@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27F93373519ECC0BE0A2F24B /* Pods_BitPrice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B34BFFBF5AF27B7753AEF30 /* Pods_BitPrice.framework */; };
+		73E1BE82AA673BDB1624510F /* Pods_BitPriceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664C18CFF9DED32C6060BE52 /* Pods_BitPriceUITests.framework */; };
+		B5CF2D788D7C5B77E19FD99A /* Pods_BitPriceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07813F8BD707C695FDBBC646 /* Pods_BitPriceTests.framework */; };
 		F864D654201A947000EF7028 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F864D644201A947000EF7028 /* AppDelegate.swift */; };
 		F864D655201A947000EF7028 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F864D646201A947000EF7028 /* ViewController.swift */; };
 		F864D656201A947000EF7028 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F864D64C201A947000EF7028 /* LaunchScreen.storyboard */; };
@@ -38,6 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07813F8BD707C695FDBBC646 /* Pods_BitPriceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitPriceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35173FF0A58A0E9CA0B0A38D /* Pods-BitPriceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitPriceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitPriceTests/Pods-BitPriceTests.release.xcconfig"; sourceTree = "<group>"; };
+		3D59A69A2A7322BD4500E335 /* Pods-BitPriceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitPriceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitPriceUITests/Pods-BitPriceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		49D9770647862058B60F9440 /* Pods-BitPriceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitPriceUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitPriceUITests/Pods-BitPriceUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4E5B60B4BB16C2200F2D05E9 /* Pods-BitPrice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitPrice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitPrice/Pods-BitPrice.debug.xcconfig"; sourceTree = "<group>"; };
+		4E8F4DCE485A9275AE731303 /* Pods-BitPriceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitPriceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitPriceTests/Pods-BitPriceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		664C18CFF9DED32C6060BE52 /* Pods_BitPriceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitPriceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B34BFFBF5AF27B7753AEF30 /* Pods_BitPrice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitPrice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E040B7A9DD2ED0787D6FD566 /* Pods-BitPrice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitPrice.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitPrice/Pods-BitPrice.release.xcconfig"; sourceTree = "<group>"; };
 		F864D644201A947000EF7028 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F864D646201A947000EF7028 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F864D64D201A947000EF7028 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F93373519ECC0BE0A2F24B /* Pods_BitPrice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5CF2D788D7C5B77E19FD99A /* Pods_BitPriceTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,12 +91,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73E1BE82AA673BDB1624510F /* Pods_BitPriceUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E414E20828CE915BF9738F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B34BFFBF5AF27B7753AEF30 /* Pods_BitPrice.framework */,
+				07813F8BD707C695FDBBC646 /* Pods_BitPriceTests.framework */,
+				664C18CFF9DED32C6060BE52 /* Pods_BitPriceUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		969AFF5F5D8D63027F946CA7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E5B60B4BB16C2200F2D05E9 /* Pods-BitPrice.debug.xcconfig */,
+				E040B7A9DD2ED0787D6FD566 /* Pods-BitPrice.release.xcconfig */,
+				4E8F4DCE485A9275AE731303 /* Pods-BitPriceTests.debug.xcconfig */,
+				35173FF0A58A0E9CA0B0A38D /* Pods-BitPriceTests.release.xcconfig */,
+				3D59A69A2A7322BD4500E335 /* Pods-BitPriceUITests.debug.xcconfig */,
+				49D9770647862058B60F9440 /* Pods-BitPriceUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F864D643201A947000EF7028 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +206,8 @@
 				F8D9D9C3201A925A002F2DCC /* BitPriceTests */,
 				F8D9D9CE201A925A002F2DCC /* BitPriceUITests */,
 				F8D9D9AA201A925A002F2DCC /* Products */,
+				969AFF5F5D8D63027F946CA7 /* Pods */,
+				5E414E20828CE915BF9738F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,9 +257,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8D9D9D4201A925A002F2DCC /* Build configuration list for PBXNativeTarget "BitPrice" */;
 			buildPhases = (
+				C44D16B51BAA6DFEC0E436C5 /* [CP] Check Pods Manifest.lock */,
 				F8D9D9A5201A925A002F2DCC /* Sources */,
 				F8D9D9A6201A925A002F2DCC /* Frameworks */,
 				F8D9D9A7201A925A002F2DCC /* Resources */,
+				788B8434B80F97993872248B /* [CP] Embed Pods Frameworks */,
+				284B06907BEF15D8EB92EB93 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,9 +277,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8D9D9D7201A925A002F2DCC /* Build configuration list for PBXNativeTarget "BitPriceTests" */;
 			buildPhases = (
+				99ABC956E2F02CE6DF8C726F /* [CP] Check Pods Manifest.lock */,
 				F8D9D9BC201A925A002F2DCC /* Sources */,
 				F8D9D9BD201A925A002F2DCC /* Frameworks */,
 				F8D9D9BE201A925A002F2DCC /* Resources */,
+				396AA2BEC572CCA1F667A733 /* [CP] Embed Pods Frameworks */,
+				1233F49828CBDD3043FAC30C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,9 +298,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8D9D9DA201A925A002F2DCC /* Build configuration list for PBXNativeTarget "BitPriceUITests" */;
 			buildPhases = (
+				339698A0C4B7F8D4DA9A68A3 /* [CP] Check Pods Manifest.lock */,
 				F8D9D9C7201A925A002F2DCC /* Sources */,
 				F8D9D9C8201A925A002F2DCC /* Frameworks */,
 				F8D9D9C9201A925A002F2DCC /* Resources */,
+				D3FF8F51C6B78A1CE8E4897D /* [CP] Embed Pods Frameworks */,
+				1ADA2AE97F7AC7CCDF72FD8A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -341,6 +390,153 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1233F49828CBDD3043FAC30C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitPriceTests/Pods-BitPriceTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1ADA2AE97F7AC7CCDF72FD8A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitPriceUITests/Pods-BitPriceUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		284B06907BEF15D8EB92EB93 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitPrice/Pods-BitPrice-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		339698A0C4B7F8D4DA9A68A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitPriceUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		396AA2BEC572CCA1F667A733 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitPriceTests/Pods-BitPriceTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		788B8434B80F97993872248B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitPrice/Pods-BitPrice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99ABC956E2F02CE6DF8C726F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitPriceTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C44D16B51BAA6DFEC0E436C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitPrice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3FF8F51C6B78A1CE8E4897D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitPriceUITests/Pods-BitPriceUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F8D9D9A5201A925A002F2DCC /* Sources */ = {
@@ -525,6 +721,7 @@
 		};
 		F8D9D9D5201A925A002F2DCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E5B60B4BB16C2200F2D05E9 /* Pods-BitPrice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -540,6 +737,7 @@
 		};
 		F8D9D9D6201A925A002F2DCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E040B7A9DD2ED0787D6FD566 /* Pods-BitPrice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -555,6 +753,7 @@
 		};
 		F8D9D9D8201A925A002F2DCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E8F4DCE485A9275AE731303 /* Pods-BitPriceTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -572,6 +771,7 @@
 		};
 		F8D9D9D9201A925A002F2DCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35173FF0A58A0E9CA0B0A38D /* Pods-BitPriceTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -589,6 +789,7 @@
 		};
 		F8D9D9DB201A925A002F2DCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D59A69A2A7322BD4500E335 /* Pods-BitPriceUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -605,6 +806,7 @@
 		};
 		F8D9D9DC201A925A002F2DCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49D9770647862058B60F9440 /* Pods-BitPriceUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
