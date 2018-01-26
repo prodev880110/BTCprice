@@ -21,6 +21,8 @@
 		F864D667201A95B300EF7028 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F864D669201A95B300EF7028 /* Localizable.strings */; };
 		F864D66C201A967600EF7028 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F864D66B201A967600EF7028 /* Settings.bundle */; };
 		F864D66E201A975A00EF7028 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F864D66D201A975A00EF7028 /* CoreDataStack.swift */; };
+		F87C6AF2201AC4F100BB968F /* Fonts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F87C6AF1201AC4F100BB968F /* Fonts.bundle */; };
+		F87C6AF4201AC55A00BB968F /* UIFont+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87C6AF3201AC55A00BB968F /* UIFont+App.swift */; };
 		F8D9D9B7201A925A002F2DCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D9D9B6201A925A002F2DCC /* Assets.xcassets */; };
 		F8D9D9C5201A925A002F2DCC /* BitPriceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D9D9C4201A925A002F2DCC /* BitPriceTests.swift */; };
 		F8D9D9D0201A925A002F2DCC /* BitPriceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D9D9CF201A925A002F2DCC /* BitPriceUITests.swift */; };
@@ -68,6 +70,8 @@
 		F864D66A201A95B600EF7028 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		F864D66B201A967600EF7028 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		F864D66D201A975A00EF7028 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		F87C6AF1201AC4F100BB968F /* Fonts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Fonts.bundle; sourceTree = "<group>"; };
+		F87C6AF3201AC55A00BB968F /* UIFont+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+App.swift"; sourceTree = "<group>"; };
 		F8D9D9A9201A925A002F2DCC /* BitPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D9D9B6201A925A002F2DCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8D9D9C0201A925A002F2DCC /* BitPriceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitPriceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +179,7 @@
 			children = (
 				F864D66D201A975A00EF7028 /* CoreDataStack.swift */,
 				F8635768201AA7CF00FB886B /* RemoteConfig+Fetch.swift */,
+				F87C6AF3201AC55A00BB968F /* UIFont+App.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 			children = (
 				F864D65B201A947600EF7028 /* BitPrice.xcdatamodeld */,
 				F863576A201AAC8800FB886B /* Firebase */,
+				F87C6AF1201AC4F100BB968F /* Fonts.bundle */,
 				F864D66B201A967600EF7028 /* Settings.bundle */,
 			);
 			path = Resources;
@@ -399,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F864D657201A947000EF7028 /* Main.storyboard in Resources */,
+				F87C6AF2201AC4F100BB968F /* Fonts.bundle in Resources */,
 				F864D667201A95B300EF7028 /* Localizable.strings in Resources */,
 				F864D66C201A967600EF7028 /* Settings.bundle in Resources */,
 				F8D9D9B7201A925A002F2DCC /* Assets.xcassets in Resources */,
@@ -617,6 +624,7 @@
 				F864D655201A947000EF7028 /* ViewController.swift in Sources */,
 				F864D654201A947000EF7028 /* AppDelegate.swift in Sources */,
 				F864D65D201A947600EF7028 /* BitPrice.xcdatamodeld in Sources */,
+				F87C6AF4201AC55A00BB968F /* UIFont+App.swift in Sources */,
 				F864D66E201A975A00EF7028 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
