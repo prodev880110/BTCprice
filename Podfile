@@ -3,6 +3,10 @@ platform :ios, '9.0'
 target 'BitPrice' do
     use_frameworks!
     
+    # Charts (Beautiful charts for iOS/tvOS/OSX)
+    # https://github.com/danielgindi/Charts
+    pod 'Charts'
+    
     # Crashlytics (crash reporting solution)
     # https://fabric.io/kits/ios/crashlytics/install
     pod 'Fabric', '~> 1.7.2'
