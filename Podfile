@@ -23,3 +23,10 @@ target 'BitPrice' do
     end
     
 end
+
+post_install do | installer |
+    require 'fileutils'
+    FileUtils.cp_r('Pods/Target Support Files/Pods-BitPrice/Pods-BitPrice-acknowledgements.plist',
+                   'BitPrice/Resources/Settings.bundle/Acknowledgements.plist',
+                   :remove_destination => true)
+end
