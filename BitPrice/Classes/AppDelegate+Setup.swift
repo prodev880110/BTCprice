@@ -6,6 +6,7 @@
 //  Copyright © 2018 Bruno Tortato Furtado. All rights reserved.
 //
 
+import Fabric
 import Firebase
 import Foundation
 
@@ -15,6 +16,7 @@ extension AppDelegate {
         FirebaseApp.configure()
         #if DEBUG
             FirebaseConfiguration.shared.setLoggerLevel(.debug)
+            Fabric.sharedSDK().debug = true
         #endif
     }
     
