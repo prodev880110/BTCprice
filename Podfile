@@ -3,6 +3,10 @@ platform :ios, '9.0'
 target 'BitPrice' do
     use_frameworks!
     
+    # Alamofire (HTTP networking)
+    # https://github.com/Alamofire/Alamofire
+    pod 'Alamofire', '~> 4.5'
+    
     # Charts (Beautiful charts for iOS/tvOS/OSX)
     # https://github.com/danielgindi/Charts
     pod 'Charts'
