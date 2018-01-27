@@ -40,6 +40,14 @@
 		F8A704B7201C97E60015C071 /* ViewController+FooterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704AF201C97E60015C071 /* ViewController+FooterDelegate.swift */; };
 		F8A704B8201C97E60015C071 /* ViewController+HeaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704B0201C97E60015C071 /* ViewController+HeaderDelegate.swift */; };
 		F8A704B9201C97E60015C071 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704B1201C97E60015C071 /* ViewController.swift */; };
+		F8A704BC201CA6880015C071 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704BB201CA6880015C071 /* Ticker.swift */; };
+		F8A704BE201CA8870015C071 /* TickerApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704BD201CA8870015C071 /* TickerApiService.swift */; };
+		F8A704C0201CA8C60015C071 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704BF201CA8C60015C071 /* ApiService.swift */; };
+		F8A704C2201CA9D00015C071 /* TickerApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704C1201CA9D00015C071 /* TickerApiRouter.swift */; };
+		F8A704C4201CB1700015C071 /* Bundle+InfoPlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704C3201CB1700015C071 /* Bundle+InfoPlist.swift */; };
+		F8A704C6201CB2880015C071 /* MarketPriceApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704C5201CB2880015C071 /* MarketPriceApiRouter.swift */; };
+		F8A704C8201CB40C0015C071 /* MarketPriceApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704C7201CB40C0015C071 /* MarketPriceApiService.swift */; };
+		F8A704CA201CB48A0015C071 /* MarketPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704C9201CB48A0015C071 /* MarketPrice.swift */; };
 		F8D9D9B7201A925A002F2DCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D9D9B6201A925A002F2DCC /* Assets.xcassets */; };
 		F8D9D9C5201A925A002F2DCC /* BitPriceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D9D9C4201A925A002F2DCC /* BitPriceTests.swift */; };
 		F8D9D9D0201A925A002F2DCC /* BitPriceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D9D9CF201A925A002F2DCC /* BitPriceUITests.swift */; };
@@ -106,6 +114,14 @@
 		F8A704AF201C97E60015C071 /* ViewController+FooterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+FooterDelegate.swift"; sourceTree = "<group>"; };
 		F8A704B0201C97E60015C071 /* ViewController+HeaderDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+HeaderDelegate.swift"; sourceTree = "<group>"; };
 		F8A704B1201C97E60015C071 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F8A704BB201CA6880015C071 /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
+		F8A704BD201CA8870015C071 /* TickerApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerApiService.swift; sourceTree = "<group>"; };
+		F8A704BF201CA8C60015C071 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		F8A704C1201CA9D00015C071 /* TickerApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerApiRouter.swift; sourceTree = "<group>"; };
+		F8A704C3201CB1700015C071 /* Bundle+InfoPlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+InfoPlist.swift"; sourceTree = "<group>"; };
+		F8A704C5201CB2880015C071 /* MarketPriceApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPriceApiRouter.swift; sourceTree = "<group>"; };
+		F8A704C7201CB40C0015C071 /* MarketPriceApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPriceApiService.swift; sourceTree = "<group>"; };
+		F8A704C9201CB48A0015C071 /* MarketPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPrice.swift; sourceTree = "<group>"; };
 		F8D9D9A9201A925A002F2DCC /* BitPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D9D9B6201A925A002F2DCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8D9D9C0201A925A002F2DCC /* BitPriceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitPriceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -235,6 +251,7 @@
 		F864D647201A947000EF7028 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				F8A704C3201CB1700015C071 /* Bundle+InfoPlist.swift */,
 				F864D66D201A975A00EF7028 /* CoreDataStack.swift */,
 				F8566F12201BC0CB005E9950 /* Date+Formatter.swift */,
 				F8566F16201BC3F6005E9950 /* Float+Formatter.swift */,
@@ -252,6 +269,8 @@
 			isa = PBXGroup;
 			children = (
 				F8566F10201BBD0E005E9950 /* ReferenceType.swift */,
+				F8A704C9201CB48A0015C071 /* MarketPrice.swift */,
+				F8A704BB201CA6880015C071 /* Ticker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -329,6 +348,11 @@
 		F8A704BA201C9FCD0015C071 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				F8A704BF201CA8C60015C071 /* ApiService.swift */,
+				F8A704C5201CB2880015C071 /* MarketPriceApiRouter.swift */,
+				F8A704C7201CB40C0015C071 /* MarketPriceApiService.swift */,
+				F8A704C1201CA9D00015C071 /* TickerApiRouter.swift */,
+				F8A704BD201CA8870015C071 /* TickerApiService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -725,10 +749,16 @@
 				F8635769201AA7CF00FB886B /* RemoteConfig+Fetch.swift in Sources */,
 				F8566EFB201B2F3A005E9950 /* CardView.swift in Sources */,
 				F8635767201AA57B00FB886B /* AppDelegate+Setup.swift in Sources */,
+				F8A704CA201CB48A0015C071 /* MarketPrice.swift in Sources */,
 				F8566F11201BBD0E005E9950 /* ReferenceType.swift in Sources */,
 				F8A704B3201C97E60015C071 /* BodyPriceView.swift in Sources */,
+				F8A704C0201CA8C60015C071 /* ApiService.swift in Sources */,
+				F8A704C8201CB40C0015C071 /* MarketPriceApiService.swift in Sources */,
 				F8566F17201BC3F6005E9950 /* Float+Formatter.swift in Sources */,
 				F8A704B9201C97E60015C071 /* ViewController.swift in Sources */,
+				F8A704BC201CA6880015C071 /* Ticker.swift in Sources */,
+				F8A704C6201CB2880015C071 /* MarketPriceApiRouter.swift in Sources */,
+				F8A704C2201CA9D00015C071 /* TickerApiRouter.swift in Sources */,
 				F8A704B7201C97E60015C071 /* ViewController+FooterDelegate.swift in Sources */,
 				F8566F25201C0E2E005E9950 /* Button.swift in Sources */,
 				F8566F20201BF115005E9950 /* ChartView.swift in Sources */,
@@ -737,6 +767,7 @@
 				F8566F2B201C1699005E9950 /* UserDefaults+App.swift in Sources */,
 				F8A704B8201C97E60015C071 /* ViewController+HeaderDelegate.swift in Sources */,
 				F864D65D201A947600EF7028 /* BitPrice.xcdatamodeld in Sources */,
+				F8A704BE201CA8870015C071 /* TickerApiService.swift in Sources */,
 				F8A704B4201C97E60015C071 /* BodyView.swift in Sources */,
 				F8A704B6201C97E60015C071 /* HeaderView.swift in Sources */,
 				F8A704B5201C97E60015C071 /* FooterView.swift in Sources */,
@@ -746,6 +777,7 @@
 				F8566F09201B85F4005E9950 /* String+Localized.swift in Sources */,
 				F8566F13201BC0CB005E9950 /* Date+Formatter.swift in Sources */,
 				F864D66E201A975A00EF7028 /* CoreDataStack.swift in Sources */,
+				F8A704C4201CB1700015C071 /* Bundle+InfoPlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,6 +845,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				API_BASE_URL = "https://api.blockchain.info";
 				BUNDLE_ID_SUFFIX = .debug;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -873,6 +906,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				API_BASE_URL = "https://api.blockchain.info";
 				BUNDLE_ID_SUFFIX = "";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
