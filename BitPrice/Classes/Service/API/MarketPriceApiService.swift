@@ -47,8 +47,8 @@ class MarketPriceApiService: ApiService {
         let start: String?
         
         switch referenceType {
-        case .day:
-            timespan = "1days"
+        case .week:
+            timespan = "1weeks"
             start = "2018-01-27"
         case .month:
             timespan = "1months"
