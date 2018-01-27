@@ -10,14 +10,6 @@
 		27F93373519ECC0BE0A2F24B /* Pods_BitPrice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B34BFFBF5AF27B7753AEF30 /* Pods_BitPrice.framework */; };
 		73E1BE82AA673BDB1624510F /* Pods_BitPriceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664C18CFF9DED32C6060BE52 /* Pods_BitPriceUITests.framework */; };
 		B5CF2D788D7C5B77E19FD99A /* Pods_BitPriceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07813F8BD707C695FDBBC646 /* Pods_BitPriceTests.framework */; };
-		F84D2B08201C8AD1003B8455 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84D2AFF201C8AD1003B8455 /* ViewController.swift */; };
-		F84D2B09201C8AD1003B8455 /* ViewController+HeaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84D2B00201C8AD1003B8455 /* ViewController+HeaderDelegate.swift */; };
-		F84D2B0A201C8AD1003B8455 /* BodyHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84D2B02201C8AD1003B8455 /* BodyHistoryView.swift */; };
-		F84D2B0B201C8AD1003B8455 /* BodyPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84D2B03201C8AD1003B8455 /* BodyPriceView.swift */; };
-		F84D2B0C201C8AD1003B8455 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84D2B04201C8AD1003B8455 /* HeaderView.swift */; };
-		F84D2B0D201C8AD1003B8455 /* BodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84D2B05201C8AD1003B8455 /* BodyView.swift */; };
-		F84D2B0E201C8AD1003B8455 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84D2B06201C8AD1003B8455 /* FooterView.swift */; };
-		F84D2B0F201C8AD1003B8455 /* ViewController+FooterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84D2B07201C8AD1003B8455 /* ViewController+FooterDelegate.swift */; };
 		F8566EF9201B2EAC005E9950 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8566EF8201B2EAC005E9950 /* UIColor+App.swift */; };
 		F8566EFB201B2F3A005E9950 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8566EFA201B2F3A005E9950 /* CardView.swift */; };
 		F8566F09201B85F4005E9950 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8566F08201B85F4005E9950 /* String+Localized.swift */; };
@@ -40,6 +32,14 @@
 		F864D66E201A975A00EF7028 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F864D66D201A975A00EF7028 /* CoreDataStack.swift */; };
 		F87C6AF2201AC4F100BB968F /* Fonts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F87C6AF1201AC4F100BB968F /* Fonts.bundle */; };
 		F87C6AF4201AC55A00BB968F /* UIFont+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87C6AF3201AC55A00BB968F /* UIFont+App.swift */; };
+		F8A704B2201C97E60015C071 /* BodyHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704AA201C97E60015C071 /* BodyHistoryView.swift */; };
+		F8A704B3201C97E60015C071 /* BodyPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704AB201C97E60015C071 /* BodyPriceView.swift */; };
+		F8A704B4201C97E60015C071 /* BodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704AC201C97E60015C071 /* BodyView.swift */; };
+		F8A704B5201C97E60015C071 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704AD201C97E60015C071 /* FooterView.swift */; };
+		F8A704B6201C97E60015C071 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704AE201C97E60015C071 /* HeaderView.swift */; };
+		F8A704B7201C97E60015C071 /* ViewController+FooterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704AF201C97E60015C071 /* ViewController+FooterDelegate.swift */; };
+		F8A704B8201C97E60015C071 /* ViewController+HeaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704B0201C97E60015C071 /* ViewController+HeaderDelegate.swift */; };
+		F8A704B9201C97E60015C071 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704B1201C97E60015C071 /* ViewController.swift */; };
 		F8D9D9B7201A925A002F2DCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D9D9B6201A925A002F2DCC /* Assets.xcassets */; };
 		F8D9D9C5201A925A002F2DCC /* BitPriceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D9D9C4201A925A002F2DCC /* BitPriceTests.swift */; };
 		F8D9D9D0201A925A002F2DCC /* BitPriceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D9D9CF201A925A002F2DCC /* BitPriceUITests.swift */; };
@@ -72,14 +72,6 @@
 		664C18CFF9DED32C6060BE52 /* Pods_BitPriceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitPriceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B34BFFBF5AF27B7753AEF30 /* Pods_BitPrice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitPrice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E040B7A9DD2ED0787D6FD566 /* Pods-BitPrice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitPrice.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitPrice/Pods-BitPrice.release.xcconfig"; sourceTree = "<group>"; };
-		F84D2AFF201C8AD1003B8455 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F84D2B00201C8AD1003B8455 /* ViewController+HeaderDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+HeaderDelegate.swift"; sourceTree = "<group>"; };
-		F84D2B02201C8AD1003B8455 /* BodyHistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyHistoryView.swift; sourceTree = "<group>"; };
-		F84D2B03201C8AD1003B8455 /* BodyPriceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyPriceView.swift; sourceTree = "<group>"; };
-		F84D2B04201C8AD1003B8455 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		F84D2B05201C8AD1003B8455 /* BodyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyView.swift; sourceTree = "<group>"; };
-		F84D2B06201C8AD1003B8455 /* FooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
-		F84D2B07201C8AD1003B8455 /* ViewController+FooterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+FooterDelegate.swift"; sourceTree = "<group>"; };
 		F8566EF8201B2EAC005E9950 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		F8566EFA201B2F3A005E9950 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		F8566F08201B85F4005E9950 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
@@ -106,6 +98,14 @@
 		F864D66D201A975A00EF7028 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		F87C6AF1201AC4F100BB968F /* Fonts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Fonts.bundle; sourceTree = "<group>"; };
 		F87C6AF3201AC55A00BB968F /* UIFont+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+App.swift"; sourceTree = "<group>"; };
+		F8A704AA201C97E60015C071 /* BodyHistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyHistoryView.swift; sourceTree = "<group>"; };
+		F8A704AB201C97E60015C071 /* BodyPriceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyPriceView.swift; sourceTree = "<group>"; };
+		F8A704AC201C97E60015C071 /* BodyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyView.swift; sourceTree = "<group>"; };
+		F8A704AD201C97E60015C071 /* FooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		F8A704AE201C97E60015C071 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		F8A704AF201C97E60015C071 /* ViewController+FooterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+FooterDelegate.swift"; sourceTree = "<group>"; };
+		F8A704B0201C97E60015C071 /* ViewController+HeaderDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+HeaderDelegate.swift"; sourceTree = "<group>"; };
+		F8A704B1201C97E60015C071 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F8D9D9A9201A925A002F2DCC /* BitPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D9D9B6201A925A002F2DCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8D9D9C0201A925A002F2DCC /* BitPriceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitPriceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,15 +165,6 @@
 				49D9770647862058B60F9440 /* Pods-BitPriceUITests.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		F84D2B01201C8AD1003B8455 /* Body */ = {
-			isa = PBXGroup;
-			children = (
-				F84D2B02201C8AD1003B8455 /* BodyHistoryView.swift */,
-				F84D2B03201C8AD1003B8455 /* BodyPriceView.swift */,
-			);
-			path = Body;
 			sourceTree = "<group>";
 		};
 		F8566EF7201B2E83005E9950 /* UIView */ = {
@@ -236,13 +227,7 @@
 		F864D645201A947000EF7028 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F84D2AFF201C8AD1003B8455 /* ViewController.swift */,
-				F84D2B00201C8AD1003B8455 /* ViewController+HeaderDelegate.swift */,
-				F84D2B07201C8AD1003B8455 /* ViewController+FooterDelegate.swift */,
-				F84D2B04201C8AD1003B8455 /* HeaderView.swift */,
-				F84D2B05201C8AD1003B8455 /* BodyView.swift */,
-				F84D2B06201C8AD1003B8455 /* FooterView.swift */,
-				F84D2B01201C8AD1003B8455 /* Body */,
+				F8A704A8201C97E60015C071 /* View */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -315,6 +300,29 @@
 				F864D669201A95B300EF7028 /* Localizable.strings */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		F8A704A8201C97E60015C071 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F8A704B1201C97E60015C071 /* ViewController.swift */,
+				F8A704B0201C97E60015C071 /* ViewController+HeaderDelegate.swift */,
+				F8A704AF201C97E60015C071 /* ViewController+FooterDelegate.swift */,
+				F8A704AE201C97E60015C071 /* HeaderView.swift */,
+				F8A704AC201C97E60015C071 /* BodyView.swift */,
+				F8A704AD201C97E60015C071 /* FooterView.swift */,
+				F8A704A9201C97E60015C071 /* Body */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F8A704A9201C97E60015C071 /* Body */ = {
+			isa = PBXGroup;
+			children = (
+				F8A704AA201C97E60015C071 /* BodyHistoryView.swift */,
+				F8A704AB201C97E60015C071 /* BodyPriceView.swift */,
+			);
+			path = Body;
 			sourceTree = "<group>";
 		};
 		F8D9D9A0201A925A002F2DCC = {
@@ -706,28 +714,28 @@
 			files = (
 				F8635769201AA7CF00FB886B /* RemoteConfig+Fetch.swift in Sources */,
 				F8566EFB201B2F3A005E9950 /* CardView.swift in Sources */,
-				F84D2B0B201C8AD1003B8455 /* BodyPriceView.swift in Sources */,
 				F8635767201AA57B00FB886B /* AppDelegate+Setup.swift in Sources */,
 				F8566F11201BBD0E005E9950 /* ReferenceType.swift in Sources */,
-				F84D2B0A201C8AD1003B8455 /* BodyHistoryView.swift in Sources */,
-				F84D2B0D201C8AD1003B8455 /* BodyView.swift in Sources */,
+				F8A704B3201C97E60015C071 /* BodyPriceView.swift in Sources */,
 				F8566F17201BC3F6005E9950 /* Float+Formatter.swift in Sources */,
+				F8A704B9201C97E60015C071 /* ViewController.swift in Sources */,
+				F8A704B7201C97E60015C071 /* ViewController+FooterDelegate.swift in Sources */,
 				F8566F25201C0E2E005E9950 /* Button.swift in Sources */,
 				F8566F20201BF115005E9950 /* ChartView.swift in Sources */,
+				F8A704B2201C97E60015C071 /* BodyHistoryView.swift in Sources */,
 				F864D654201A947000EF7028 /* AppDelegate.swift in Sources */,
 				F8566F2B201C1699005E9950 /* UserDefaults+App.swift in Sources */,
-				F84D2B09201C8AD1003B8455 /* ViewController+HeaderDelegate.swift in Sources */,
-				F84D2B08201C8AD1003B8455 /* ViewController.swift in Sources */,
-				F84D2B0C201C8AD1003B8455 /* HeaderView.swift in Sources */,
+				F8A704B8201C97E60015C071 /* ViewController+HeaderDelegate.swift in Sources */,
 				F864D65D201A947600EF7028 /* BitPrice.xcdatamodeld in Sources */,
+				F8A704B4201C97E60015C071 /* BodyView.swift in Sources */,
+				F8A704B6201C97E60015C071 /* HeaderView.swift in Sources */,
+				F8A704B5201C97E60015C071 /* FooterView.swift in Sources */,
 				F8566F27201C0E54005E9950 /* UIView+Shadow.swift in Sources */,
-				F84D2B0F201C8AD1003B8455 /* ViewController+FooterDelegate.swift in Sources */,
 				F8566EF9201B2EAC005E9950 /* UIColor+App.swift in Sources */,
 				F87C6AF4201AC55A00BB968F /* UIFont+App.swift in Sources */,
 				F8566F09201B85F4005E9950 /* String+Localized.swift in Sources */,
 				F8566F13201BC0CB005E9950 /* Date+Formatter.swift in Sources */,
 				F864D66E201A975A00EF7028 /* CoreDataStack.swift in Sources */,
-				F84D2B0E201C8AD1003B8455 /* FooterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
