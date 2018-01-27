@@ -69,7 +69,6 @@ class MarketPriceApiService: ApiService {
         }
         
         if let start = start {
-            print("BRUNO: \(start.toString(dateFormat: "yyyy-MM-dd"))")
             params["start"] = start.toString(dateFormat: "yyyy-MM-dd")
         }
         
