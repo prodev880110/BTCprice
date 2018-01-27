@@ -44,18 +44,18 @@ class MarketPriceApiService: ApiService {
     
     private func parameters(referenceType: ReferenceType) -> [String: String] {
         let timespan: String?
-        let start: String?
+        let start: Date?
         
         switch referenceType {
         case .week:
             timespan = "1weeks"
-            start = "2018-01-27"
+            start = Date().startOfWeek
         case .month:
             timespan = "1months"
-            start = "2018-01-01"
+            start = Date().startOfMonth
         case .year:
             timespan = "1years"
-            start = "2018-01-01"
+            start = Date().startOfYear
         case .all:
             timespan = nil
             start = nil
@@ -69,7 +69,8 @@ class MarketPriceApiService: ApiService {
         }
         
         if let start = start {
-            params["start"] = start
+            print("BRUNO: \(start.toString(dateFormat: "yyyy-MM-dd"))")
+            params["start"] = start.toString(dateFormat: "yyyy-MM-dd")
         }
         
         return params
