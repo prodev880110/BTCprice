@@ -64,22 +64,22 @@
                                 <rect key="frame" x="15" y="78" width="345" height="514"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUx-WC-jGd" userLabel="priceView" customClass="BodyPriceView" customModule="BitPrice" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="15" width="315" height="94.5"/>
+                                        <rect key="frame" x="15" y="15" width="315" height="103"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="day, time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aM5-WQ-PG5" userLabel="updatedLabel">
-                                                <rect key="frame" x="15" y="0.0" width="285" height="14"/>
+                                                <rect key="frame" x="15" y="0.0" width="285" height="15.5"/>
                                                 <fontDescription key="fontDescription" name="DINPro-Light" family="DINPro" pointSize="12"/>
                                                 <color key="textColor" red="0.69803921570000005" green="0.69803921570000005" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$36.500,00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvo-ij-IzH" userLabel="priceLabel">
-                                                <rect key="frame" x="0.0" y="19" width="315" height="47"/>
+                                                <rect key="frame" x="0.0" y="20.5" width="315" height="51.5"/>
                                                 <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="40"/>
                                                 <color key="textColor" red="0.29803921570000003" green="0.25882352939999997" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="diff" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5I7-RU-lIF" userLabel="diffLabel">
-                                                <rect key="frame" x="15" y="71" width="285" height="23.5"/>
+                                                <rect key="frame" x="15" y="77" width="285" height="26"/>
                                                 <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -106,26 +106,26 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQi-oO-YII" userLabel="Separator View">
-                                        <rect key="frame" x="15" y="124.5" width="315" height="1"/>
+                                        <rect key="frame" x="15" y="133" width="315" height="1"/>
                                         <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="spN-FV-kz2"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="np2-Gi-q6k" userLabel="historyView" customClass="BodyHistoryView" customModule="BitPrice" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="140.5" width="315" height="358.5"/>
+                                        <rect key="frame" x="15" y="149" width="315" height="350"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJb-mp-QRp" userLabel="Left View">
-                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="42.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="102.5" height="47"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9b-dT-Hoy" userLabel="titleLabel">
-                                                        <rect key="frame" x="0.0" y="0.0" width="103" height="21"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="102" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="DINPro-Light" family="DINPro" pointSize="18"/>
                                                         <color key="textColor" red="0.69803921570000005" green="0.69803921570000005" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reference" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zET-W6-IDV" userLabel="referenceLabel">
-                                                        <rect key="frame" x="0.0" y="25" width="103.5" height="17.5"/>
+                                                        <rect key="frame" x="0.0" y="27.5" width="102.5" height="19.5"/>
                                                         <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="15"/>
                                                         <color key="textColor" red="0.29803921570000003" green="0.25882352939999997" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -142,11 +142,11 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EiZ-lZ-dc0" userLabel="chartView" customClass="ChartView" customModule="BitPrice" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="57.5" width="315" height="301.5"/>
+                                                <rect key="frame" x="0.0" y="62" width="315" height="288.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vkk-BG-a5e" userLabel="Right View">
-                                                <rect key="frame" x="277" y="21.5" width="38" height="25"/>
+                                                <rect key="frame" x="279" y="26" width="36" height="25"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zg2-qD-Ulo" userLabel="indicatorImageView">
                                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -156,7 +156,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iv-Ga-RKZ" userLabel="percentLabel">
-                                                        <rect key="frame" x="25" y="5" width="13" height="15.5"/>
+                                                        <rect key="frame" x="25" y="4.5" width="11" height="17"/>
                                                         <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -210,13 +210,13 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhO-bJ-VfL" userLabel="footerView" customClass="FooterView" customModule="BitPrice" customModuleProvider="target">
-                                <rect key="frame" x="20" y="607" width="335" height="45"/>
+                                <rect key="frame" x="15" y="607" width="345" height="45"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTb-PV-KfN" userLabel="dayButton" customClass="Button" customModule="BitPrice" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="69" height="45"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTb-PV-KfN" userLabel="weekButton" customClass="Button" customModule="BitPrice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="45"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="17"/>
-                                        <state key="normal" title="Day">
+                                        <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="15"/>
+                                        <state key="normal" title="Week">
                                             <color key="titleColor" red="0.29803921570000003" green="0.25882352939999997" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <state key="selected">
@@ -230,9 +230,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdh-Qa-H56" userLabel="monthButton" customClass="Button" customModule="BitPrice" customModuleProvider="target">
-                                        <rect key="frame" x="89" y="0.0" width="68.5" height="45"/>
+                                        <rect key="frame" x="90" y="0.0" width="75" height="45"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="15"/>
                                         <state key="normal" title="Month">
                                             <color key="titleColor" red="0.29803921570000003" green="0.25882352939999997" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -247,9 +247,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaN-Yt-MHZ" userLabel="yearButton" customClass="Button" customModule="BitPrice" customModuleProvider="target">
-                                        <rect key="frame" x="177.5" y="0.0" width="69" height="45"/>
+                                        <rect key="frame" x="180" y="0.0" width="75" height="45"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="15"/>
                                         <state key="normal" title="Year">
                                             <color key="titleColor" red="0.29803921570000003" green="0.25882352939999997" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -264,9 +264,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnK-QG-YYW" userLabel="allButton" customClass="Button" customModule="BitPrice" customModuleProvider="target">
-                                        <rect key="frame" x="266.5" y="0.0" width="68.5" height="45"/>
+                                        <rect key="frame" x="270" y="0.0" width="75" height="45"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="15"/>
                                         <state key="normal" title="All">
                                             <color key="titleColor" red="0.29803921570000003" green="0.25882352939999997" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -288,8 +288,8 @@
                                     <constraint firstItem="iaN-Yt-MHZ" firstAttribute="width" secondItem="wnK-QG-YYW" secondAttribute="width" id="Ahf-Ur-kp3"/>
                                     <constraint firstItem="iaN-Yt-MHZ" firstAttribute="top" secondItem="bhO-bJ-VfL" secondAttribute="top" id="EU2-IT-c1Q"/>
                                     <constraint firstItem="UTb-PV-KfN" firstAttribute="width" secondItem="Rdh-Qa-H56" secondAttribute="width" id="GKc-vo-n49"/>
-                                    <constraint firstItem="Rdh-Qa-H56" firstAttribute="leading" secondItem="UTb-PV-KfN" secondAttribute="trailing" constant="20" id="Kta-g2-x0M"/>
-                                    <constraint firstItem="wnK-QG-YYW" firstAttribute="leading" secondItem="iaN-Yt-MHZ" secondAttribute="trailing" constant="20" id="Ktx-M1-301"/>
+                                    <constraint firstItem="Rdh-Qa-H56" firstAttribute="leading" secondItem="UTb-PV-KfN" secondAttribute="trailing" constant="15" id="Kta-g2-x0M"/>
+                                    <constraint firstItem="wnK-QG-YYW" firstAttribute="leading" secondItem="iaN-Yt-MHZ" secondAttribute="trailing" constant="15" id="Ktx-M1-301"/>
                                     <constraint firstAttribute="bottom" secondItem="Rdh-Qa-H56" secondAttribute="bottom" id="PZR-Q2-QNT"/>
                                     <constraint firstItem="Rdh-Qa-H56" firstAttribute="top" secondItem="bhO-bJ-VfL" secondAttribute="top" id="STN-Q8-6lc"/>
                                     <constraint firstAttribute="bottom" secondItem="wnK-QG-YYW" secondAttribute="bottom" id="TYG-0D-XDS"/>
@@ -298,12 +298,12 @@
                                     <constraint firstAttribute="trailing" secondItem="wnK-QG-YYW" secondAttribute="trailing" id="cM4-dR-NSO"/>
                                     <constraint firstItem="UTb-PV-KfN" firstAttribute="leading" secondItem="bhO-bJ-VfL" secondAttribute="leading" id="dXd-BJ-9WS"/>
                                     <constraint firstItem="Rdh-Qa-H56" firstAttribute="width" secondItem="iaN-Yt-MHZ" secondAttribute="width" id="gbL-E7-ayy"/>
-                                    <constraint firstItem="iaN-Yt-MHZ" firstAttribute="leading" secondItem="Rdh-Qa-H56" secondAttribute="trailing" constant="20" id="zPx-RZ-t27"/>
+                                    <constraint firstItem="iaN-Yt-MHZ" firstAttribute="leading" secondItem="Rdh-Qa-H56" secondAttribute="trailing" constant="15" id="zPx-RZ-t27"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="allButton" destination="wnK-QG-YYW" id="8mp-cI-TQ4"/>
-                                    <outlet property="dayButton" destination="UTb-PV-KfN" id="cdc-Hd-9O1"/>
                                     <outlet property="monthButton" destination="Rdh-Qa-H56" id="4kY-XE-9Gp"/>
+                                    <outlet property="weekButton" destination="UTb-PV-KfN" id="cdc-Hd-9O1"/>
                                     <outlet property="yearButton" destination="iaN-Yt-MHZ" id="tFM-aN-j8a"/>
                                 </connections>
                             </view>
@@ -314,13 +314,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bhO-bJ-VfL" secondAttribute="bottom" constant="15" id="0Ll-7C-NmK"/>
                             <constraint firstItem="M67-kf-cZl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="I70-xz-0RF"/>
                             <constraint firstItem="rAa-wT-mei" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="LvN-kj-XAX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bhO-bJ-VfL" secondAttribute="trailing" constant="20" id="RTR-fc-cHa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bhO-bJ-VfL" secondAttribute="trailing" constant="15" id="RTR-fc-cHa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M67-kf-cZl" secondAttribute="trailing" constant="15" id="TZq-u6-U1G"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rAa-wT-mei" secondAttribute="trailing" constant="15" id="XuO-H4-vWa"/>
                             <constraint firstItem="bhO-bJ-VfL" firstAttribute="top" secondItem="rAa-wT-mei" secondAttribute="bottom" constant="15" id="guL-xM-1o5"/>
                             <constraint firstItem="rAa-wT-mei" firstAttribute="top" secondItem="M67-kf-cZl" secondAttribute="bottom" constant="15" id="hn0-Lk-dLs"/>
                             <constraint firstItem="M67-kf-cZl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="ndS-cs-2qm"/>
-                            <constraint firstItem="bhO-bJ-VfL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vG6-p5-N7b"/>
+                            <constraint firstItem="bhO-bJ-VfL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="vG6-p5-N7b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -336,7 +336,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_refresh" width="222" height="222"/>
+        <image name="ic_refresh" width="28" height="28"/>
     </resources>
     <color key="tintColor" red="0.29803921570000003" green="0.25882352939999997" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
