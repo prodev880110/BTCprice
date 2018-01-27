@@ -8,13 +8,20 @@
 
 // MARK: - PriceView
 
-"price_view.price" = "Bitcoin Price";
+"price_view.title" = "Bitcoin Price";
 "price_view.date_format" = "yyyy-MM-dd hh:mm a";
+
+// MARK: - PriceHistoryView
+
+"price_history_view.price" = "History Price";
+
+// MARK: - ChatView
+
+"chat_view.no_data" = "No chart data available.";
 
 // MARK: - PriceReferenceType
 
 "price_ref_type.day" = "Day";
-"price_ref_type.week" = "Week";
 "price_ref_type.month" = "Month";
 "price_ref_type.year" = "Year";
 "price_ref_type.all" = "All";
