@@ -10,14 +10,24 @@
 		27F93373519ECC0BE0A2F24B /* Pods_BitPrice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B34BFFBF5AF27B7753AEF30 /* Pods_BitPrice.framework */; };
 		73E1BE82AA673BDB1624510F /* Pods_BitPriceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664C18CFF9DED32C6060BE52 /* Pods_BitPriceUITests.framework */; };
 		B5CF2D788D7C5B77E19FD99A /* Pods_BitPriceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07813F8BD707C695FDBBC646 /* Pods_BitPriceTests.framework */; };
+		F84D2B08201C8AD1003B8455 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84D2AFF201C8AD1003B8455 /* ViewController.swift */; };
+		F84D2B09201C8AD1003B8455 /* ViewController+HeaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84D2B00201C8AD1003B8455 /* ViewController+HeaderDelegate.swift */; };
+		F84D2B0A201C8AD1003B8455 /* BodyHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84D2B02201C8AD1003B8455 /* BodyHistoryView.swift */; };
+		F84D2B0B201C8AD1003B8455 /* BodyPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84D2B03201C8AD1003B8455 /* BodyPriceView.swift */; };
+		F84D2B0C201C8AD1003B8455 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84D2B04201C8AD1003B8455 /* HeaderView.swift */; };
+		F84D2B0D201C8AD1003B8455 /* BodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84D2B05201C8AD1003B8455 /* BodyView.swift */; };
+		F84D2B0E201C8AD1003B8455 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84D2B06201C8AD1003B8455 /* FooterView.swift */; };
+		F84D2B0F201C8AD1003B8455 /* ViewController+FooterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84D2B07201C8AD1003B8455 /* ViewController+FooterDelegate.swift */; };
 		F8566EF9201B2EAC005E9950 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8566EF8201B2EAC005E9950 /* UIColor+App.swift */; };
 		F8566EFB201B2F3A005E9950 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8566EFA201B2F3A005E9950 /* CardView.swift */; };
-		F8566EFE201B7ED8005E9950 /* PriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8566EFD201B7ED8005E9950 /* PriceViewController.swift */; };
-		F8566F07201B84E9005E9950 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8566F06201B84E9005E9950 /* PriceView.swift */; };
 		F8566F09201B85F4005E9950 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8566F08201B85F4005E9950 /* String+Localized.swift */; };
 		F8566F11201BBD0E005E9950 /* ReferenceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8566F10201BBD0E005E9950 /* ReferenceType.swift */; };
 		F8566F13201BC0CB005E9950 /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8566F12201BC0CB005E9950 /* Date+Formatter.swift */; };
 		F8566F17201BC3F6005E9950 /* Float+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8566F16201BC3F6005E9950 /* Float+Formatter.swift */; };
+		F8566F20201BF115005E9950 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8566F1F201BF115005E9950 /* ChartView.swift */; };
+		F8566F25201C0E2E005E9950 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8566F24201C0E2E005E9950 /* Button.swift */; };
+		F8566F27201C0E54005E9950 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8566F26201C0E54005E9950 /* UIView+Shadow.swift */; };
+		F8566F2B201C1699005E9950 /* UserDefaults+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8566F2A201C1699005E9950 /* UserDefaults+App.swift */; };
 		F8635767201AA57B00FB886B /* AppDelegate+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8635766201AA57B00FB886B /* AppDelegate+Setup.swift */; };
 		F8635769201AA7CF00FB886B /* RemoteConfig+Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8635768201AA7CF00FB886B /* RemoteConfig+Fetch.swift */; };
 		F8635771201AAC8800FB886B /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = F863576E201AAC8800FB886B /* RemoteConfigDefaults.plist */; };
@@ -62,16 +72,26 @@
 		664C18CFF9DED32C6060BE52 /* Pods_BitPriceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitPriceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B34BFFBF5AF27B7753AEF30 /* Pods_BitPrice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitPrice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E040B7A9DD2ED0787D6FD566 /* Pods-BitPrice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitPrice.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitPrice/Pods-BitPrice.release.xcconfig"; sourceTree = "<group>"; };
+		F84D2AFF201C8AD1003B8455 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F84D2B00201C8AD1003B8455 /* ViewController+HeaderDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+HeaderDelegate.swift"; sourceTree = "<group>"; };
+		F84D2B02201C8AD1003B8455 /* BodyHistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyHistoryView.swift; sourceTree = "<group>"; };
+		F84D2B03201C8AD1003B8455 /* BodyPriceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyPriceView.swift; sourceTree = "<group>"; };
+		F84D2B04201C8AD1003B8455 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		F84D2B05201C8AD1003B8455 /* BodyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyView.swift; sourceTree = "<group>"; };
+		F84D2B06201C8AD1003B8455 /* FooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		F84D2B07201C8AD1003B8455 /* ViewController+FooterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+FooterDelegate.swift"; sourceTree = "<group>"; };
 		F8566EF8201B2EAC005E9950 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		F8566EFA201B2F3A005E9950 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		F8566EFD201B7ED8005E9950 /* PriceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceViewController.swift; sourceTree = "<group>"; };
-		F8566F06201B84E9005E9950 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 		F8566F08201B85F4005E9950 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		F8566F0A201B8631005E9950 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F8566F0B201B863D005E9950 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		F8566F10201BBD0E005E9950 /* ReferenceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceType.swift; sourceTree = "<group>"; };
 		F8566F12201BC0CB005E9950 /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
 		F8566F16201BC3F6005E9950 /* Float+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Formatter.swift"; sourceTree = "<group>"; };
+		F8566F1F201BF115005E9950 /* ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		F8566F24201C0E2E005E9950 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		F8566F26201C0E54005E9950 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
+		F8566F2A201C1699005E9950 /* UserDefaults+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+App.swift"; sourceTree = "<group>"; };
 		F8635766201AA57B00FB886B /* AppDelegate+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Setup.swift"; sourceTree = "<group>"; };
 		F8635768201AA7CF00FB886B /* RemoteConfig+Fetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RemoteConfig+Fetch.swift"; sourceTree = "<group>"; };
 		F863576C201AAC8800FB886B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -147,6 +167,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F84D2B01201C8AD1003B8455 /* Body */ = {
+			isa = PBXGroup;
+			children = (
+				F84D2B02201C8AD1003B8455 /* BodyHistoryView.swift */,
+				F84D2B03201C8AD1003B8455 /* BodyPriceView.swift */,
+			);
+			path = Body;
+			sourceTree = "<group>";
+		};
 		F8566EF7201B2E83005E9950 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,13 +184,20 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
-		F8566EFC201B7ED8005E9950 /* Price */ = {
+		F8566F1E201BF115005E9950 /* LineChartView */ = {
 			isa = PBXGroup;
 			children = (
-				F8566EFD201B7ED8005E9950 /* PriceViewController.swift */,
-				F8566F06201B84E9005E9950 /* PriceView.swift */,
+				F8566F1F201BF115005E9950 /* ChartView.swift */,
 			);
-			path = Price;
+			path = LineChartView;
+			sourceTree = "<group>";
+		};
+		F8566F23201C0E1D005E9950 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				F8566F24201C0E2E005E9950 /* Button.swift */,
+			);
+			path = UIButton;
 			sourceTree = "<group>";
 		};
 		F863576A201AAC8800FB886B /* Firebase */ = {
@@ -200,7 +236,13 @@
 		F864D645201A947000EF7028 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F8566EFC201B7ED8005E9950 /* Price */,
+				F84D2AFF201C8AD1003B8455 /* ViewController.swift */,
+				F84D2B00201C8AD1003B8455 /* ViewController+HeaderDelegate.swift */,
+				F84D2B07201C8AD1003B8455 /* ViewController+FooterDelegate.swift */,
+				F84D2B04201C8AD1003B8455 /* HeaderView.swift */,
+				F84D2B05201C8AD1003B8455 /* BodyView.swift */,
+				F84D2B06201C8AD1003B8455 /* FooterView.swift */,
+				F84D2B01201C8AD1003B8455 /* Body */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -215,6 +257,8 @@
 				F8566F08201B85F4005E9950 /* String+Localized.swift */,
 				F8566EF8201B2EAC005E9950 /* UIColor+App.swift */,
 				F87C6AF3201AC55A00BB968F /* UIFont+App.swift */,
+				F8566F26201C0E54005E9950 /* UIView+Shadow.swift */,
+				F8566F2A201C1699005E9950 /* UserDefaults+App.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -237,6 +281,8 @@
 		F864D64A201A947000EF7028 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F8566F1E201BF115005E9950 /* LineChartView */,
+				F8566F23201C0E1D005E9950 /* UIButton */,
 				F8566EF7201B2E83005E9950 /* UIView */,
 			);
 			path = UI;
@@ -660,18 +706,28 @@
 			files = (
 				F8635769201AA7CF00FB886B /* RemoteConfig+Fetch.swift in Sources */,
 				F8566EFB201B2F3A005E9950 /* CardView.swift in Sources */,
+				F84D2B0B201C8AD1003B8455 /* BodyPriceView.swift in Sources */,
 				F8635767201AA57B00FB886B /* AppDelegate+Setup.swift in Sources */,
-				F8566EFE201B7ED8005E9950 /* PriceViewController.swift in Sources */,
 				F8566F11201BBD0E005E9950 /* ReferenceType.swift in Sources */,
+				F84D2B0A201C8AD1003B8455 /* BodyHistoryView.swift in Sources */,
+				F84D2B0D201C8AD1003B8455 /* BodyView.swift in Sources */,
 				F8566F17201BC3F6005E9950 /* Float+Formatter.swift in Sources */,
-				F8566F07201B84E9005E9950 /* PriceView.swift in Sources */,
+				F8566F25201C0E2E005E9950 /* Button.swift in Sources */,
+				F8566F20201BF115005E9950 /* ChartView.swift in Sources */,
 				F864D654201A947000EF7028 /* AppDelegate.swift in Sources */,
+				F8566F2B201C1699005E9950 /* UserDefaults+App.swift in Sources */,
+				F84D2B09201C8AD1003B8455 /* ViewController+HeaderDelegate.swift in Sources */,
+				F84D2B08201C8AD1003B8455 /* ViewController.swift in Sources */,
+				F84D2B0C201C8AD1003B8455 /* HeaderView.swift in Sources */,
 				F864D65D201A947600EF7028 /* BitPrice.xcdatamodeld in Sources */,
+				F8566F27201C0E54005E9950 /* UIView+Shadow.swift in Sources */,
+				F84D2B0F201C8AD1003B8455 /* ViewController+FooterDelegate.swift in Sources */,
 				F8566EF9201B2EAC005E9950 /* UIColor+App.swift in Sources */,
 				F87C6AF4201AC55A00BB968F /* UIFont+App.swift in Sources */,
 				F8566F09201B85F4005E9950 /* String+Localized.swift in Sources */,
 				F8566F13201BC0CB005E9950 /* Date+Formatter.swift in Sources */,
 				F864D66E201A975A00EF7028 /* CoreDataStack.swift in Sources */,
+				F84D2B0E201C8AD1003B8455 /* FooterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
