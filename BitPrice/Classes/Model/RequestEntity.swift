@@ -10,14 +10,28 @@ import Foundation
 import CoreData
 
 @objc(RequestEntity)
-public class RequestEntity: NSManagedObject {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<RequestEntity> {
-        return NSFetchRequest<RequestEntity>(entityName: "RequestEntity")
+class RequestEntity: NSManagedObject {
+    
+    @NSManaged var url: String
+    @NSManaged var responseBody: String
+    @NSManaged var date: Date
+    
+    // MARK: - Public
+    
+    class func fetchEntity() -> NSEntityDescription {
+        return NSEntityDescription.entity(forEntityName: RequestEntity.className,
+                                          in: CoreDataStack.shared.context)!
     }
     
-    @NSManaged public var date: NSDate
-    @NSManaged public var responseBody: String
-    @NSManaged public var url: String
+    class func fetchRequest() -> NSFetchRequest<RequestEntity> {
+        return NSFetchRequest<RequestEntity>(entityName: RequestEntity.className)
+    }
+    
+    convenience init(url: String, responseBody: String, date: Date) {
+        self.init(entity: RequestEntity.fetchEntity(), insertInto: CoreDataStack.shared.context)
+        self.url = url
+        self.responseBody = responseBody
+        self.date = date
+    }
     
 }
