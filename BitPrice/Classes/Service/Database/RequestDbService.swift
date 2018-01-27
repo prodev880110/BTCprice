@@ -11,6 +11,8 @@ import Foundation
 
 class RequestDbService {
 
+    // MARK: - Public
+    
     func insert(url: String, responseBody: String, date: Date) {
         let stack = CoreDataStack.shared
         let context = stack.context
@@ -41,6 +43,20 @@ class RequestDbService {
         return request
     }
     
+    func fetch() -> [RequestEntity]? {
+        let context = CoreDataStack.shared.context
+        let fetchRequest: NSFetchRequest<RequestEntity> = RequestEntity.fetchRequest()
+        var requests: [RequestEntity]?
+        
+        do {
+            requests = try context.fetch(fetchRequest) as [RequestEntity]?
+        } catch let error {
+            debugPrint("error: \(error)")
+        }
+        
+        return requests
+    }
+    
     func delete(url: String) {
         let stack = CoreDataStack.shared
         let context = stack.context
@@ -52,4 +68,17 @@ class RequestDbService {
         }
     }
     
+    func delete() {
+        let stack = CoreDataStack.shared
+        let context = stack.context
+        let requests = fetch()
+        
+        if let requests = requests {
+            for request in requests {
+                context.delete(request)
+            }
+            stack.saveContext()
+        }
+    }
+
 }

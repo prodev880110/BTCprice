@@ -22,19 +22,19 @@ class MarketPriceApiServiceTest: ApiServiceTest {
     
     // MARK: - Test
     
-    func testGetMarkePriceApiServiceWeek() {
+    func testGetWeekMarkePriceApiService() {
         get(referenceType: .week)
     }
     
-    func testGetMarkePriceApiServiceMonth() {
+    func testGetMonthMarkePriceApiService() {
         get(referenceType: .month)
     }
     
-    func testGetMarkePriceApiServiceYear() {
+    func testGetYearMarkePriceApiService() {
         get(referenceType: .year)
     }
     
-    func testGetMarkePriceApiServiceAll() {
+    func testGetAllMarkePriceApiService() {
         get(referenceType: .all)
     }
     
