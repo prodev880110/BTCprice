@@ -57,6 +57,7 @@
 		F8EB80B7201CFAAC00AD9087 /* ApiServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB80B4201CFAAC00AD9087 /* ApiServiceTest.swift */; };
 		F8EB80B8201CFAAC00AD9087 /* MarketPriceApiServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB80B5201CFAAC00AD9087 /* MarketPriceApiServiceTest.swift */; };
 		F8EB80B9201CFAAC00AD9087 /* TickerApiServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB80B6201CFAAC00AD9087 /* TickerApiServiceTest.swift */; };
+		F8EB80BC201CFBBC00AD9087 /* RequestDbServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB80BB201CFBBC00AD9087 /* RequestDbServiceTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +143,7 @@
 		F8EB80B4201CFAAC00AD9087 /* ApiServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServiceTest.swift; sourceTree = "<group>"; };
 		F8EB80B5201CFAAC00AD9087 /* MarketPriceApiServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketPriceApiServiceTest.swift; sourceTree = "<group>"; };
 		F8EB80B6201CFAAC00AD9087 /* TickerApiServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerApiServiceTest.swift; sourceTree = "<group>"; };
+		F8EB80BB201CFBBC00AD9087 /* RequestDbServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDbServiceTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -446,6 +448,7 @@
 		F8EB80BA201CFAB100AD9087 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				F8EB80BB201CFBBC00AD9087 /* RequestDbServiceTest.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -832,6 +835,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8EB80B8201CFAAC00AD9087 /* MarketPriceApiServiceTest.swift in Sources */,
+				F8EB80BC201CFBBC00AD9087 /* RequestDbServiceTest.swift in Sources */,
 				F8EB80B9201CFAAC00AD9087 /* TickerApiServiceTest.swift in Sources */,
 				F8EB80B7201CFAAC00AD9087 /* ApiServiceTest.swift in Sources */,
 			);
