@@ -14,10 +14,12 @@ extension AppDelegate {
     
     func setupFirebase() {
         FirebaseApp.configure()
+        /*
         #if DEBUG
             FirebaseConfiguration.shared.setLoggerLevel(.debug)
             Fabric.sharedSDK().debug = true
         #endif
+        */
     }
     
     func setupRemoteConfig() {
