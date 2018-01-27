@@ -21,7 +21,7 @@
 
 // MARK: - PriceReferenceType
 
-"price_ref_type.day" = "Day";
+"price_ref_type.week" = "Week";
 "price_ref_type.month" = "Month";
 "price_ref_type.year" = "Year";
 "price_ref_type.all" = "All";

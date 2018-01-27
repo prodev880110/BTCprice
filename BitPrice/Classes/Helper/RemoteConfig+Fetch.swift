@@ -14,11 +14,11 @@ extension RemoteConfig {
         let expirationDuration = configSettings.isDeveloperModeEnabled ? 0 : 3600
         fetch(withExpirationDuration: TimeInterval(expirationDuration)) { (status, error) in
             if status == .success {
-                print("Config fetched!")
+                debugPrint("Config fetched!")
                 self.activateFetched()
             } else {
-                print("Config not fetched")
-                print("Error: \(error?.localizedDescription ?? "No error available.")")
+                debugPrint("Config not fetched")
+                debugPrint("Error: \(error?.localizedDescription ?? "No error available.")")
             }
         }
     }

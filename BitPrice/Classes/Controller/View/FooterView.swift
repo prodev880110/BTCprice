@@ -12,7 +12,7 @@ class FooterView: UIView {
     
     // MARK: - Outlets
     
-    @IBOutlet private weak var dayButton: Button!
+    @IBOutlet private weak var weekButton: Button!
     @IBOutlet private weak var monthButton: Button!
     @IBOutlet private weak var yearButton: Button!
     @IBOutlet private weak var allButton: Button!
@@ -26,7 +26,7 @@ class FooterView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         unselectAll()
-        dayButton.setTitle(ReferenceType.day.rawValue.localized, for: .normal)
+        weekButton.setTitle(ReferenceType.week.rawValue.localized, for: .normal)
         monthButton.setTitle(ReferenceType.month.rawValue.localized, for: .normal)
         yearButton.setTitle(ReferenceType.year.rawValue.localized, for: .normal)
         allButton.setTitle(ReferenceType.all.rawValue.localized, for: .normal)
@@ -39,8 +39,8 @@ class FooterView: UIView {
         let button: Button
         
         switch type {
-        case .day:
-            button = dayButton
+        case .week:
+            button = weekButton
         case .month:
             button = monthButton
         case .year:
@@ -59,8 +59,8 @@ class FooterView: UIView {
         sender.isSelected = true
         let type: ReferenceType
         
-        if sender == dayButton {
-            type = .day
+        if sender == weekButton {
+            type = .week
         } else if sender == monthButton {
             type = .month
         } else if sender == yearButton {
@@ -75,7 +75,7 @@ class FooterView: UIView {
     // MARK: - Private
     
     private func unselectAll() {
-        dayButton.isSelected = false
+        weekButton.isSelected = false
         monthButton.isSelected = false
         yearButton.isSelected = false
         allButton.isSelected = false

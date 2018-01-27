@@ -25,7 +25,7 @@ extension UserDefaults {
             type = ReferenceType(rawValue: (storedValue as! String))
         }
         
-        return type ?? ReferenceType.day
+        return type ?? ReferenceType.week
     }
     
     func setReference(_ type: ReferenceType) {
