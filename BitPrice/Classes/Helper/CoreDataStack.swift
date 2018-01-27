@@ -11,6 +11,45 @@ import CoreData
 class CoreDataStack {
     
     private let containerName = "BitPrice"
+    static let shared = CoreDataStack()
+    
+    private init() { }
+    
+    // MARK: - Variable
+    
+    lazy var context: NSManagedObjectContext = {
+        if #available(iOS 10, *) {
+            return persistentContainer.viewContext
+        } else {
+            return managedObjectContext
+        }
+    }()
+    
+    // MARK: - Public
+    
+    func saveContext() {
+        if #available(iOS 10, *) {
+            let context = persistentContainer.viewContext
+            if context.hasChanges {
+                do {
+                    try context.save()
+                } catch {
+                    let nserror = error as NSError
+                    fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                }
+            }
+            return
+        }
+        
+        if managedObjectContext.hasChanges {
+            do {
+                try managedObjectContext.save()
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+    }
     
     // MARK: - Core Data stack for iOS 10+
     
@@ -53,45 +92,13 @@ class CoreDataStack {
         return coordinator
     }()
     
-    private lazy var managedObjectContext: NSManagedObjectContext? = {
+    private lazy var managedObjectContext: NSManagedObjectContext = {
         let coordinator = self.persistentStoreCoordinator
-        if coordinator == nil {
-            return nil
-        }
-        
+
         var managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         managedObjectContext.persistentStoreCoordinator = coordinator
+        
         return managedObjectContext
     }()
-    
-    // MARK: - Core Data Saving support
-    
-    func saveContext() {
-        // iOS 10+
-        if #available(iOS 10, *) {
-            let context = persistentContainer.viewContext
-            if context.hasChanges {
-                do {
-                    try context.save()
-                } catch {
-                    let nserror = error as NSError
-                    fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-                }
-            }
-            return
-        }
-        
-        // iOS 9+
-        if let managedObjectContext = self.managedObjectContext {
-            if managedObjectContext.hasChanges {
-                do {
-                    try managedObjectContext.save()
-                } catch {
-                    let nserror = error as NSError
-                    fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-                }
-            }
-        }
-    }
     
 }
