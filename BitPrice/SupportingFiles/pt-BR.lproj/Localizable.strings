@@ -5,3 +5,23 @@
   Created by Bruno Tortato Furtado on 25/01/18.
   Copyright © 2018 Bruno Tortato Furtado. All rights reserved.
 */
+
+// MARK: - PriceView
+
+"price_view.title" = "Preço do Bitcoin";
+"price_view.date_format" = "dd/MM/yyyy HH:mm";
+
+// MARK: - PriceHistoryView
+
+"price_history_view.price" = "Histórico de preço";
+
+// MARK: - ChatView
+
+"chat_view.no_data" = "Não há dados disponíveis.";
+
+// MARK: - PriceReferenceType
+
+"price_ref_type.day" = "Dia";
+"price_ref_type.month" = "Mês";
+"price_ref_type.year" = "Ano";
+"price_ref_type.all" = "Tudo";
