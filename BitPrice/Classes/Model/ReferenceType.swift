@@ -10,9 +10,9 @@ import Foundation
 
 enum ReferenceType: String {
 
-    case week = "price_ref_type.week"
-    case month = "price_ref_type.month"
-    case year = "price_ref_type.year"
-    case all = "price_ref_type.all"
+    case week = "reference_type.week"
+    case month = "reference_type.month"
+    case year = "reference_type.year"
+    case all = "reference_type.all"
     
 }
