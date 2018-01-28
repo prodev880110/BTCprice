@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  BitPrice
+
+  Created by Bruno Tortato Furtado on 25/01/18.
+  Copyright © 2018 Bruno Tortato Furtado. All rights reserved.
+*/
+
+// MARK: - BodyPriceView
+
+"body_price_view.title" = "Bitcoin Price";
+"body_price_view.date_format" = "yyyy-MM-dd hh:mm a";
+
+// MARK: - BodyHistoryView
+
+"body_history_view.price" = "History Price";
+
+// MARK: - ChatView
+
+"chart_view.no_data" = "No chart data available.";
+"chart_view.date_format" = "yy-MM-dd";
+
+// MARK: - ReferenceType
+
+"reference_type.week" = "Week";
+"reference_type.month" = "Month";
+"reference_type.year" = "Year";
+"reference_type.all" = "All";
