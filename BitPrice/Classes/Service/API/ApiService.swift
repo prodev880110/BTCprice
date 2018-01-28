@@ -14,6 +14,7 @@ class ApiService {
     let sessionManager: SessionManager = {
         let conf = URLSessionConfiguration.default
         
+        conf.requestCachePolicy = .reloadIgnoringLocalCacheData
         conf.timeoutIntervalForRequest = Params.timeout
         conf.timeoutIntervalForResource = Params.timeout
         
