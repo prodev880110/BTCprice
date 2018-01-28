@@ -1,4 +1,5 @@
 # OS X
+#
 [Tt]humbs.db
 .DS_Store
 profile
@@ -46,10 +47,10 @@ playground.xcworkspace
 ## CocoaPods
 #
 Pods/
+!Podfile.lock
 
 ## fastlane
 #
-
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
