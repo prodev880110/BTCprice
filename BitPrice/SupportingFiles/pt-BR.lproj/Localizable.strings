@@ -6,22 +6,23 @@
   Copyright © 2018 Bruno Tortato Furtado. All rights reserved.
 */
 
-// MARK: - PriceView
+// MARK: - BodyPriceView
 
-"price_view.title" = "Preço do Bitcoin";
-"price_view.date_format" = "dd/MM/yyyy HH:mm";
+"body_price_view.title" = "Preço do Bitcoin";
+"body_price_view.date_format" = "dd/MM/yyyy HH:mm";
 
-// MARK: - PriceHistoryView
+// MARK: - BodyHistoryView
 
-"price_history_view.price" = "Histórico de preço";
+"body_history_view.price" = "Histórico de preço";
 
-// MARK: - ChatView
+// MARK: - ChartView
 
-"chat_view.no_data" = "Não há dados disponíveis.";
+"chart_view.no_data" = "Não há dados disponíveis.";
+"chart_view.date_format" = "dd/MM/yy";
 
-// MARK: - PriceReferenceType
+// MARK: - ReferenceType
 
-"price_ref_type.week" = "Semana";
-"price_ref_type.month" = "Mês";
-"price_ref_type.year" = "Ano";
-"price_ref_type.all" = "Tudo";
+"reference_type.week" = "Semana";
+"reference_type.month" = "Mês";
+"reference_type.year" = "Ano";
+"reference_type.all" = "Tudo";
