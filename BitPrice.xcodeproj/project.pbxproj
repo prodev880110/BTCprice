@@ -54,7 +54,7 @@
 		F8A704CC201CC3410015C071 /* Date+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704CB201CC3410015C071 /* Date+Components.swift */; };
 		F8C05D3D201CE51B0081AB33 /* RequestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C05D3B201CE51B0081AB33 /* RequestEntity.swift */; };
 		F8D9D9B7201A925A002F2DCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D9D9B6201A925A002F2DCC /* Assets.xcassets */; };
-		F8D9D9D0201A925A002F2DCC /* BitPriceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D9D9CF201A925A002F2DCC /* BitPriceUITests.swift */; };
+		F8D9D9D0201A925A002F2DCC /* ViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D9D9CF201A925A002F2DCC /* ViewControllerUITests.swift */; };
 		F8EB80AE201CE84300AD9087 /* RequestDbService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB80AD201CE84300AD9087 /* RequestDbService.swift */; };
 		F8EB80B2201CE91000AD9087 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB80B1201CE91000AD9087 /* NSObject+ClassName.swift */; };
 		F8EB80B7201CFAAC00AD9087 /* ApiServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB80B4201CFAAC00AD9087 /* ApiServiceTest.swift */; };
@@ -142,7 +142,7 @@
 		F8D9D9C0201A925A002F2DCC /* BitPriceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitPriceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D9D9C6201A925A002F2DCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8D9D9CB201A925A002F2DCC /* BitPriceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitPriceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8D9D9CF201A925A002F2DCC /* BitPriceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitPriceUITests.swift; sourceTree = "<group>"; };
+		F8D9D9CF201A925A002F2DCC /* ViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerUITests.swift; sourceTree = "<group>"; };
 		F8D9D9D1201A925A002F2DCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8EB80AD201CE84300AD9087 /* RequestDbService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDbService.swift; sourceTree = "<group>"; };
 		F8EB80B1201CE91000AD9087 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
@@ -430,7 +430,7 @@
 		F8D9D9CE201A925A002F2DCC /* BitPriceUITests */ = {
 			isa = PBXGroup;
 			children = (
-				F8D9D9CF201A925A002F2DCC /* BitPriceUITests.swift */,
+				F8D9D9CF201A925A002F2DCC /* ViewControllerUITests.swift */,
 				F8D9D9D1201A925A002F2DCC /* Info.plist */,
 			);
 			path = BitPriceUITests;
@@ -857,7 +857,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8D9D9D0201A925A002F2DCC /* BitPriceUITests.swift in Sources */,
+				F8D9D9D0201A925A002F2DCC /* ViewControllerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
