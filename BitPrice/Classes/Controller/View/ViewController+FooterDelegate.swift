@@ -12,7 +12,7 @@ extension ViewController: FooterViewDelegate {
     
     func footerViewButtonDidSelect(type: ReferenceType) {
         UserDefaults.standard.setReference(type)
-        bodyView.setReference(type)
+        callServices(reference: type)
     }
     
 }

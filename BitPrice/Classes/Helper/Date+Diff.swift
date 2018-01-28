@@ -1,5 +1,5 @@
 //
-//  Ticker.swift
+//  Date+Diff.swift
 //  BitPrice
 //
 //  Created by Bruno Tortato Furtado on 27/01/18.
@@ -8,12 +8,10 @@
 
 import Foundation
 
-struct Ticker: Decodable {
+extension Date {
     
-    let USD: TickerItem
-    
-    struct TickerItem: Decodable {
-        let last: Float
+    func years(from date: Date) -> Int {
+        return Calendar.current.dateComponents([.year], from: date, to: self).year ?? 0
     }
     
 }

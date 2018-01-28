@@ -16,8 +16,8 @@ class MarketPriceApiService: ApiService {
     
     // MARK: - Public
     
-    func get(referenceType: ReferenceType) {
-        let params = parameters(referenceType: referenceType)
+    func get(reference: ReferenceType) {
+        let params = parameters(reference: reference)
         _ = self.sessionManager.request(MarketPriceApiRouter.get(params))
             .validate(statusCode: [200])
             .responseJSON { response in
@@ -42,35 +42,29 @@ class MarketPriceApiService: ApiService {
     
     // MARK: - Private
     
-    private func parameters(referenceType: ReferenceType) -> [String: String] {
-        let timespan: String?
-        let start: Date?
+    private func parameters(reference: ReferenceType) -> [String: String] {
+        let start: Date
+        let timespan: String
         
-        switch referenceType {
+        switch reference {
         case .week:
-            timespan = "1weeks"
             start = Date().startOfWeek
+            timespan = "1weeks"
         case .month:
-            timespan = "1months"
             start = Date().startOfMonth
+            timespan = "1months"
         case .year:
-            timespan = "1years"
             start = Date().startOfYear
+            timespan = "1years"
         case .all:
-            timespan = nil
-            start = nil
+            start = Date().startOfBitcoin
+            timespan = "\(Date().years(from: start))years"
         }
         
         var params: [String: String] = [:]
+        params["start"] = start.toString(dateFormat: "yyyy-MM-dd")
+        params["timespan"] = timespan
         params["format"] = "json"
-        
-        if let timespan = timespan {
-            params["timespan"] = timespan
-        }
-        
-        if let start = start {
-            params["start"] = start.toString(dateFormat: "yyyy-MM-dd")
-        }
         
         return params
     }

@@ -24,5 +24,9 @@ extension Date {
         let calendar = Calendar.current
         return calendar.date(from: calendar.dateComponents([.year], from: self))!
     }
+    
+    var startOfBitcoin: Date {
+        return Date.fromString("2009-01-03", dateFormat: "yyyy-MM-dd")
+    }
 
 }
