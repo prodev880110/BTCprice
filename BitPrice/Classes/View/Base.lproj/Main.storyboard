@@ -40,6 +40,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOd-U2-kcQ" userLabel="refreshButton">
                                         <rect key="frame" x="317" y="0.0" width="28" height="28"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="refreshButton"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="dme-Vc-DrP"/>
                                             <constraint firstAttribute="width" constant="28" id="idc-xE-qyb"/>
@@ -206,6 +207,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTb-PV-KfN" userLabel="weekButton" customClass="Button" customModule="BitPrice" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="45"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="weekButton"/>
                                         <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="15"/>
                                         <state key="normal" title="Week">
                                             <color key="titleColor" red="0.29803921570000003" green="0.25882352939999997" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -223,6 +225,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdh-Qa-H56" userLabel="monthButton" customClass="Button" customModule="BitPrice" customModuleProvider="target">
                                         <rect key="frame" x="90" y="0.0" width="75" height="45"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="monthButton"/>
                                         <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="15"/>
                                         <state key="normal" title="Month">
                                             <color key="titleColor" red="0.29803921570000003" green="0.25882352939999997" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -240,6 +243,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaN-Yt-MHZ" userLabel="yearButton" customClass="Button" customModule="BitPrice" customModuleProvider="target">
                                         <rect key="frame" x="180" y="0.0" width="75" height="45"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="yearButton"/>
                                         <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="15"/>
                                         <state key="normal" title="Year">
                                             <color key="titleColor" red="0.29803921570000003" green="0.25882352939999997" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -257,6 +261,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnK-QG-YYW" userLabel="allButton" customClass="Button" customModule="BitPrice" customModuleProvider="target">
                                         <rect key="frame" x="270" y="0.0" width="75" height="45"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="allButton"/>
                                         <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="15"/>
                                         <state key="normal" title="All">
                                             <color key="titleColor" red="0.29803921570000003" green="0.25882352939999997" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
