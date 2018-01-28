@@ -36,7 +36,7 @@ Este código-fonte é distribuído sob os termos e condições da [MIT](LICENSE)
 
 # Change-log
 
-Um resumo sobre cada versão do BitPrice pode ser encontrado nas [releases](https://github.com/Bruno-Furtado/bitprice-ios/releases)
+Um resumo sobre cada versão do BitPrice pode ser encontrado nas [releases](https://github.com/Bruno-Furtado/bitprice-ios/releases).
 
 [swift-badge]: https://img.shields.io/badge/swift-4.0-orange.svg?style=flat
 [swift-url]: https://swift.org
