@@ -23,25 +23,25 @@ class MarketPriceApiServiceTest: ApiServiceTest {
     // MARK: - Test
     
     func testGetWeekMarkePriceApiService() {
-        get(referenceType: .week)
+        get(reference: .week)
     }
     
     func testGetMonthMarkePriceApiService() {
-        get(referenceType: .month)
+        get(reference: .month)
     }
     
     func testGetYearMarkePriceApiService() {
-        get(referenceType: .year)
+        get(reference: .year)
     }
     
     func testGetAllMarkePriceApiService() {
-        get(referenceType: .all)
+        get(reference: .all)
     }
     
     // MARK: - Private
     
-    private func get(referenceType: ReferenceType) {
-        service.get(referenceType: referenceType)
+    private func get(reference: ReferenceType) {
+        service.get(reference: reference)
         waitForExpectations(timeout: ApiService.Params.timeout, handler: nil)
     }
     
