@@ -26,6 +26,10 @@ O BitPrice é um aplicativo que apresenta o histórico de preços do Bitcoin.
 - Abrir o terminal e executar o comando na raiz do projeto: `pod install`
 - Abrir o arquivo `BitPrice.xcworkspace`, localizado na raiz do projeto
 
+# Outras informaçes
+
+- Para mais informações (ambientes, testes, ferramentas e outros) acesse a [wiki](https://github.com/Bruno-Furtado/bitprice-ios/wiki).
+
 # Licença
 
 Este código-fonte é distribuído sob os termos e condições da [MIT](LICENSE).
