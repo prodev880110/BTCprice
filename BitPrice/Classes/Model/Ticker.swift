@@ -11,7 +11,6 @@ import Foundation
 struct Ticker: Decodable {
     
     let USD: TickerItem
-    let BRL: TickerItem
     
     struct TickerItem: Decodable {
         let last: Float
