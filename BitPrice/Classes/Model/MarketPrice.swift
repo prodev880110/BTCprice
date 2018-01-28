@@ -10,8 +10,6 @@ import Foundation
 
 struct MarketPrice: Decodable {
     
-    let period: String
-    let unit: String
     let values: [Value]
     
     struct Value: Decodable {
