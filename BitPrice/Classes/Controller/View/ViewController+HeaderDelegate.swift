@@ -11,7 +11,8 @@ import UIKit
 extension ViewController: HeaderViewDelegate {
     
     func headerViewRefreshDidSelect() {
-        debugPrint("headerViewRefreshDidSelect")
+        let ref = UserDefaults.standard.reference()
+        callServices(reference: ref)
     }
     
 }
