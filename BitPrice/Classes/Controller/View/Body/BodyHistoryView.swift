@@ -23,20 +23,15 @@ class BodyHistoryView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupChart()
-        self.titleLabel.text = "price_history_view.price".localized
+        self.titleLabel.text = "body_history_view.price".localized
         self.referenceLabel.text = nil
         self.percentLabel.text = nil
     }
     
     // MARK: - Public
     
-    func setReference(_ type: ReferenceType) {
-        self.referenceLabel.text = type.rawValue.localized
-    }
-    
-    func setPrices(referencePrice: Float, currentPrice: Float) {
-        let diff = (currentPrice - referencePrice)
+    func setPrices(firstPrice: Float, lastPrice: Float) {
+        let diff = (lastPrice - firstPrice)
         let color: UIColor
         let imageName: String?
         
@@ -52,7 +47,12 @@ class BodyHistoryView: UIView {
         }
         
         setIndicatorImage(imageName: imageName)
-        setPercent(referencePrice: referencePrice, currentPrice: currentPrice, color: color)
+        setPercent(firstPrice: firstPrice, lastPrice: lastPrice, color: color)
+    }
+    
+    func setChartData(reference: ReferenceType, values: [ChartDataEntry]) {
+        self.referenceLabel.text = reference.rawValue.localized
+        chartView.setData(values: values)
     }
     
     // MARK: - Private
@@ -63,23 +63,10 @@ class BodyHistoryView: UIView {
         }
     }
     
-    private func setPercent(referencePrice: Float, currentPrice: Float, color: UIColor) {
-        let percent = abs(1 - (currentPrice / referencePrice))
+    private func setPercent(firstPrice: Float, lastPrice: Float, color: UIColor) {
+        let percent = abs(1 - (lastPrice / firstPrice))
         self.percentLabel.text = percent.toPercentString()
         self.percentLabel.textColor = color
-    }
-    
-    private func setupChart() {
-        var values = [ChartDataEntry]()
-        
-        for i in 0 ..< 20 {
-            let x = Double(i)
-            let y = Double(arc4random_uniform(50))
-            let value = ChartDataEntry(x: x, y: y)
-            values.append(value)
-        }
-        
-        chartView.setData(values: values)
     }
     
 }
