@@ -27,19 +27,19 @@ class RequestDbServiceTest: XCTestCase {
     
     // MARK: - Test
     
-    func testInsertAndFetchUrlRequestDbService() {
-        let url = "http://www.ab.com"
-        service.insert(url: url, responseBody: "{ 1 : 1 }", date: Date())
-        XCTAssert(service.fetch(url: url) != nil)
+    func testInsertAndFetchReferenceRequestDbService() {
+        let ref = ReferenceType.week.rawValue
+        service.insert(reference: ref, responseBody: "{ 1 : 1 }", date: Date())
+        XCTAssert(service.fetch(reference: ref) != nil)
     }
     
-    func testDeleteAndFetchUrlRequestDbService() {
-        let url = "http://www.fg.com"
-        service.insert(url: url, responseBody: "{ 2 : 2 }", date: Date())
+    func testDeleteAndFetchReferenceRequestDbService() {
+        let ref = ReferenceType.month.rawValue
+        service.insert(reference: ref, responseBody: "{ 2 : 2 }", date: Date())
         
-        if service.fetch(url: url) != nil {
-            service.delete(url: url)
-            XCTAssert(service.fetch(url: url) == nil)
+        if service.fetch(reference: ref) != nil {
+            service.delete(reference: ref)
+            XCTAssert(service.fetch(reference: ref) == nil)
             return
         }
         
@@ -47,8 +47,13 @@ class RequestDbServiceTest: XCTestCase {
     }
     
     func testDeleteAndFetchRequestDbService() {
-        service.insert(url: "http://www.hi.com", responseBody: "{ 3 : 3 }", date: Date())
-        service.insert(url: "http://www.jk.com", responseBody: "{ 4 : 4 }", date: Date())
+        service.insert(reference: ReferenceType.all.rawValue,
+                       responseBody: "{ 3 : 3 }",
+                       date: Date())
+        
+        service.insert(reference: ReferenceType.week.rawValue,
+                       responseBody: "{ 4 : 4 }",
+                       date: Date())
         
         if let requests = service.fetch() {
             if requests.count > 1 {
