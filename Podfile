@@ -5,11 +5,11 @@ target 'BitPrice' do
     
     # Alamofire (HTTP networking)
     # https://github.com/Alamofire/Alamofire
-    pod 'Alamofire', '~> 4.5'
+    pod 'Alamofire', '~> 4.6.0'
     
     # Charts (Beautiful charts for iOS/tvOS/OSX)
     # https://github.com/danielgindi/Charts
-    pod 'Charts'
+    pod 'Charts', '~> 3.0.5'
     
     # Crashlytics (crash reporting solution)
     # https://fabric.io/kits/ios/crashlytics/install
@@ -18,9 +18,9 @@ target 'BitPrice' do
     
     # Firebase (push notifications, performance report and remote config)
     # https://firebase.google.com/docs/ios/setup?hl=pt-br
-    pod 'Firebase/Core'
-    pod 'Firebase/Performance'
-    pod 'Firebase/RemoteConfig'
+    pod 'Firebase/Core', '~> 4.8.2'
+    pod 'Firebase/Performance', '~> 4.8.2'
+    pod 'Firebase/RemoteConfig', '~> 4.8.2'
     
     target 'BitPriceTests' do
         inherit! :search_paths
