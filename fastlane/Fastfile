@@ -18,7 +18,7 @@ default_platform(:ios)
 platform :ios do
   before_all do
   	setup_travis
-    cocoapods
+    cocoapods(repo_update: true)
   end
 
   desc "Runs all the tests"
