@@ -29,13 +29,13 @@ class RequestDbServiceTest: XCTestCase {
     
     func testInsertAndFetchReferenceRequestDbService() {
         let ref = ReferenceType.week.rawValue
-        service.insert(reference: ref, data: Data(), date: Date())
+        service.insert(reference: ref, responseBody: "", date: Date())
         XCTAssert(service.fetch(reference: ref) != nil)
     }
     
     func testDeleteAndFetchReferenceRequestDbService() {
         let ref = ReferenceType.month.rawValue
-        service.insert(reference: ref, data: Data(), date: Date())
+        service.insert(reference: ref, responseBody: "", date: Date())
         
         if service.fetch(reference: ref) != nil {
             service.delete(reference: ref)
@@ -48,11 +48,11 @@ class RequestDbServiceTest: XCTestCase {
     
     func testDeleteAndFetchRequestDbService() {
         service.insert(reference: ReferenceType.all.rawValue,
-                       data: Data(),
+                       responseBody: "",
                        date: Date())
         
         service.insert(reference: ReferenceType.week.rawValue,
-                       data: Data(),
+                       responseBody: "",
                        date: Date())
         
         if let requests = service.fetch() {
