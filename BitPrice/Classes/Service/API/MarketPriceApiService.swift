@@ -15,7 +15,9 @@ class MarketPriceApiService: ApiService {
     func get(reference: ReferenceType,
              success: @escaping (String?, MarketPrice) -> Void,
              failure: @escaping (String?, Error?) -> Void) {
+        
         let params = parameters(reference: reference)
+        
         _ = self.sessionManager.request(MarketPriceApiRouter.get(params))
             .validate(statusCode: [200])
             .responseJSON { response in
