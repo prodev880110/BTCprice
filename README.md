@@ -10,7 +10,7 @@ O BitPrice é um aplicativo que apresenta o histórico de preços do Bitcoin.
 # Requisitos
 
 - Xcode 9 ou superior
-- [CocoaPods](https://cocoapods.org/)
+- Ruby (padrão no MacOS)
 
 # Compatibilidade
 
@@ -20,11 +20,27 @@ O BitPrice é um aplicativo que apresenta o histórico de preços do Bitcoin.
 
 # Configuração inicial
 
-- Instalar o [CocoaPods](https://cocoapods.org/)
+## Obrigatório
+
+- Execute o seguinte comando para instalar as dependências do sistema:
+
+```
+gem install bundler
+bundle install
+```
+
+- Execute o seguinte comando na raiz do projeto para instalar as dependências do projeto:
+
+```
+pod install
+```
+
+- Abrir o arquivo `BitPrice.xcworkspace` e divirta-se.
+
+## Opcional
+
 - Instalar as [fontes](https://firebasestorage.googleapis.com/v0/b/bitprice-55d7d.appspot.com/o/Fonts%2FDINPro.zip?alt=media&token=69fab1f3-2af7-46b1-a29d-81afb5df5297) *(clicar duas vezes sobre cada uma)*
 - Copiar a [paleta de cores](https://firebasestorage.googleapis.com/v0/b/bitprice-55d7d.appspot.com/o/Colors%2FBitPrice.clr?alt=media&token=ea2970e1-ef97-433f-a67a-b202cea28a54) para o diretório `~\Library\Colors`
-- Abrir o terminal e executar o comando na raiz do projeto: `pod install`
-- Abrir o arquivo `BitPrice.xcworkspace`, localizado na raiz do projeto
 
 # Outras informaçes
 
