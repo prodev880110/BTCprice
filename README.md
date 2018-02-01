@@ -22,14 +22,14 @@ O BitPrice é um aplicativo que apresenta o histórico de preços do Bitcoin.
 
 ### Obrigatório
 
-- Execute os seguintes comandos para instalar as dependências do sistema:
+- Executar os seguintes comandos para instalar as dependências do sistema:
 
 ```
 gem install bundler
 bundle install
 ```
 
-- Execute o seguinte comando na raiz do projeto para instalar as dependências do mesmo:
+- Executar o seguinte comando na raiz do projeto para instalar as dependências do mesmo:
 
 ```
 pod install
