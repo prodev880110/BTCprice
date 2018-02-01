@@ -41,20 +41,41 @@ class ViewController: UIViewController {
     func callServices(reference: ReferenceType) {
         spinnerView.show(onView: bodyView, hideAfter: 2)
         tickerService.get()
-        marketPriceService.get(reference: reference)
+        
+        marketPriceService.get(reference: reference, success: { (url, marketPrice) in
+            self.marketPriceServiceGetSuccess(marketPrice: marketPrice)
+        }) { (url, error) in
+            self.spinnerView.hide()
+        }
     }
     
     // MARK: - Private
     
     private func setupVariables() {
         tickerService.delegate = self
-        marketPriceService.delegate = self
     }
     
     private func setupViews(reference: ReferenceType) {
         headerView.delegate = self
         footerView.delegate = self
         footerView.setReference(reference)
+    }
+    
+    private func marketPriceServiceGetSuccess(marketPrice: MarketPrice) {
+        let ref = UserDefaults.standard.reference()
+        let firsPrice = marketPrice.values.first?.y ?? 0
+        let lastPrice = marketPrice.values.last?.y ?? 0
+        var values = [ChartDataEntry]()
+        
+        for value in marketPrice.values {
+            let x = Double(value.x)
+            let y = Double(value.y)
+            values.append(ChartDataEntry(x: x, y: y))
+        }
+        
+        bodyView.historyView.setPrices(firstPrice: firsPrice, lastPrice: lastPrice)
+        bodyView.historyView.setChartData(reference: ref, values: values)
+        spinnerView.hide()
     }
 
 }

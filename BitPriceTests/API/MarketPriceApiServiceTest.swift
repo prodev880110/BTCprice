@@ -17,7 +17,6 @@ class MarketPriceApiServiceTest: ApiServiceTest {
     
     override func setUp() {
         super.setUp()
-        service.delegate = self
     }
     
     // MARK: - Test
@@ -41,20 +40,13 @@ class MarketPriceApiServiceTest: ApiServiceTest {
     // MARK: - Private
     
     private func get(reference: ReferenceType) {
-        service.get(reference: reference)
-        waitForExpectations(timeout: ApiService.Params.timeout, handler: nil)
-    }
-    
-}
+        service.get(reference: reference, success: { (url, marketPrice) in
+            self.success()
+        }) { (url, error) in
+            self.failure(error: error)
+        }
 
-extension MarketPriceApiServiceTest: MarketPriceApiServiceDelegate {
-    
-    func marketPriceApiGetDidComplete(marketPrice: MarketPrice) {
-        success()
-    }
-    
-    func marketPriceApiGetDidComplete(error: Error?) {
-        failure(error: error)
+        waitForExpectations(timeout: ApiService.Params.timeout, handler: nil)
     }
     
 }

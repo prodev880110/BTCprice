@@ -10,32 +10,32 @@ import Foundation
 
 class MarketPriceApiService: ApiService {
     
-    // MARK: - Variable
-    
-    weak var delegate: MarketPriceApiServiceDelegate?
-    
     // MARK: - Public
     
-    func get(reference: ReferenceType) {
+    func get(reference: ReferenceType,
+             success: @escaping (String?, MarketPrice) -> Void,
+             failure: @escaping (String?, Error?) -> Void) {
         let params = parameters(reference: reference)
         _ = self.sessionManager.request(MarketPriceApiRouter.get(params))
             .validate(statusCode: [200])
             .responseJSON { response in
+                let urlString = response.request?.url?.absoluteString
+                
                 guard let data = response.data else {
-                    self.delegate?.marketPriceApiGetDidComplete(error: nil)
+                    failure(urlString, nil)
                     return
                 }
                 
                 if let error = response.error {
-                    self.delegate?.marketPriceApiGetDidComplete(error: error)
+                    failure(urlString, error)
                     return
                 }
                 
                 do {
                     let marketPrice = try JSONDecoder().decode(MarketPrice.self, from: data)
-                    self.delegate?.marketPriceApiGetDidComplete(marketPrice: marketPrice)
+                    success(urlString, marketPrice)
                 } catch let error {
-                    self.delegate?.marketPriceApiGetDidComplete(error: error)
+                    failure(urlString, error)
                 }
         }
     }
@@ -69,9 +69,4 @@ class MarketPriceApiService: ApiService {
         return params
     }
     
-}
-
-protocol MarketPriceApiServiceDelegate: class {
-    func marketPriceApiGetDidComplete(marketPrice: MarketPrice)
-    func marketPriceApiGetDidComplete(error: Error?)
 }
