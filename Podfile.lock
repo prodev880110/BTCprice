@@ -57,13 +57,13 @@ PODS:
   - Protobuf (3.5.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.5)
-  - Charts
+  - Alamofire (~> 4.6.0)
+  - Charts (~> 3.0.5)
   - Crashlytics (~> 3.9.3)
   - Fabric (~> 1.7.2)
-  - Firebase/Core
-  - Firebase/Performance
-  - Firebase/RemoteConfig
+  - Firebase/Core (~> 4.8.2)
+  - Firebase/Performance (~> 4.8.2)
+  - Firebase/RemoteConfig (~> 4.8.2)
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
@@ -83,6 +83,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
 
-PODFILE CHECKSUM: a678f5f0e9e302da45907c908e29dbec7ac801e1
+PODFILE CHECKSUM: 886aaf72661acdb2aa7a74cef89223a58a8b4979
 
 COCOAPODS: 1.4.0
