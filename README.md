@@ -4,13 +4,14 @@
 
 [![Swift][swift-badge]][swift-url]
 [![Platform][platform-badge]][platform-url]
+[![Build Status][build-badge]][build-url]
 
 O BitPrice é um aplicativo que apresenta o histórico de preços do Bitcoin.
 
 # Requisitos
 
 - Xcode 9 ou superior
-- [CocoaPods](https://cocoapods.org/)
+- Ruby (padrão no MacOS)
 
 # Compatibilidade
 
@@ -20,11 +21,27 @@ O BitPrice é um aplicativo que apresenta o histórico de preços do Bitcoin.
 
 # Configuração inicial
 
-- Instalar o [CocoaPods](https://cocoapods.org/)
+### Obrigatório
+
+Executar os seguintes comandos para instalar as dependências do sistema:
+
+```
+gem install bundler
+bundle install
+```
+
+Executar o seguinte comando na raiz do projeto para instalar as dependências do mesmo:
+
+```
+pod install
+```
+
+Abrir o arquivo `BitPrice.xcworkspace` e divirta-se.
+
+### Opcional
+
 - Instalar as [fontes](https://firebasestorage.googleapis.com/v0/b/bitprice-55d7d.appspot.com/o/Fonts%2FDINPro.zip?alt=media&token=69fab1f3-2af7-46b1-a29d-81afb5df5297) *(clicar duas vezes sobre cada uma)*
 - Copiar a [paleta de cores](https://firebasestorage.googleapis.com/v0/b/bitprice-55d7d.appspot.com/o/Colors%2FBitPrice.clr?alt=media&token=ea2970e1-ef97-433f-a67a-b202cea28a54) para o diretório `~\Library\Colors`
-- Abrir o terminal e executar o comando na raiz do projeto: `pod install`
-- Abrir o arquivo `BitPrice.xcworkspace`, localizado na raiz do projeto
 
 # Outras informaçes
 
@@ -41,4 +58,6 @@ Um resumo sobre cada versão do BitPrice pode ser encontrado nas [releases](http
 [swift-badge]: https://img.shields.io/badge/swift-4.0-orange.svg?style=flat
 [swift-url]: https://swift.org
 [platform-badge]: https://img.shields.io/badge/platform-iOS%209+-lightgrey.svg
-[platform-url]: https://developer.apple.com/swift/
+[platform-url]: https://developer.apple.com/swift
+[build-badge]: https://travis-ci.org/Bruno-Furtado/bitprice-ios.svg?branch=master
+[build-url]: https://travis-ci.org/Bruno-Furtado/bitprice-ios
