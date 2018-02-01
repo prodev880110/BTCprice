@@ -17,26 +17,18 @@ class TickerApiServiceTest: ApiServiceTest {
     
     override func setUp() {
         super.setUp()
-        service.delegate = self
     }
     
     // MARK: - Test
     
     func testGetTickerApiService() {
-        service.get()
+        service.get(success: { (url, ticker) in
+            self.success()
+        }) { (url, error) in
+            self.failure(error: error)
+        }
+        
         waitForExpectations(timeout: ApiService.Params.timeout, handler: nil)
-    }
-    
-}
-
-extension TickerApiServiceTest: TickerApiServiceDelegate {
-    
-    func tickerApiGetDidComplete(ticker: Ticker) {
-        success()
-    }
-    
-    func tickerApiGetDidComplete(error: Error?) {
-        failure(error: error)
     }
     
 }

@@ -10,38 +10,33 @@ import Foundation
 
 class TickerApiService: ApiService {
     
-    // MARK: - Variable
-    
-    weak var delegate: TickerApiServiceDelegate?
-    
     // MARK: - Public
     
-    func get() {
+    func get(success: @escaping (String?, Ticker) -> Void,
+             failure: @escaping (String?, Error?) -> Void) {
+        
         _ = self.sessionManager.request(TickerApiRouter.get())
             .validate(statusCode: [200])
             .responseJSON { response in
+                let urlString = response.request?.url?.absoluteString
+                
                 guard let data = response.data else {
-                    self.delegate?.tickerApiGetDidComplete(error: nil)
+                    failure(urlString, nil)
                     return
                 }
                 
                 if let error = response.error {
-                    self.delegate?.tickerApiGetDidComplete(error: error)
+                    failure(urlString, error)
                     return
                 }
                 
                 do {
                     let ticker = try JSONDecoder().decode(Ticker.self, from: data)
-                    self.delegate?.tickerApiGetDidComplete(ticker: ticker)
+                    success(urlString, ticker)
                 } catch let error {
-                    self.delegate?.tickerApiGetDidComplete(error: error)
+                    failure(urlString, error)
                 }
         }
     }
     
-}
-
-protocol TickerApiServiceDelegate: class {
-    func tickerApiGetDidComplete(ticker: Ticker)
-    func tickerApiGetDidComplete(error: Error?)
 }

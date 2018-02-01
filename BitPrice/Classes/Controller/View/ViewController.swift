@@ -31,7 +31,6 @@ class ViewController: UIViewController {
         
         let ref = UserDefaults.standard.reference()
         
-        setupVariables()
         setupViews(reference: ref)
         callServices(reference: ref)
     }
@@ -40,7 +39,12 @@ class ViewController: UIViewController {
     
     func callServices(reference: ReferenceType) {
         spinnerView.show(onView: bodyView, hideAfter: 2)
-        tickerService.get()
+        
+        tickerService.get(success: { (url, ticker) in
+            self.tickerServiceGetSuccess(ticker: ticker)
+        }) { (url, error) in
+            self.spinnerView.hide()
+        }
         
         marketPriceService.get(reference: reference, success: { (url, marketPrice) in
             self.marketPriceServiceGetSuccess(marketPrice: marketPrice)
@@ -51,14 +55,15 @@ class ViewController: UIViewController {
     
     // MARK: - Private
     
-    private func setupVariables() {
-        tickerService.delegate = self
-    }
-    
     private func setupViews(reference: ReferenceType) {
         headerView.delegate = self
         footerView.delegate = self
         footerView.setReference(reference)
+    }
+    
+    private func tickerServiceGetSuccess(ticker: Ticker) {
+        bodyView.priceView.setPrice(ticker.USD.last)
+        spinnerView.hide()
     }
     
     private func marketPriceServiceGetSuccess(marketPrice: MarketPrice) {
