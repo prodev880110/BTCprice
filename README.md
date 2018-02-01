@@ -4,6 +4,7 @@
 
 [![Swift][swift-badge]][swift-url]
 [![Platform][platform-badge]][platform-url]
+[![Build Status][build-badge]][build-url]
 
 O BitPrice é um aplicativo que apresenta o histórico de preços do Bitcoin.
 
@@ -57,4 +58,6 @@ Um resumo sobre cada versão do BitPrice pode ser encontrado nas [releases](http
 [swift-badge]: https://img.shields.io/badge/swift-4.0-orange.svg?style=flat
 [swift-url]: https://swift.org
 [platform-badge]: https://img.shields.io/badge/platform-iOS%209+-lightgrey.svg
-[platform-url]: https://developer.apple.com/swift/
+[platform-url]: https://developer.apple.com/swift
+[build-badge]: https://travis-ci.org/Bruno-Furtado/bitprice-ios.svg?branch=master
+[build-url]: https://travis-ci.org/Bruno-Furtado/bitprice-ios
