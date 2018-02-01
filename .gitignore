@@ -44,6 +44,10 @@ xcuserdata/
 timeline.xctimeline
 playground.xcworkspace
 
+## Ruby
+#
+!Gemfile.lock
+
 ## CocoaPods
 #
 Pods/
