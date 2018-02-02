@@ -11,6 +11,8 @@ import Foundation
 
 class ApiService {
     
+    // MARK: - Variable
+    
     let sessionManager: SessionManager = {
         let conf = URLSessionConfiguration.default
         
@@ -20,9 +22,21 @@ class ApiService {
         return SessionManager(configuration: conf)
     }()
     
+    // MARK: - Public
+    
+    func failure() -> ServiceFailureType {
+        if NetworkReachabilityManager()!.isReachable {
+            return .server
+        } else {
+            return .connection
+        }
+    }
+    
+    // MARK: - Other
+    
     struct Params {
         static let baseUrl = URL(string: Bundle.main.apiBaseUrl())!
         static let timeout: Double = 15
     }
-    
+        
 }

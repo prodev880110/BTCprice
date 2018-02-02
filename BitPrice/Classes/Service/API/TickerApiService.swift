@@ -13,18 +13,18 @@ class TickerApiService: ApiService {
     // MARK: - Public
     
     func get(success: @escaping (Data) -> Void,
-             failure: @escaping (Error?) -> Void) {
+             failure: @escaping (ServiceFailureType) -> Void) {
         
         _ = self.sessionManager.request(TickerApiRouter.get())
             .validate(statusCode: [200])
             .responseJSON { response in
                 guard let data = response.data else {
-                    failure(nil)
+                    failure(self.failure())
                     return
                 }
                 
-                if let error = response.error {
-                    failure(error)
+                if response.error != nil {
+                    failure(self.failure())
                     return
                 }
                 

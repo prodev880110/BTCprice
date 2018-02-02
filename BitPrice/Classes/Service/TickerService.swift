@@ -21,8 +21,8 @@ class TickerService: Service<Ticker> {
     func get() {
         apiService.get(success: { (data) in
             self.success(data: data)
-        }) { (error) in
-            self.failure(error: error)
+        }) { (failure) in
+            self.failure(failure)
         }
     }
     
@@ -35,15 +35,15 @@ class TickerService: Service<Ticker> {
                 self.delegate?.tickerGetDidComplete(ticker: ticker, date: date, fromCache: false)
                 self.dbInsert(data: data, date: date)
             } else {
-                self.delegate?.tickerGetDidComplete(error: nil)
+                self.delegate?.tickerGetDidComplete(failure: .server)
             }
         }
     }
     
-    private func failure(error: Error?) {
+    private func failure(_ failure: ServiceFailureType) {
         DispatchQueue.main.async {
             guard let request = RequestDbService().fetch(reference: nil) else {
-                self.delegate?.tickerGetDidComplete(error: error)
+                self.delegate?.tickerGetDidComplete(failure: failure)
                 return
             }
             
@@ -52,7 +52,7 @@ class TickerService: Service<Ticker> {
                 return
             }
             
-            self.delegate?.tickerGetDidComplete(error: error)
+            self.delegate?.tickerGetDidComplete(failure: failure)
         }
     }
 
@@ -60,5 +60,5 @@ class TickerService: Service<Ticker> {
 
 protocol TickerServiceDelegate: class {
     func tickerGetDidComplete(ticker: Ticker, date: Date, fromCache: Bool)
-    func tickerGetDidComplete(error: Error?)
+    func tickerGetDidComplete(failure: ServiceFailureType)
 }

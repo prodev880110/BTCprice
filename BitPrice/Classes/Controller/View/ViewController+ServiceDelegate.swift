@@ -21,7 +21,7 @@ extension ViewController: TickerServiceDelegate {
         }
     }
     
-    func tickerGetDidComplete(error: Error?) {
+    func tickerGetDidComplete(failure: ServiceFailureType) {
         bodyView.priceView.spinnerView.hide()
     }
     

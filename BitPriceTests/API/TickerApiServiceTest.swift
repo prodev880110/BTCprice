@@ -24,8 +24,12 @@ class TickerApiServiceTest: ApiServiceTest {
     func testGetTickerApiService() {
         service.get(success: { (data) in
             self.success()
-        }) { (error) in
-            self.failure(error: error)
+        }) { (failure) in
+            if failure == .server {
+                XCTFail("server service error")
+            } else {
+                XCTFail("connection service error")
+            }
         }
 
         waitForExpectations(timeout: ApiService.Params.timeout, handler: nil)
