@@ -13,7 +13,7 @@ class MarketPriceApiService: ApiService {
     // MARK: - Public
     
     func get(reference: ReferenceType,
-             success: @escaping (String, Data) -> Void,
+             success: @escaping (Data) -> Void,
              failure: @escaping (Error?) -> Void) {
         
         let params = parameters(reference: reference)
@@ -21,8 +21,7 @@ class MarketPriceApiService: ApiService {
         _ = self.sessionManager.request(MarketPriceApiRouter.get(params))
             .validate(statusCode: [200])
             .responseJSON { response in
-                guard let data = response.data,
-                    let url = response.request?.url?.absoluteString else {
+                guard let data = response.data else {
                     failure(nil)
                     return
                 }
@@ -32,7 +31,7 @@ class MarketPriceApiService: ApiService {
                     return
                 }
                 
-                success(url, data)
+                success(data)
         }
     }
     
