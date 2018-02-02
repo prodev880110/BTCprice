@@ -13,27 +13,26 @@ class MarketPriceApiService: ApiService {
     // MARK: - Public
     
     func get(reference: ReferenceType,
-             success: @escaping (String?, Data) -> Void,
-             failure: @escaping (String?, Error?) -> Void) {
+             success: @escaping (String, Data) -> Void,
+             failure: @escaping (Error?) -> Void) {
         
         let params = parameters(reference: reference)
         
         _ = self.sessionManager.request(MarketPriceApiRouter.get(params))
             .validate(statusCode: [200])
             .responseJSON { response in
-                let urlString = response.request?.url?.absoluteString
-                
-                guard let data = response.data else {
-                    failure(urlString, nil)
+                guard let data = response.data,
+                    let url = response.request?.url?.absoluteString else {
+                    failure(nil)
                     return
                 }
                 
                 if let error = response.error {
-                    failure(urlString, error)
+                    failure(error)
                     return
                 }
                 
-                success(urlString, data)
+                success(url, data)
         }
     }
     

@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         
         marketPriceService.get(reference: reference, success: { (url, data) in
             self.marketPriceServiceGetSuccess(data: data)
-        }) { (url, error) in
+        }) { error in
             self.spinnerView.hide()
         }
     }

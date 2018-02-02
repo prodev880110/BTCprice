@@ -47,7 +47,7 @@ class MarketPriceApiServiceTest: ApiServiceTest {
             } catch let error {
                 self.failure(error: error)
             }
-        }) { (url, error) in
+        }) { error in
             self.failure(error: error)
         }
 
