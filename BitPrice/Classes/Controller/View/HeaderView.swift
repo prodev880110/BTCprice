@@ -28,6 +28,7 @@ class HeaderView: UIView {
     // MARK: - Action
     
     @IBAction func refreshSelect(_ sender: UIButton) {
+        sender.heartAnimation()
         delegate?.headerViewRefreshDidSelect()
     }
 

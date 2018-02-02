@@ -53,6 +53,7 @@
 		F8A704C8201CB40C0015C071 /* MarketPriceApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704C7201CB40C0015C071 /* MarketPriceApiService.swift */; };
 		F8A704CA201CB48A0015C071 /* MarketPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704C9201CB48A0015C071 /* MarketPrice.swift */; };
 		F8A704CC201CC3410015C071 /* Date+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704CB201CC3410015C071 /* Date+Components.swift */; };
+		F8A8601E2024EB8800553A43 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8601D2024EB8800553A43 /* UIView+Animations.swift */; };
 		F8C05D3D201CE51B0081AB33 /* RequestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C05D3B201CE51B0081AB33 /* RequestEntity.swift */; };
 		F8D62DAD201D85C8005E76FD /* Date+Calc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D62DAC201D85C8005E76FD /* Date+Calc.swift */; };
 		F8D9D9B7201A925A002F2DCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D9D9B6201A925A002F2DCC /* Assets.xcassets */; };
@@ -141,6 +142,7 @@
 		F8A704C7201CB40C0015C071 /* MarketPriceApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPriceApiService.swift; sourceTree = "<group>"; };
 		F8A704C9201CB48A0015C071 /* MarketPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPrice.swift; sourceTree = "<group>"; };
 		F8A704CB201CC3410015C071 /* Date+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Components.swift"; sourceTree = "<group>"; };
+		F8A8601D2024EB8800553A43 /* UIView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
 		F8C05D3B201CE51B0081AB33 /* RequestEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestEntity.swift; sourceTree = "<group>"; };
 		F8D62DAC201D85C8005E76FD /* Date+Calc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Calc.swift"; sourceTree = "<group>"; };
 		F8D9D9A9201A925A002F2DCC /* BitPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -294,6 +296,7 @@
 				F87C6AF3201AC55A00BB968F /* UIFont+App.swift */,
 				F8566F26201C0E54005E9950 /* UIView+Shadow.swift */,
 				F8566F2A201C1699005E9950 /* UserDefaults+App.swift */,
+				F8A8601D2024EB8800553A43 /* UIView+Animations.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -821,6 +824,7 @@
 				F8566F11201BBD0E005E9950 /* ReferenceType.swift in Sources */,
 				F856EB85201D4AD700D4E655 /* SpinnerView.swift in Sources */,
 				F8A704B3201C97E60015C071 /* BodyPriceView.swift in Sources */,
+				F8A8601E2024EB8800553A43 /* UIView+Animations.swift in Sources */,
 				F8A704C0201CA8C60015C071 /* ApiService.swift in Sources */,
 				F8A704C8201CB40C0015C071 /* MarketPriceApiService.swift in Sources */,
 				F8566F17201BC3F6005E9950 /* Float+Formatter.swift in Sources */,
