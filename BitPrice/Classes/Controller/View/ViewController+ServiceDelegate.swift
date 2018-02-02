@@ -7,13 +7,18 @@
 //
 
 import Charts
+import NotificationBannerSwift
 import UIKit
 
 extension ViewController: TickerServiceDelegate {
     
-    func tickerGetDidComplete(ticker: Ticker, date: Date) {
+    func tickerGetDidComplete(ticker: Ticker, date: Date, fromCache: Bool) {
         bodyView.priceView.setPrice(ticker.USD.last, date: date)
         bodyView.priceView.spinnerView.hide()
+        
+        if fromCache {
+            StatusBarNotificationBanner.noConnection.show()
+        }
     }
     
     func tickerGetDidComplete(error: Error?) {

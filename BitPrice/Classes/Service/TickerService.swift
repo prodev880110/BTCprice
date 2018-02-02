@@ -32,7 +32,7 @@ class TickerService: Service<Ticker> {
         DispatchQueue.main.async {
             if let ticker = self.jsonDecode(data: data) {
                 let date = Date()
-                self.delegate?.tickerGetDidComplete(ticker: ticker, date: date)
+                self.delegate?.tickerGetDidComplete(ticker: ticker, date: date, fromCache: false)
                 self.dbInsert(data: data, date: date)
             } else {
                 self.delegate?.tickerGetDidComplete(error: nil)
@@ -48,7 +48,7 @@ class TickerService: Service<Ticker> {
             }
             
             if let ticker = self.jsonDecode(data: request.data) {
-                self.delegate?.tickerGetDidComplete(ticker: ticker, date: request.date)
+                self.delegate?.tickerGetDidComplete(ticker: ticker, date: request.date, fromCache: true)
                 return
             }
             
@@ -59,6 +59,6 @@ class TickerService: Service<Ticker> {
 }
 
 protocol TickerServiceDelegate: class {
-    func tickerGetDidComplete(ticker: Ticker, date: Date)
+    func tickerGetDidComplete(ticker: Ticker, date: Date, fromCache: Bool)
     func tickerGetDidComplete(error: Error?)
 }
