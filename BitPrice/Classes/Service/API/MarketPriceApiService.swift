@@ -14,7 +14,7 @@ class MarketPriceApiService: ApiService {
     
     func get(reference: ReferenceType,
              success: @escaping (Data) -> Void,
-             failure: @escaping (Error?) -> Void) {
+             failure: @escaping (ServiceFailureType) -> Void) {
         
         let params = parameters(reference: reference)
         
@@ -22,12 +22,12 @@ class MarketPriceApiService: ApiService {
             .validate(statusCode: [200])
             .responseJSON { response in
                 guard let data = response.data else {
-                    failure(nil)
+                    failure(self.failure())
                     return
                 }
                 
-                if let error = response.error {
-                    failure(error)
+                if response.error != nil {
+                    failure(self.failure())
                     return
                 }
                 

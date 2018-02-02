@@ -28,8 +28,8 @@ class MarketPriceService: Service<MarketPrice> {
         
         apiService.get(reference: reference, success: { (data) in
             self.success(reference: reference, data: data)
-        }) { error in
-            self.failure(reference: reference, error: error)
+        }) { failure in
+            self.failure(failure, reference: reference)
         }
     }
     
@@ -41,17 +41,17 @@ class MarketPriceService: Service<MarketPrice> {
                 self.delegate?.marketPriceGetDidComplete(marketPrice: marketPrice)
                 self.dbInsert(reference: reference, data: data)
             } else {
-                self.delegate?.marketPriceGetDidComplete(error: nil)
+                self.delegate?.marketPriceGetDidComplete(failure: .server)
             }
         }
     }
     
-    private func failure(reference: ReferenceType, error: Error?) {
+    private func failure(_ failure: ServiceFailureType, reference: ReferenceType) {
         DispatchQueue.main.async {
             if let marketPrice = self.dbFetch(reference: reference) {
                 self.delegate?.marketPriceGetDidComplete(marketPrice: marketPrice)
             } else {
-                self.delegate?.marketPriceGetDidComplete(error: error)
+                self.delegate?.marketPriceGetDidComplete(failure: failure)
             }
         }
     }
@@ -60,5 +60,5 @@ class MarketPriceService: Service<MarketPrice> {
 
 protocol MarketPriceServiceDelegate: class {
     func marketPriceGetDidComplete(marketPrice: MarketPrice)
-    func marketPriceGetDidComplete(error: Error?)
+    func marketPriceGetDidComplete(failure: ServiceFailureType)
 }

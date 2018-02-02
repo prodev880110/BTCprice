@@ -47,7 +47,7 @@ extension ViewController: MarketPriceServiceDelegate {
         bodyView.historyView.spinnerView.hide()
     }
     
-    func marketPriceGetDidComplete(error: Error?) {
+    func marketPriceGetDidComplete(failure: ServiceFailureType) {
         bodyView.historyView.spinnerView.hide()
     }
     

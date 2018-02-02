@@ -44,11 +44,11 @@ class MarketPriceApiServiceTest: ApiServiceTest {
             do {
                 _ = try JSONDecoder().decode(MarketPrice.self, from: data)
                 self.success()
-            } catch let error {
-                self.failure(error: error)
+            } catch {
+                self.failure(.server)
             }
-        }) { error in
-            self.failure(error: error)
+        }) { failure in
+            self.failure(failure)
         }
 
         waitForExpectations(timeout: ApiService.Params.timeout, handler: nil)
