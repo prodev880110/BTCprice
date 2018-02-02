@@ -13,7 +13,7 @@ class MarketPriceApiService: ApiService {
     // MARK: - Public
     
     func get(reference: ReferenceType,
-             success: @escaping (String?, MarketPrice) -> Void,
+             success: @escaping (String?, Data) -> Void,
              failure: @escaping (String?, Error?) -> Void) {
         
         let params = parameters(reference: reference)
@@ -33,12 +33,7 @@ class MarketPriceApiService: ApiService {
                     return
                 }
                 
-                do {
-                    let marketPrice = try JSONDecoder().decode(MarketPrice.self, from: data)
-                    success(urlString, marketPrice)
-                } catch let error {
-                    failure(urlString, error)
-                }
+                success(urlString, data)
         }
     }
     

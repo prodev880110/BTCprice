@@ -40,8 +40,13 @@ class MarketPriceApiServiceTest: ApiServiceTest {
     // MARK: - Private
     
     private func get(reference: ReferenceType) {
-        service.get(reference: reference, success: { (url, marketPrice) in
-            self.success()
+        service.get(reference: reference, success: { (url, data) in
+            do {
+                _ = try JSONDecoder().decode(MarketPrice.self, from: data)
+                self.success()
+            } catch let error {
+                self.failure(error: error)
+            }
         }) { (url, error) in
             self.failure(error: error)
         }

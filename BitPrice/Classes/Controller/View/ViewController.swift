@@ -46,8 +46,8 @@ class ViewController: UIViewController {
             self.spinnerView.hide()
         }
         
-        marketPriceService.get(reference: reference, success: { (url, marketPrice) in
-            self.marketPriceServiceGetSuccess(marketPrice: marketPrice)
+        marketPriceService.get(reference: reference, success: { (url, data) in
+            self.marketPriceServiceGetSuccess(data: data)
         }) { (url, error) in
             self.spinnerView.hide()
         }
@@ -66,8 +66,10 @@ class ViewController: UIViewController {
         spinnerView.hide()
     }
     
-    private func marketPriceServiceGetSuccess(marketPrice: MarketPrice) {
+    private func marketPriceServiceGetSuccess(data: Data) {
         let ref = UserDefaults.standard.reference()
+        let marketPrice = try! JSONDecoder().decode(MarketPrice.self, from: data)
+        
         let firsPrice = marketPrice.values.first?.y ?? 0
         let lastPrice = marketPrice.values.last?.y ?? 0
         var values = [ChartDataEntry]()
