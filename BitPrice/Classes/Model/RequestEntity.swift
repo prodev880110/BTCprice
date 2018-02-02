@@ -12,6 +12,7 @@ import CoreData
 @objc(RequestEntity)
 class RequestEntity: NSManagedObject {
     
+    @NSManaged var reference: String
     @NSManaged var url: String
     @NSManaged var data: Data
     @NSManaged var date: Date?
@@ -27,8 +28,9 @@ class RequestEntity: NSManagedObject {
         return NSFetchRequest<RequestEntity>(entityName: RequestEntity.className)
     }
     
-    convenience init(url: String, data: Data, date: Date) {
+    convenience init(reference: String, url: String, data: Data, date: Date) {
         self.init(entity: RequestEntity.fetchEntity(), insertInto: CoreDataStack.shared.context)
+        self.reference = reference
         self.url = url
         self.data = data
         self.date = date

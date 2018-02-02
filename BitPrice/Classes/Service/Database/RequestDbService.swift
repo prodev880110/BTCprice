@@ -13,12 +13,12 @@ class RequestDbService {
 
     // MARK: - Public
     
-    func insert(url: String, data: Data, date: Date) {
-        delete(url: url)
+    func insert(reference: ReferenceType, url: String, data: Data, date: Date) {
+        delete(reference: reference)
         
         let stack = CoreDataStack.shared
         let context = stack.context
-        _ = RequestEntity(url: url, data: data, date: date)
+        _ = RequestEntity(reference: reference.rawValue, url: url, data: data, date: date)
         
         do {
             try context.save()
@@ -28,13 +28,13 @@ class RequestDbService {
         }
     }
     
-    func fetch(url: String) -> RequestEntity? {
+    func fetch(reference: ReferenceType) -> RequestEntity? {
         let context = CoreDataStack.shared.context
         var request: RequestEntity?
         
         let fetchRequest: NSFetchRequest<RequestEntity> = RequestEntity.fetchRequest()
         fetchRequest.fetchLimit = 1
-        fetchRequest.predicate = NSPredicate(format: "url = %@", url)
+        fetchRequest.predicate = NSPredicate(format: "reference = %@", reference.rawValue)
 
         do {
             request = try context.fetch(fetchRequest).first as RequestEntity?
@@ -59,10 +59,10 @@ class RequestDbService {
         return requests
     }
     
-    func delete(url: String) {
+    func delete(reference: ReferenceType) {
         let stack = CoreDataStack.shared
         let context = stack.context
-        let request = fetch(url: url)
+        let request = fetch(reference: reference)
         
         if let request = request {
             context.delete(request)
