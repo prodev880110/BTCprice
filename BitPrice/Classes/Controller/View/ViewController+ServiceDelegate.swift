@@ -9,6 +9,19 @@
 import Charts
 import UIKit
 
+extension ViewController: TickerServiceDelegate {
+    
+    func tickerGetDidComplete(ticker: Ticker, date: Date) {
+        bodyView.priceView.setPrice(ticker.USD.last, date: date)
+        spinnerView.hide()
+    }
+    
+    func tickerGetDidComplete(error: Error?) {
+        spinnerView.hide()
+    }
+    
+}
+
 extension ViewController: MarketPriceServiceDelegate {
     
     func marketPriceApiGetDidComplete(marketPrice: MarketPrice) {

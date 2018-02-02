@@ -27,9 +27,9 @@ class BodyPriceView: UIView {
     
     // MARK: - Public
     
-    func setPrice(_ price: Float) {
+    func setPrice(_ price: Float, date: Date) {
         self.priceLabel.text = price.toCurrencyString()
-        setUpdated(date: Date())
+        setUpdated(date: date)
     }
     
     // MARK: - Private
