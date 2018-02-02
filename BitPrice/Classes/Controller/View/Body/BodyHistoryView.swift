@@ -19,6 +19,10 @@ class BodyHistoryView: UIView {
     @IBOutlet private weak var percentLabel: UILabel!
     @IBOutlet private weak var chartView: ChartView!
     
+    // MARK: - Variables
+    
+    var spinnerView = SpinnerView()
+    
     // MARK: - UIView
     
     override func awakeFromNib() {

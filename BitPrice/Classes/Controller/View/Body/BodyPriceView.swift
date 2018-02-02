@@ -16,6 +16,10 @@ class BodyPriceView: UIView {
     @IBOutlet private weak var updatedLabel: UILabel!
     @IBOutlet private weak var priceLabel: UILabel!
     
+    // MARK: - Variables
+    
+    var spinnerView = SpinnerView()
+    
     // MARK: - UIView
     
     override func awakeFromNib() {
