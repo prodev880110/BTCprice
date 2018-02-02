@@ -31,6 +31,8 @@ class BodyPriceView: UIView {
     
     func setPrice(_ price: Float, date: Date) {
         self.priceLabel.text = price.toCurrencyString()
+        self.priceLabel.shimmerAnimation()
+        
         setUpdated(date: date)
     }
     
@@ -39,6 +41,7 @@ class BodyPriceView: UIView {
     private func setUpdated(date: Date) {
         let dateFormat = "body_price_view.date_format".localized
         self.updatedLabel.text = date.toString(dateFormat: dateFormat)
+        self.updatedLabel.shimmerAnimation()
     }
     
 }
