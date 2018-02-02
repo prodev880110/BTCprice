@@ -13,11 +13,11 @@ extension ViewController: TickerServiceDelegate {
     
     func tickerGetDidComplete(ticker: Ticker, date: Date) {
         bodyView.priceView.setPrice(ticker.USD.last, date: date)
-        spinnerView.hide()
+        bodyView.priceView.spinnerView.hide()
     }
     
     func tickerGetDidComplete(error: Error?) {
-        spinnerView.hide()
+        bodyView.priceView.spinnerView.hide()
     }
     
 }
@@ -39,11 +39,11 @@ extension ViewController: MarketPriceServiceDelegate {
         
         bodyView.historyView.setPrices(firstPrice: firsPrice, lastPrice: lastPrice)
         bodyView.historyView.setChartData(reference: ref, values: values)
-        spinnerView.hide()
+        bodyView.historyView.spinnerView.hide()
     }
     
     func marketPriceGetDidComplete(error: Error?) {
-        self.spinnerView.hide()
+        bodyView.historyView.spinnerView.hide()
     }
     
 }

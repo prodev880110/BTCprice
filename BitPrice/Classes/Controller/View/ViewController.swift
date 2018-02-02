@@ -18,9 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet private weak var footerView: FooterView!
     
     // MARK: - Variable
-    
-    var spinnerView = SpinnerView()
-    
+        
     private let tickerService = TickerService()
     private let marketPriceService = MarketPriceService()
     
@@ -39,10 +37,16 @@ class ViewController: UIViewController {
     // MARK: - Public
     
     func callServices(reference: ReferenceType) {
-        spinnerView.show(onView: bodyView, hideAfter: 2)
-
         tickerService.get()
         marketPriceService.get(reference: reference)
+        
+        if let priceView = bodyView.priceView {
+            priceView.spinnerView.show(onView: priceView)
+        }
+        
+        if let historyView = bodyView.historyView {
+            historyView.spinnerView.show(onView: historyView)
+        }
     }
     
     // MARK: - Private
