@@ -8,11 +8,10 @@
 
 import Foundation
 
-class MarketPriceService {
+class MarketPriceService: Service<MarketPrice> {
     
     // MARK: - Variable
     
-    private let dbService = RequestDbService()
     private let apiService = MarketPriceApiService()
     
     weak var delegate: MarketPriceServiceDelegate?
@@ -49,32 +48,6 @@ class MarketPriceService {
         } else {
             self.delegate?.marketPriceApiGetDidComplete(error: error)
         }
-    }
-    
-    private func jsonDecode(data: Data) -> MarketPrice? {
-        do {
-            return try JSONDecoder().decode(MarketPrice.self, from: data)
-        } catch {
-            return nil
-        }
-    }
-    
-    private func dbFetch(reference: ReferenceType, cachedDays days: Int? = nil) -> MarketPrice? {
-        guard let request = dbService.fetch(reference: reference) else { return nil }
-        
-        guard let days = days else {
-            return jsonDecode(data: request.data)
-        }
-
-        if Date().days(from: request.date) <= days {
-            return jsonDecode(data: request.data)
-        }
-        
-        return nil
-    }
-    
-    private func dbInsert(reference: ReferenceType, data: Data) {
-        dbService.insert(reference: reference, data: data, date: Date())
     }
     
 }
