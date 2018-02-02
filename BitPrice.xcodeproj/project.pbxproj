@@ -54,6 +54,8 @@
 		F8A704CA201CB48A0015C071 /* MarketPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704C9201CB48A0015C071 /* MarketPrice.swift */; };
 		F8A704CC201CC3410015C071 /* Date+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704CB201CC3410015C071 /* Date+Components.swift */; };
 		F8A8601E2024EB8800553A43 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8601D2024EB8800553A43 /* UIView+Animations.swift */; };
+		F8AF645E202511530043465D /* BannerColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF645D202511530043465D /* BannerColors.swift */; };
+		F8AF64602025122F0043465D /* StatusBarNotificationBanner+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF645F2025122F0043465D /* StatusBarNotificationBanner+App.swift */; };
 		F8C05D3D201CE51B0081AB33 /* RequestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C05D3B201CE51B0081AB33 /* RequestEntity.swift */; };
 		F8D62DAD201D85C8005E76FD /* Date+Calc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D62DAC201D85C8005E76FD /* Date+Calc.swift */; };
 		F8D9D9B7201A925A002F2DCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D9D9B6201A925A002F2DCC /* Assets.xcassets */; };
@@ -143,6 +145,8 @@
 		F8A704C9201CB48A0015C071 /* MarketPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPrice.swift; sourceTree = "<group>"; };
 		F8A704CB201CC3410015C071 /* Date+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Components.swift"; sourceTree = "<group>"; };
 		F8A8601D2024EB8800553A43 /* UIView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
+		F8AF645D202511530043465D /* BannerColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerColors.swift; sourceTree = "<group>"; };
+		F8AF645F2025122F0043465D /* StatusBarNotificationBanner+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatusBarNotificationBanner+App.swift"; sourceTree = "<group>"; };
 		F8C05D3B201CE51B0081AB33 /* RequestEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestEntity.swift; sourceTree = "<group>"; };
 		F8D62DAC201D85C8005E76FD /* Date+Calc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Calc.swift"; sourceTree = "<group>"; };
 		F8D9D9A9201A925A002F2DCC /* BitPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -291,12 +295,13 @@
 				F8566F16201BC3F6005E9950 /* Float+Formatter.swift */,
 				F8EB80B1201CE91000AD9087 /* NSObject+ClassName.swift */,
 				F8635768201AA7CF00FB886B /* RemoteConfig+Fetch.swift */,
+				F8AF645F2025122F0043465D /* StatusBarNotificationBanner+App.swift */,
 				F8566F08201B85F4005E9950 /* String+Localized.swift */,
 				F8566EF8201B2EAC005E9950 /* UIColor+App.swift */,
 				F87C6AF3201AC55A00BB968F /* UIFont+App.swift */,
+				F8A8601D2024EB8800553A43 /* UIView+Animations.swift */,
 				F8566F26201C0E54005E9950 /* UIView+Shadow.swift */,
 				F8566F2A201C1699005E9950 /* UserDefaults+App.swift */,
-				F8A8601D2024EB8800553A43 /* UIView+Animations.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 		F864D64A201A947000EF7028 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F8AF645C202511340043465D /* BaseNotificationBanner */,
 				F8566F1E201BF115005E9950 /* LineChartView */,
 				F8566F23201C0E1D005E9950 /* UIButton */,
 				F8566EF7201B2E83005E9950 /* UIView */,
@@ -397,6 +403,14 @@
 				F8A704BD201CA8870015C071 /* TickerApiService.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		F8AF645C202511340043465D /* BaseNotificationBanner */ = {
+			isa = PBXGroup;
+			children = (
+				F8AF645D202511530043465D /* BannerColors.swift */,
+			);
+			path = BaseNotificationBanner;
 			sourceTree = "<group>";
 		};
 		F8D9D9A0201A925A002F2DCC = {
@@ -712,7 +726,10 @@
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -721,7 +738,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotificationBannerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -827,6 +847,7 @@
 				F8A8601E2024EB8800553A43 /* UIView+Animations.swift in Sources */,
 				F8A704C0201CA8C60015C071 /* ApiService.swift in Sources */,
 				F8A704C8201CB40C0015C071 /* MarketPriceApiService.swift in Sources */,
+				F8AF64602025122F0043465D /* StatusBarNotificationBanner+App.swift in Sources */,
 				F8566F17201BC3F6005E9950 /* Float+Formatter.swift in Sources */,
 				F877E0B62024AD1B002E955B /* Service.swift in Sources */,
 				F8A704B9201C97E60015C071 /* ViewController.swift in Sources */,
@@ -835,6 +856,7 @@
 				F8D62DAD201D85C8005E76FD /* Date+Calc.swift in Sources */,
 				F8EB80AE201CE84300AD9087 /* RequestDbService.swift in Sources */,
 				F877E0B42024AD05002E955B /* TickerService.swift in Sources */,
+				F8AF645E202511530043465D /* BannerColors.swift in Sources */,
 				F8A704C2201CA9D00015C071 /* TickerApiRouter.swift in Sources */,
 				F8A704B7201C97E60015C071 /* ViewController+FooterDelegate.swift in Sources */,
 				F8566F25201C0E2E005E9950 /* Button.swift in Sources */,

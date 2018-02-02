@@ -22,6 +22,10 @@ target 'BitPrice' do
     pod 'Firebase/Performance', '~> 4.8.2'
     pod 'Firebase/RemoteConfig', '~> 4.8.2'
     
+    # NotificationBanner (highly customizable in app notification banners)
+    # https://github.com/Daltron/NotificationBanner
+    pod 'NotificationBannerSwift', '~> 1.6.1'
+    
     target 'BitPriceTests' do
         inherit! :search_paths
     end
