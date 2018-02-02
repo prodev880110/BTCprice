@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     var spinnerView = SpinnerView()
     
     private let tickerService = TickerApiService()
-    private let marketPriceService = MarketPriceApiService()
+    private let marketPriceService = MarketPriceService()
     
     // MARK: - UIViewController
     
@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         
         let ref = UserDefaults.standard.reference()
         
+        setupVariables()
         setupViews(reference: ref)
         callServices(reference: ref)
     }
@@ -46,14 +47,14 @@ class ViewController: UIViewController {
             self.spinnerView.hide()
         }
         
-        marketPriceService.get(reference: reference, success: { (url, data) in
-            self.marketPriceServiceGetSuccess(data: data)
-        }) { error in
-            self.spinnerView.hide()
-        }
+        marketPriceService.get(reference: reference)
     }
     
     // MARK: - Private
+    
+    private func setupVariables() {
+        marketPriceService.delegate = self
+    }
     
     private func setupViews(reference: ReferenceType) {
         headerView.delegate = self
@@ -63,25 +64,6 @@ class ViewController: UIViewController {
     
     private func tickerServiceGetSuccess(ticker: Ticker) {
         bodyView.priceView.setPrice(ticker.USD.last)
-        spinnerView.hide()
-    }
-    
-    private func marketPriceServiceGetSuccess(data: Data) {
-        let ref = UserDefaults.standard.reference()
-        let marketPrice = try! JSONDecoder().decode(MarketPrice.self, from: data)
-        
-        let firsPrice = marketPrice.values.first?.y ?? 0
-        let lastPrice = marketPrice.values.last?.y ?? 0
-        var values = [ChartDataEntry]()
-        
-        for value in marketPrice.values {
-            let x = Double(value.x)
-            let y = Double(value.y)
-            values.append(ChartDataEntry(x: x, y: y))
-        }
-        
-        bodyView.historyView.setPrices(firstPrice: firsPrice, lastPrice: lastPrice)
-        bodyView.historyView.setChartData(reference: ref, values: values)
         spinnerView.hide()
     }
 
