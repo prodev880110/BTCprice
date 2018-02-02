@@ -11,11 +11,9 @@ import UIKit
 class SpinnerView: UIView {
     
     private let indicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-    private var hideAfter = 0
 
-    func show(onView: UIView, hideAfter: Int) {
+    func show(onView: UIView) {
         backgroundColor = onView.backgroundColor
-        self.hideAfter = hideAfter
         
         frame = onView.frame
         frame.origin.x = 0
@@ -24,14 +22,15 @@ class SpinnerView: UIView {
         indicatorView.startAnimating()
         indicatorView.center = center
         
-        self.addSubview(self.indicatorView)
-        onView.addSubview(self)
+        DispatchQueue.main.async {
+            self.addSubview(self.indicatorView)
+            onView.addSubview(self)
+        }
     }
     
     func hide() {
-        hideAfter -= 1
-        if hideAfter == 0 {
-            indicatorView.stopAnimating()
+        DispatchQueue.main.async {
+            self.indicatorView.stopAnimating()
             self.removeFromSuperview()
         }
     }
