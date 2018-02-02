@@ -31,18 +31,23 @@ class ViewController: UIViewController {
         
         setupVariables()
         setupViews(reference: ref)
-        callServices(reference: ref)
+        
+        callTickerService()
+        callMarketPriceService(reference: ref)
     }
     
     // MARK: - Public
     
-    func callServices(reference: ReferenceType) {
+    func callTickerService() {
         tickerService.get()
-        marketPriceService.get(reference: reference)
         
         if let priceView = bodyView.priceView {
             priceView.spinnerView.show(onView: priceView)
         }
+    }
+    
+    func callMarketPriceService(reference: ReferenceType) {
+        marketPriceService.get(reference: reference)
         
         if let historyView = bodyView.historyView {
             historyView.spinnerView.show(onView: historyView)
