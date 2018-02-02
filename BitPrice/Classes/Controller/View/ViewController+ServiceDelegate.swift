@@ -24,7 +24,7 @@ extension ViewController: TickerServiceDelegate {
 
 extension ViewController: MarketPriceServiceDelegate {
     
-    func marketPriceApiGetDidComplete(marketPrice: MarketPrice) {
+    func marketPriceGetDidComplete(marketPrice: MarketPrice) {
         let ref = UserDefaults.standard.reference()
         
         let firsPrice = marketPrice.values.first?.y ?? 0
@@ -42,7 +42,7 @@ extension ViewController: MarketPriceServiceDelegate {
         spinnerView.hide()
     }
     
-    func marketPriceApiGetDidComplete(error: Error?) {
+    func marketPriceGetDidComplete(error: Error?) {
         self.spinnerView.hide()
     }
     
