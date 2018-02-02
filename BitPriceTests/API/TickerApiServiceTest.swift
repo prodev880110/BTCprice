@@ -22,12 +22,12 @@ class TickerApiServiceTest: ApiServiceTest {
     // MARK: - Test
     
     func testGetTickerApiService() {
-        service.get(success: { (url, ticker) in
+        service.get(success: { (data) in
             self.success()
-        }) { (url, error) in
+        }) { (error) in
             self.failure(error: error)
         }
-        
+
         waitForExpectations(timeout: ApiService.Params.timeout, handler: nil)
     }
     

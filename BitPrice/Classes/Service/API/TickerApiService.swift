@@ -12,30 +12,23 @@ class TickerApiService: ApiService {
     
     // MARK: - Public
     
-    func get(success: @escaping (String?, Ticker) -> Void,
-             failure: @escaping (String?, Error?) -> Void) {
+    func get(success: @escaping (Data) -> Void,
+             failure: @escaping (Error?) -> Void) {
         
         _ = self.sessionManager.request(TickerApiRouter.get())
             .validate(statusCode: [200])
             .responseJSON { response in
-                let urlString = response.request?.url?.absoluteString
-                
                 guard let data = response.data else {
-                    failure(urlString, nil)
+                    failure(nil)
                     return
                 }
                 
                 if let error = response.error {
-                    failure(urlString, error)
+                    failure(error)
                     return
                 }
                 
-                do {
-                    let ticker = try JSONDecoder().decode(Ticker.self, from: data)
-                    success(urlString, ticker)
-                } catch let error {
-                    failure(urlString, error)
-                }
+                success(data)
         }
     }
     
