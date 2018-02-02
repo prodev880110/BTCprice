@@ -29,13 +29,13 @@ class RequestDbServiceTest: XCTestCase {
     
     func testInsertAndFetchReferenceRequestDbService() {
         let url = "http://www.abc.com"
-        service.insert(url: url, responseBody: "", date: Date())
+        service.insert(url: url, data: Data(), date: Date())
         XCTAssert(service.fetch(url: url) != nil)
     }
     
     func testDeleteAndFetchReferenceRequestDbService() {
         let url = "http://www.cde.com"
-        service.insert(url: url, responseBody: "", date: Date())
+        service.insert(url: url, data: Data(), date: Date())
         
         if service.fetch(url: url) != nil {
             service.delete(url: url)
@@ -48,11 +48,11 @@ class RequestDbServiceTest: XCTestCase {
     
     func testDeleteAndFetchRequestDbService() {
         service.insert(url: "http://www.fgh.com",
-                       responseBody: "",
+                       data: Data(),
                        date: Date())
         
         service.insert(url: "http://www.ijk.com",
-                       responseBody: "",
+                       data: Data(),
                        date: Date())
         
         if let requests = service.fetch() {

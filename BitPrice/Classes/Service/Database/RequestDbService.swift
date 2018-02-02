@@ -13,12 +13,12 @@ class RequestDbService {
 
     // MARK: - Public
     
-    func insert(url: String, responseBody: String, date: Date) {
+    func insert(url: String, data: Data, date: Date) {
         delete(url: url)
         
         let stack = CoreDataStack.shared
         let context = stack.context
-        _ = RequestEntity(url: url, responseBody: responseBody, date: date)
+        _ = RequestEntity(url: url, data: data, date: date)
         
         do {
             try context.save()
