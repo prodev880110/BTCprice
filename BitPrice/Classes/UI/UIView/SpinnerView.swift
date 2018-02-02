@@ -22,17 +22,13 @@ class SpinnerView: UIView {
         indicatorView.startAnimating()
         indicatorView.center = center
         
-        DispatchQueue.main.async {
-            self.addSubview(self.indicatorView)
-            onView.addSubview(self)
-        }
+        self.addSubview(self.indicatorView)
+        onView.addSubview(self)
     }
     
     func hide() {
-        DispatchQueue.main.async {
-            self.indicatorView.stopAnimating()
-            self.removeFromSuperview()
-        }
+        self.indicatorView.stopAnimating()
+        self.removeFromSuperview()
     }
     
 }

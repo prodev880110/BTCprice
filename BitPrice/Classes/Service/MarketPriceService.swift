@@ -20,7 +20,9 @@ class MarketPriceService: Service<MarketPrice> {
     
     func get(reference: ReferenceType, cachedDays days: Int = 0) {
         if let marketPrice = dbFetch(reference: reference, cachedDays: days) {
-            delegate?.marketPriceGetDidComplete(marketPrice: marketPrice)
+            DispatchQueue.main.async {
+                self.delegate?.marketPriceGetDidComplete(marketPrice: marketPrice)
+            }
             return
         }
         
@@ -34,19 +36,23 @@ class MarketPriceService: Service<MarketPrice> {
     // MARK: - Private
     
     private func success(reference: ReferenceType, data: Data) {
-        if let marketPrice = jsonDecode(data: data) {
-            delegate?.marketPriceGetDidComplete(marketPrice: marketPrice)
-            dbInsert(reference: reference, data: data)
-        } else {
-            delegate?.marketPriceGetDidComplete(error: nil)
+        DispatchQueue.main.async {
+            if let marketPrice = self.jsonDecode(data: data) {
+                self.delegate?.marketPriceGetDidComplete(marketPrice: marketPrice)
+                self.dbInsert(reference: reference, data: data)
+            } else {
+                self.delegate?.marketPriceGetDidComplete(error: nil)
+            }
         }
     }
     
     private func failure(reference: ReferenceType, error: Error?) {
-        if let marketPrice = self.dbFetch(reference: reference) {
-            delegate?.marketPriceGetDidComplete(marketPrice: marketPrice)
-        } else {
-            delegate?.marketPriceGetDidComplete(error: error)
+        DispatchQueue.main.async {
+            if let marketPrice = self.dbFetch(reference: reference) {
+                self.delegate?.marketPriceGetDidComplete(marketPrice: marketPrice)
+            } else {
+                self.delegate?.marketPriceGetDidComplete(error: error)
+            }
         }
     }
     

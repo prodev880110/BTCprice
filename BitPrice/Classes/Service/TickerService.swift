@@ -29,27 +29,31 @@ class TickerService: Service<Ticker> {
     // MARK: - Private
     
     private func success(data: Data) {
-        if let ticker = jsonDecode(data: data) {
-            let date = Date()
-            delegate?.tickerGetDidComplete(ticker: ticker, date: date)
-            dbInsert(data: data, date: date)
-        } else {
-            delegate?.tickerGetDidComplete(error: nil)
+        DispatchQueue.main.async {
+            if let ticker = self.jsonDecode(data: data) {
+                let date = Date()
+                self.delegate?.tickerGetDidComplete(ticker: ticker, date: date)
+                self.dbInsert(data: data, date: date)
+            } else {
+                self.delegate?.tickerGetDidComplete(error: nil)
+            }
         }
     }
     
     private func failure(error: Error?) {
-        guard let request = RequestDbService().fetch(reference: nil) else {
-            delegate?.tickerGetDidComplete(error: error)
-            return
+        DispatchQueue.main.async {
+            guard let request = RequestDbService().fetch(reference: nil) else {
+                self.delegate?.tickerGetDidComplete(error: error)
+                return
+            }
+            
+            if let ticker = self.jsonDecode(data: request.data) {
+                self.delegate?.tickerGetDidComplete(ticker: ticker, date: request.date)
+                return
+            }
+            
+            self.delegate?.tickerGetDidComplete(error: error)
         }
-        
-        if let ticker = jsonDecode(data: request.data) {
-            delegate?.tickerGetDidComplete(ticker: ticker, date: request.date)
-            return
-        }
-
-        delegate?.tickerGetDidComplete(error: error)
     }
 
 }
