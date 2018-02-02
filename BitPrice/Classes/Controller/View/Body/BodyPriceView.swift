@@ -12,7 +12,6 @@ class BodyPriceView: UIView {
     
     // MARK: - Outlet
     
-    @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var updatedLabel: UILabel!
     @IBOutlet private weak var priceLabel: UILabel!
     
@@ -24,9 +23,8 @@ class BodyPriceView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.titleLabel.text = "body_price_view.title".localized
-        self.updatedLabel.text = nil
-        self.priceLabel.text = nil
+        self.updatedLabel.text = "-"
+        self.priceLabel.text = "-"
     }
     
     // MARK: - Public

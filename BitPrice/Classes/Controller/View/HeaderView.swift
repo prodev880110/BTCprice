@@ -10,9 +10,20 @@ import UIKit
 
 class HeaderView: UIView {
 
+    // MARK: - Outlet
+    
+    @IBOutlet private weak var titleLabel: UILabel!
+    
     // MARK: - Variable
     
     weak var delegate: HeaderViewDelegate?
+    
+    // MARK: - UIView
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.titleLabel.text = "body_price_view.title".localized
+    }
     
     // MARK: - Action
     
