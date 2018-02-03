@@ -15,7 +15,7 @@ extension UIColor {
         self.init(red: CGFloat(red)/divisor, green: CGFloat(green)/divisor, blue: CGFloat(blue)/divisor, alpha: 1)
     }
 
-    struct app {
+    struct App {
         // black
         static let black = UIColor(red: 66, green: 66, blue: 66)
 

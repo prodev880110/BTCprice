@@ -48,13 +48,13 @@ class BodyHistoryView: UIView {
         let imageName: String?
 
         if diff == 0 {
-            color = UIColor.app.darkGray
+            color = UIColor.App.darkGray
             imageName = nil
         } else if diff > 0 {
-            color = UIColor.app.green
+            color = UIColor.App.green
             imageName = "ic_arrow_drop_up"
         } else {
-            color = UIColor.app.red
+            color = UIColor.App.red
             imageName = "ic_arrow_drop_down"
         }
 

@@ -24,9 +24,9 @@ class Button: UIButton {
             let color: UIColor
 
             if isSelected {
-                color = UIColor.app.purple
+                color = UIColor.App.purple
             } else {
-                color = UIColor.app.white
+                color = UIColor.App.white
             }
 
             backgroundColor = color

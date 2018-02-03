@@ -40,7 +40,7 @@ class ChartView: LineChartView {
     // MARK: - Private
 
     private func line(values: [ChartDataEntry]) -> LineChartDataSet {
-        let color = UIColor.app.purple
+        let color = UIColor.App.purple
         let line = LineChartDataSet(values: values, label: nil)
 
         line.setColor(color)
@@ -54,7 +54,7 @@ class ChartView: LineChartView {
 
     private func setupNoData() {
         noDataFont = UIFont.appFont(ofSize: 20)
-        noDataTextColor = UIColor.app.black
+        noDataTextColor = UIColor.App.black
         noDataText = "chart_view.no_data".localized
     }
 
@@ -80,8 +80,8 @@ class ChartView: LineChartView {
     }
 
     private func setupAxis(_ axis: AxisBase) {
-        axis.gridColor = UIColor.app.lightGray
-        axis.labelTextColor = UIColor.app.purple
+        axis.gridColor = UIColor.App.lightGray
+        axis.labelTextColor = UIColor.App.purple
         axis.axisLineColor = UIColor.clear
     }
 

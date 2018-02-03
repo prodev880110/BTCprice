@@ -22,7 +22,8 @@ extension UserDefaults {
         var type: ReferenceType?
 
         if let storedValue = storedValue {
-            type = ReferenceType(rawValue: (storedValue as! String))
+            let value = storedValue as? String ?? ReferenceType.week.rawValue
+            type = ReferenceType(rawValue: value)
         }
 
         return type ?? ReferenceType.week
