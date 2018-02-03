@@ -42,12 +42,14 @@ extension ViewController: MarketPriceServiceDelegate {
             values.append(ChartDataEntry(x: x, y: y))
         }
         
+        bodyView.historyView.setLoaded(true)
         bodyView.historyView.setPrices(firstPrice: firsPrice, lastPrice: lastPrice)
         bodyView.historyView.setChartData(reference: ref, values: values)
         bodyView.historyView.spinnerView.hide()
     }
     
     func marketPriceGetDidComplete(failure: ServiceFailureType) {
+        bodyView.historyView.setLoaded(true)
         bodyView.historyView.spinnerView.hide()
     }
     

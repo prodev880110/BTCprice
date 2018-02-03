@@ -32,15 +32,17 @@ class BodyHistoryView: UIView {
         self.referenceLabel.text = nil
         self.percentLabel.text = nil
         
-        self.titleLabel.isHidden = true
-        self.chartView.isHidden = true
+        setLoaded(false)
     }
     
     // MARK: - Public
     
+    func setLoaded(_ loaded: Bool) {
+        self.titleLabel.isHidden = !loaded
+        self.chartView.isHidden = !loaded
+    }
+    
     func setPrices(firstPrice: Float, lastPrice: Float) {
-        self.titleLabel.isHidden = false
-        
         let diff = (lastPrice - firstPrice)
         let color: UIColor
         let imageName: String?
@@ -61,7 +63,6 @@ class BodyHistoryView: UIView {
     }
     
     func setChartData(reference: ReferenceType, values: [ChartDataEntry]) {
-        self.chartView.isHidden = false
         self.referenceLabel.text = reference.rawValue.localized
         chartView.setData(values: values)
     }
@@ -78,11 +79,6 @@ class BodyHistoryView: UIView {
         let percent = abs(1 - (lastPrice / firstPrice))
         self.percentLabel.text = percent.toPercentString()
         self.percentLabel.textColor = color
-    }
-    
-    private func launchFinished(_ finished: Bool) {
-        self.titleLabel.isHidden = !finished
-        self.chartView.isHidden = !finished
     }
     
 }
