@@ -35,7 +35,6 @@ pod install
 
 # abrir o projeto utilizando a workspace
 open BitPrice.xcworkspace
-
 ```
 
 ### Opcional
