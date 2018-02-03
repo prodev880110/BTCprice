@@ -48,13 +48,13 @@ class MarketPriceApiService: ApiService {
         
         switch reference {
         case .week:
-            start = Date().startOfWeek
+            start = Date().minus(days: 7)
             timespan = "1weeks"
         case .month:
-            start = Date().startOfMonth
+            start = Date().minus(days: 30)
             timespan = "1months"
         case .year:
-            start = Date().startOfYear
+            start = Date().minus(days: 360)
             timespan = "1years"
         case .all:
             start = Date().startOfBitcoin
