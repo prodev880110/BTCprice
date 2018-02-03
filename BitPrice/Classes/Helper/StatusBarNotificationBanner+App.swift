@@ -10,7 +10,7 @@ import NotificationBannerSwift
 
 extension StatusBarNotificationBanner {
     
-    static var noConnection: StatusBarNotificationBanner {
+    class var noConnection: StatusBarNotificationBanner {
         let title = "banner.no_connection".localized
         return StatusBarNotificationBanner(title: title, style: .info, colors: BannerColors())
     }
