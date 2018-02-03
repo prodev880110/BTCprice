@@ -29,11 +29,13 @@ class BodyPriceView: UIView {
     
     // MARK: - Public
     
-    func setPrice(_ price: Float, date: Date) {
+    func setPrice(_ price: Float, date: Date? = nil) {
         self.priceLabel.text = price.toCurrencyString()
         self.priceLabel.shimmerAnimation()
         
-        setUpdated(date: date)
+        if let date = date {
+            setUpdated(date: date)
+        }
     }
     
     // MARK: - Private
