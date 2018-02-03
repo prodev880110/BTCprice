@@ -12,6 +12,8 @@ class BannerColors: BannerColorsProtocol {
     
     func color(for style: BannerStyle) -> UIColor {
         switch style {
+        case .danger:
+            return UIColor.app.red
         default:
             return UIColor.app.purple
         }
