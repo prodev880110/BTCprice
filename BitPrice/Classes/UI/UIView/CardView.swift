@@ -9,7 +9,7 @@
 import UIKit
 
 class CardView: UIView {
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         addShadow()

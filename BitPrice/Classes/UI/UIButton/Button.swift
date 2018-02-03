@@ -9,32 +9,32 @@
 import UIKit
 
 class Button: UIButton {
-    
+
     // MARK: - Variable
-    
+
     override var isHighlighted: Bool {
         didSet {
             let alpha: CGFloat = isHighlighted ? 0.25 : 1
             backgroundColor = backgroundColor?.withAlphaComponent(alpha)
         }
     }
-    
+
     override var isSelected: Bool {
         didSet {
             let color: UIColor
-            
+
             if isSelected {
-                color = UIColor.app.purple
+                color = UIColor.App.purple
             } else {
-                color = UIColor.app.white
+                color = UIColor.App.white
             }
-            
+
             backgroundColor = color
         }
     }
-    
+
     // MARK: - UIButton
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         addShadow()

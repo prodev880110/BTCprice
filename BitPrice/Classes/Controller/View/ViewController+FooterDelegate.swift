@@ -9,10 +9,10 @@
 import UIKit
 
 extension ViewController: FooterViewDelegate {
-    
+
     func footerViewButtonDidSelect(type: ReferenceType) {
         UserDefaults.standard.setReference(type)
-        callServices(reference: type)
+        callMarketPriceService(reference: type)
     }
-    
+
 }

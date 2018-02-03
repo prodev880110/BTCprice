@@ -6,42 +6,35 @@
 //  Copyright © 2018 Bruno Tortato Furtado. All rights reserved.
 //
 
+import Alamofire
 import Foundation
 
 class TickerApiService: ApiService {
-    
-    // MARK: - Variable
-    
-    weak var delegate: TickerApiServiceDelegate?
-    
+
     // MARK: - Public
-    
-    func get() {
+
+    func get(success: @escaping (Data) -> Void,
+             failure: @escaping (ServiceFailureType) -> Void) {
+
         _ = self.sessionManager.request(TickerApiRouter.get())
             .validate(statusCode: [200])
             .responseJSON { response in
                 guard let data = response.data else {
-                    self.delegate?.tickerApiGetDidComplete(error: nil)
+                    failure(.connection)
                     return
                 }
-                
+
                 if let error = response.error {
-                    self.delegate?.tickerApiGetDidComplete(error: error)
+                    if error as? AFError == nil {
+                        failure(.connection)
+                    } else {
+                        failure(.server)
+                    }
                     return
                 }
-                
-                do {
-                    let ticker = try JSONDecoder().decode(Ticker.self, from: data)
-                    self.delegate?.tickerApiGetDidComplete(ticker: ticker)
-                } catch let error {
-                    self.delegate?.tickerApiGetDidComplete(error: error)
-                }
+
+                success(data)
         }
     }
-    
-}
 
-protocol TickerApiServiceDelegate: class {
-    func tickerApiGetDidComplete(ticker: Ticker)
-    func tickerApiGetDidComplete(error: Error?)
 }

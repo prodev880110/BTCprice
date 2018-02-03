@@ -10,55 +10,55 @@ import XCTest
 @testable import BitPrice
 
 class RequestDbServiceTest: XCTestCase {
-    
+
     private let service = RequestDbService()
-    
+
     // MARK: - XCTestCase
-    
+
     override func setUp() {
         super.setUp()
         service.delete()
     }
-    
+
     override func tearDown() {
         super.tearDown()
         service.delete()
     }
-    
+
     // MARK: - Test
-    
+
     func testInsertAndFetchReferenceRequestDbService() {
-        let ref = ReferenceType.week.rawValue
-        service.insert(reference: ref, data: Data(), date: Date())
-        XCTAssert(service.fetch(reference: ref) != nil)
+        let reference = ReferenceType.week
+        service.insert(reference: reference, data: Data(), date: Date())
+        XCTAssert(service.fetch(reference: reference) != nil)
     }
-    
+
     func testDeleteAndFetchReferenceRequestDbService() {
-        let ref = ReferenceType.month.rawValue
-        service.insert(reference: ref, data: Data(), date: Date())
-        
-        if service.fetch(reference: ref) != nil {
-            service.delete(reference: ref)
-            XCTAssert(service.fetch(reference: ref) == nil)
+        let reference = ReferenceType.month
+        service.insert(reference: reference, data: Data(), date: Date())
+
+        if service.fetch(reference: reference) != nil {
+            service.delete(reference: reference)
+            XCTAssert(service.fetch(reference: reference) == nil)
             return
         }
-        
-        XCTFail()
+
+        XCTFail("Fail when try to delete and fetch a request")
     }
-    
+
     func testDeleteAndFetchRequestDbService() {
-        service.insert(reference: ReferenceType.all.rawValue,
+        service.insert(reference: ReferenceType.year,
                        data: Data(),
                        date: Date())
-        
-        service.insert(reference: ReferenceType.week.rawValue,
+
+        service.insert(reference: ReferenceType.all,
                        data: Data(),
                        date: Date())
-        
+
         if let requests = service.fetch() {
             if requests.count > 1 {
                 service.delete()
-                
+
                 if let newRequests = service.fetch() {
                     XCTAssert(newRequests.count == 0)
                 } else {
@@ -69,7 +69,7 @@ class RequestDbServiceTest: XCTestCase {
             }
         }
 
-        XCTFail()
+        XCTFail("Fail when try to delete and fetch many requests")
     }
-    
+
 }

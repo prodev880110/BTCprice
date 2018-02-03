@@ -9,26 +9,26 @@
 import XCTest
 
 class ViewControllerUITests: XCTestCase {
-    
+
     // MARK: - XCTestCase
-    
+
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
         XCUIApplication().launch()
     }
-    
+
     // MARK: - Test
-    
+
     func testViewControllerHeaderButton() {
         XCUIApplication().buttons["refreshButton"].tap()
     }
-    
+
     func testViewControllerFooterButtons() {
         XCUIApplication().buttons["weekButton"].tap()
         XCUIApplication().buttons["monthButton"].tap()
         XCUIApplication().buttons["yearButton"].tap()
         XCUIApplication().buttons["allButton"].tap()
     }
-    
+
 }

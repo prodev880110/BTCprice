@@ -14,5 +14,5 @@ enum ReferenceType: String {
     case month = "reference_type.month"
     case year = "reference_type.year"
     case all = "reference_type.all"
-    
+
 }

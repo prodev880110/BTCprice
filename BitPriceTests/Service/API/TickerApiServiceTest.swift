@@ -10,33 +10,25 @@ import XCTest
 @testable import BitPrice
 
 class TickerApiServiceTest: ApiServiceTest {
-    
+
     private let service = TickerApiService()
-    
+
     // MARK: - XCTestCase
-    
+
     override func setUp() {
         super.setUp()
-        service.delegate = self
     }
-    
+
     // MARK: - Test
-    
+
     func testGetTickerApiService() {
-        service.get()
+        service.get(success: { _ in
+            self.success()
+        }, failure: { failure in
+            self.failure(failure)
+        })
+
         waitForExpectations(timeout: ApiService.Params.timeout, handler: nil)
     }
-    
-}
 
-extension TickerApiServiceTest: TickerApiServiceDelegate {
-    
-    func tickerApiGetDidComplete(ticker: Ticker) {
-        success()
-    }
-    
-    func tickerApiGetDidComplete(error: Error?) {
-        failure(error: error)
-    }
-    
 }
