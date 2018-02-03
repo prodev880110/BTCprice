@@ -22,16 +22,6 @@ class ApiService {
         return SessionManager(configuration: conf)
     }()
     
-    // MARK: - Public
-    
-    func failure() -> ServiceFailureType {
-        if NetworkReachabilityManager()!.isReachable {
-            return .server
-        } else {
-            return .connection
-        }
-    }
-    
     // MARK: - Other
     
     struct Params {

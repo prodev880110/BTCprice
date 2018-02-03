@@ -6,6 +6,7 @@
 //  Copyright © 2018 Bruno Tortato Furtado. All rights reserved.
 //
 
+import Alamofire
 import Foundation
 
 class MarketPriceApiService: ApiService {
@@ -22,12 +23,16 @@ class MarketPriceApiService: ApiService {
             .validate(statusCode: [200])
             .responseJSON { response in
                 guard let data = response.data else {
-                    failure(self.failure())
+                    failure(.connection)
                     return
                 }
                 
-                if response.error != nil {
-                    failure(self.failure())
+                if let error = response.error {
+                    if error as? AFError == nil {
+                        failure(.connection)
+                    } else {
+                        failure(.server)
+                    }
                     return
                 }
                 
