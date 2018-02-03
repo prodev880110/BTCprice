@@ -41,6 +41,7 @@
 		F88F2D3E2025DCA90010A5BD /* TickerApiServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88F2D392025DCA90010A5BD /* TickerApiServiceTest.swift */; };
 		F88F2D3F2025DCA90010A5BD /* RequestDbServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88F2D3B2025DCA90010A5BD /* RequestDbServiceTest.swift */; };
 		F88F2D412025DED50010A5BD /* MarketPriceServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88F2D402025DED50010A5BD /* MarketPriceServiceTest.swift */; };
+		F88F2D432025E0250010A5BD /* TickerServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88F2D422025E0250010A5BD /* TickerServiceTest.swift */; };
 		F8A704B2201C97E60015C071 /* BodyHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704AA201C97E60015C071 /* BodyHistoryView.swift */; };
 		F8A704B3201C97E60015C071 /* BodyPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704AB201C97E60015C071 /* BodyPriceView.swift */; };
 		F8A704B4201C97E60015C071 /* BodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A704AC201C97E60015C071 /* BodyView.swift */; };
@@ -133,6 +134,7 @@
 		F88F2D392025DCA90010A5BD /* TickerApiServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerApiServiceTest.swift; sourceTree = "<group>"; };
 		F88F2D3B2025DCA90010A5BD /* RequestDbServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestDbServiceTest.swift; sourceTree = "<group>"; };
 		F88F2D402025DED50010A5BD /* MarketPriceServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPriceServiceTest.swift; sourceTree = "<group>"; };
+		F88F2D422025E0250010A5BD /* TickerServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerServiceTest.swift; sourceTree = "<group>"; };
 		F8A704AA201C97E60015C071 /* BodyHistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyHistoryView.swift; sourceTree = "<group>"; };
 		F8A704AB201C97E60015C071 /* BodyPriceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyPriceView.swift; sourceTree = "<group>"; };
 		F8A704AC201C97E60015C071 /* BodyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyView.swift; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 			children = (
 				F88F2D372025DCA90010A5BD /* ApiServiceTest.swift */,
 				F88F2D402025DED50010A5BD /* MarketPriceServiceTest.swift */,
+				F88F2D422025E0250010A5BD /* TickerServiceTest.swift */,
 				F88F2D362025DCA90010A5BD /* API */,
 				F88F2D3A2025DCA90010A5BD /* Database */,
 			);
@@ -900,6 +903,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F88F2D3D2025DCA90010A5BD /* MarketPriceApiServiceTest.swift in Sources */,
+				F88F2D432025E0250010A5BD /* TickerServiceTest.swift in Sources */,
 				F88F2D3F2025DCA90010A5BD /* RequestDbServiceTest.swift in Sources */,
 				F88F2D3E2025DCA90010A5BD /* TickerApiServiceTest.swift in Sources */,
 				F88F2D412025DED50010A5BD /* MarketPriceServiceTest.swift in Sources */,
