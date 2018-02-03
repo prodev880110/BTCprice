@@ -23,23 +23,24 @@ O BitPrice é um aplicativo que apresenta o histórico de preços do Bitcoin.
 
 ### Obrigatório
 
-Executar os seguintes comandos para instalar as dependências do sistema:
+Executar os seguintes comandos na raiz do projeto:
 
 ```
+# instalar as dependências do sistema
 gem install bundler
 bundle install
-```
 
-Executar o seguinte comando na raiz do projeto para instalar as dependências do mesmo:
-
-```
+# instalar as dependências do projeto
 pod install
-```
 
-Abrir o arquivo `BitPrice.xcworkspace` e divirta-se.
+# abrir o projeto utilizando a workspace
+open BitPrice.xcworkspace
+
+```
 
 ### Opcional
 
+- Instalar o [SwiftLint](https://github.com/realm/SwiftLint#using-homebrew) utilizando o [Homebrew](https://brew.sh/)
 - Instalar as [fontes](https://firebasestorage.googleapis.com/v0/b/bitprice-55d7d.appspot.com/o/Fonts%2FDINPro.zip?alt=media&token=69fab1f3-2af7-46b1-a29d-81afb5df5297) *(clicar duas vezes sobre cada uma)*
 - Copiar a [paleta de cores](https://firebasestorage.googleapis.com/v0/b/bitprice-55d7d.appspot.com/o/Colors%2FBitPrice.clr?alt=media&token=ea2970e1-ef97-433f-a67a-b202cea28a54) para o diretório `~\Library\Colors`
 
