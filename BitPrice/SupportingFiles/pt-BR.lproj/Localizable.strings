@@ -26,3 +26,8 @@
 "reference_type.month" = "Mês";
 "reference_type.year" = "Ano";
 "reference_type.all" = "Tudo";
+
+// MARK: - BaseNotificationBanner
+
+"banner.no_connection" = "Dispositivo sem acesso à Internet";
+"banner.server_failure" = "Falha ao conectar-se com servidor";

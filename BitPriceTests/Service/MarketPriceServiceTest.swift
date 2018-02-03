@@ -1,17 +1,17 @@
 //
-//  MarketPriceApiServiceTest.swift
+//  MarketPriceServiceTest.swift
 //  BitPriceTests
 //
-//  Created by Bruno Tortato Furtado on 25/01/18.
+//  Created by Bruno Tortato Furtado on 03/02/18.
 //  Copyright © 2018 Bruno Tortato Furtado. All rights reserved.
 //
 
 import XCTest
 @testable import BitPrice
 
-class MarketPriceApiServiceTest: ApiServiceTest {
+class MarketPriceServiceTest: ApiServiceTest {
     
-    private let service = MarketPriceApiService()
+    private let service = MarketPriceService()
     
     // MARK: - XCTestCase
     
@@ -22,19 +22,19 @@ class MarketPriceApiServiceTest: ApiServiceTest {
     
     // MARK: - Test
     
-    func testGetWeekMarkePriceApiService() {
+    func testGetWeekMarkePriceService() {
         get(reference: .week)
     }
     
-    func testGetMonthMarkePriceApiService() {
+    func testGetMonthMarkePriceService() {
         get(reference: .month)
     }
     
-    func testGetYearMarkePriceApiService() {
+    func testGetYearMarkePriceService() {
         get(reference: .year)
     }
     
-    func testGetAllMarkePriceApiService() {
+    func testGetAllMarkePriceService() {
         get(reference: .all)
     }
     
@@ -47,14 +47,15 @@ class MarketPriceApiServiceTest: ApiServiceTest {
     
 }
 
-extension MarketPriceApiServiceTest: MarketPriceApiServiceDelegate {
+extension MarketPriceServiceTest: MarketPriceServiceDelegate {
     
-    func marketPriceApiGetDidComplete(marketPrice: MarketPrice) {
-        success()
+    func marketPriceGetDidComplete(marketPrice: MarketPrice) {
+        self.success()
     }
     
-    func marketPriceApiGetDidComplete(error: Error?) {
-        failure(error: error)
+    func marketPriceGetDidComplete(failure: ServiceFailureType) {
+        self.failure(failure)
     }
     
 }
+

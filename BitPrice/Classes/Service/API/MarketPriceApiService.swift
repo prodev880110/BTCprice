@@ -6,37 +6,37 @@
 //  Copyright © 2018 Bruno Tortato Furtado. All rights reserved.
 //
 
+import Alamofire
 import Foundation
 
 class MarketPriceApiService: ApiService {
     
-    // MARK: - Variable
-    
-    weak var delegate: MarketPriceApiServiceDelegate?
-    
     // MARK: - Public
     
-    func get(reference: ReferenceType) {
+    func get(reference: ReferenceType,
+             success: @escaping (Data) -> Void,
+             failure: @escaping (ServiceFailureType) -> Void) {
+        
         let params = parameters(reference: reference)
+        
         _ = self.sessionManager.request(MarketPriceApiRouter.get(params))
             .validate(statusCode: [200])
             .responseJSON { response in
                 guard let data = response.data else {
-                    self.delegate?.marketPriceApiGetDidComplete(error: nil)
+                    failure(.connection)
                     return
                 }
                 
                 if let error = response.error {
-                    self.delegate?.marketPriceApiGetDidComplete(error: error)
+                    if error as? AFError == nil {
+                        failure(.connection)
+                    } else {
+                        failure(.server)
+                    }
                     return
                 }
                 
-                do {
-                    let marketPrice = try JSONDecoder().decode(MarketPrice.self, from: data)
-                    self.delegate?.marketPriceApiGetDidComplete(marketPrice: marketPrice)
-                } catch let error {
-                    self.delegate?.marketPriceApiGetDidComplete(error: error)
-                }
+                success(data)
         }
     }
     
@@ -69,9 +69,4 @@ class MarketPriceApiService: ApiService {
         return params
     }
     
-}
-
-protocol MarketPriceApiServiceDelegate: class {
-    func marketPriceApiGetDidComplete(marketPrice: MarketPrice)
-    func marketPriceApiGetDidComplete(error: Error?)
 }

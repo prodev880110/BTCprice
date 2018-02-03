@@ -19,16 +19,28 @@ class BodyHistoryView: UIView {
     @IBOutlet private weak var percentLabel: UILabel!
     @IBOutlet private weak var chartView: ChartView!
     
+    // MARK: - Variables
+    
+    var spinnerView = SpinnerView()
+    
     // MARK: - UIView
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         self.titleLabel.text = "body_history_view.price".localized
         self.referenceLabel.text = nil
         self.percentLabel.text = nil
+        
+        setLoaded(false)
     }
     
     // MARK: - Public
+    
+    func setLoaded(_ loaded: Bool) {
+        self.titleLabel.isHidden = !loaded
+        self.chartView.isHidden = !loaded
+    }
     
     func setPrices(firstPrice: Float, lastPrice: Float) {
         let diff = (lastPrice - firstPrice)

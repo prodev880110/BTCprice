@@ -1,31 +1,45 @@
 //
-//  ViewController+TickerServiceDelegate.swift
+//  ViewController+ServiceDelegate.swift
 //  BitPrice
 //
-//  Created by Bruno Tortato Furtado on 27/01/18.
+//  Created by Bruno Tortato Furtado on 02/02/18.
 //  Copyright © 2018 Bruno Tortato Furtado. All rights reserved.
 //
 
 import Charts
+import NotificationBannerSwift
 import UIKit
 
-extension ViewController: TickerApiServiceDelegate {
+extension ViewController: TickerServiceDelegate {
     
-    func tickerApiGetDidComplete(ticker: Ticker) {
-        bodyView.priceView.setPrice(ticker.USD.last)
-        spinnerView.hide()
+    func tickerGetDidComplete(ticker: Ticker, date: Date, fromCache: Bool) {
+        bodyView.priceView.setPrice(ticker.USD.last, date: date)
+        bodyView.priceView.spinnerView.hide()
+        
+        if fromCache {
+            StatusBarNotificationBanner.noConnection.show()
+        }
     }
     
-    func tickerApiGetDidComplete(error: Error?) {
-        spinnerView.hide()
+    func tickerGetDidComplete(failure: ServiceFailureType) {
+        bodyView.priceView.setPrice(0)
+        bodyView.priceView.spinnerView.hide()
+        
+        switch failure {
+        case .server:
+            StatusBarNotificationBanner.serverFailure.show()
+        case .connection:
+            StatusBarNotificationBanner.noConnection.show()
+        }
     }
     
 }
 
-extension ViewController: MarketPriceApiServiceDelegate {
+extension ViewController: MarketPriceServiceDelegate {
     
-    func marketPriceApiGetDidComplete(marketPrice: MarketPrice) {
+    func marketPriceGetDidComplete(marketPrice: MarketPrice) {
         let ref = UserDefaults.standard.reference()
+        
         let firsPrice = marketPrice.values.first?.y ?? 0
         let lastPrice = marketPrice.values.last?.y ?? 0
         var values = [ChartDataEntry]()
@@ -35,14 +49,16 @@ extension ViewController: MarketPriceApiServiceDelegate {
             let y = Double(value.y)
             values.append(ChartDataEntry(x: x, y: y))
         }
-
+        
+        bodyView.historyView.setLoaded(true)
         bodyView.historyView.setPrices(firstPrice: firsPrice, lastPrice: lastPrice)
         bodyView.historyView.setChartData(reference: ref, values: values)
-        spinnerView.hide()
+        bodyView.historyView.spinnerView.hide()
     }
     
-    func marketPriceApiGetDidComplete(error: Error?) {
-        spinnerView.hide()
+    func marketPriceGetDidComplete(failure: ServiceFailureType) {
+        bodyView.historyView.setLoaded(true)
+        bodyView.historyView.spinnerView.hide()
     }
     
 }

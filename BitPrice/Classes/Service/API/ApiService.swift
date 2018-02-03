@@ -11,19 +11,22 @@ import Foundation
 
 class ApiService {
     
+    // MARK: - Variable
+    
     let sessionManager: SessionManager = {
         let conf = URLSessionConfiguration.default
         
-        conf.requestCachePolicy = .reloadIgnoringLocalCacheData
         conf.timeoutIntervalForRequest = Params.timeout
         conf.timeoutIntervalForResource = Params.timeout
         
         return SessionManager(configuration: conf)
     }()
     
+    // MARK: - Other
+    
     struct Params {
         static let baseUrl = URL(string: Bundle.main.apiBaseUrl())!
         static let timeout: Double = 15
     }
-    
+        
 }

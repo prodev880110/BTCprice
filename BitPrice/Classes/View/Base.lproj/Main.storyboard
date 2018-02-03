@@ -60,6 +60,9 @@
                                     <constraint firstAttribute="bottom" secondItem="EOd-U2-kcQ" secondAttribute="bottom" id="Un0-nQ-MMG"/>
                                     <constraint firstItem="Cr6-RV-HNH" firstAttribute="centerX" secondItem="M67-kf-cZl" secondAttribute="centerX" id="sYq-Ym-ann"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="titleLabel" destination="Cr6-RV-HNH" id="5y4-Zt-rVb"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAa-wT-mei" userLabel="bodyView" customClass="BodyView" customModule="BitPrice" customModuleProvider="target">
                                 <rect key="frame" x="15" y="78" width="345" height="514"/>
@@ -93,7 +96,6 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="priceLabel" destination="uvo-ij-IzH" id="xfA-kX-8fG"/>
-                                            <outlet property="titleLabel" destination="Cr6-RV-HNH" id="zg8-bJ-cck"/>
                                             <outlet property="updatedLabel" destination="aM5-WQ-PG5" id="D9M-u7-fp1"/>
                                         </connections>
                                     </view>
@@ -164,6 +166,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="EiZ-lZ-dc0" firstAttribute="top" secondItem="XJb-mp-QRp" secondAttribute="bottom" constant="15" id="MdT-eV-NEr"/>
                                             <constraint firstItem="XJb-mp-QRp" firstAttribute="top" secondItem="np2-Gi-q6k" secondAttribute="top" id="PMZ-K7-COe"/>

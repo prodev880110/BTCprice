@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import BitPrice
 
 class ApiServiceTest: XCTestCase {
     
@@ -26,11 +27,11 @@ class ApiServiceTest: XCTestCase {
         expectation?.fulfill()
     }
     
-    func failure(error: Error?) {
-        if let error = error {
-            XCTFail("service error: \(error.localizedDescription)")
+    func failure(_ failure: ServiceFailureType) {
+        if failure == .server {
+            XCTFail("server service error")
         } else {
-            XCTFail("unknown service error")
+            XCTFail("connection service error")
         }
         expectation?.fulfill()
     }

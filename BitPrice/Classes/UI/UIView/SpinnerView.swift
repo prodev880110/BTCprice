@@ -11,27 +11,42 @@ import UIKit
 class SpinnerView: UIView {
     
     private let indicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-    private var hideAfter = 0
 
-    func show(onView: UIView, hideAfter: Int) {
+    func show(onView: UIView) {
         backgroundColor = onView.backgroundColor
-        self.hideAfter = hideAfter
         
         frame = onView.frame
         frame.origin.x = 0
         frame.origin.y = 0
 
-        indicatorView.startAnimating()
         indicatorView.center = center
-        
-        self.addSubview(self.indicatorView)
+        indicatorView.startAnimating()        
         onView.addSubview(self)
+
+        self.alpha = 0
+        indicatorView.isHidden = true
+        
+        UIView.animate(withDuration: 0.25, animations: {
+            self.alpha = 1
+        }) { (finished) in
+            self.indicatorView.isHidden = false
+            
+            self.addSubview(self.indicatorView)
+        }
     }
     
     func hide() {
-        hideAfter -= 1
-        if hideAfter == 0 {
-            indicatorView.stopAnimating()
+        if indicatorView.isHidden {
+            self.removeFromSuperview()
+            return
+        }
+        
+        self.alpha = 1
+        
+        UIView.animate(withDuration: 0.25, animations: {
+            self.alpha = 0
+        }) { (finished) in
+            self.indicatorView.stopAnimating()
             self.removeFromSuperview()
         }
     }
