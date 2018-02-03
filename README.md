@@ -6,6 +6,7 @@
 [![Platform][platform-badge]][platform-url]
 [![Build Status][build-badge]][build-url]
 [![Codecov][codecov-badge]][codecov-url]
+[![Gitter][gitter-badge]][gitter-url]
 
 O BitPrice é um aplicativo que apresenta o histórico de preços do Bitcoin.
 
@@ -64,3 +65,5 @@ Um resumo sobre cada versão do BitPrice pode ser encontrado nas [releases](http
 [build-url]: https://travis-ci.org/Bruno-Furtado/bitprice-ios
 [codecov-badge]: https://codecov.io/gh/Bruno-Furtado/bitprice-ios/branch/master/graph/badge.svg
 [codecov-url]: https://codecov.io/gh/Bruno-Furtado/bitprice-ios
+[gitter-badge]: https://badges.gitter.im/Bruno-Furtado/bitprice-ios.svg
+[gitter-url]: https://gitter.im/Bruno-Furtado/bitprice-ios?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge
