@@ -10,12 +10,12 @@ import Alamofire
 import Foundation
 
 class TickerApiService: ApiService {
-    
+
     // MARK: - Public
-    
+
     func get(success: @escaping (Data) -> Void,
              failure: @escaping (ServiceFailureType) -> Void) {
-        
+
         _ = self.sessionManager.request(TickerApiRouter.get())
             .validate(statusCode: [200])
             .responseJSON { response in
@@ -23,7 +23,7 @@ class TickerApiService: ApiService {
                     failure(.connection)
                     return
                 }
-                
+
                 if let error = response.error {
                     if error as? AFError == nil {
                         failure(.connection)
@@ -32,9 +32,9 @@ class TickerApiService: ApiService {
                     }
                     return
                 }
-                
+
                 success(data)
         }
     }
-    
+
 }

@@ -10,27 +10,27 @@ import XCTest
 @testable import BitPrice
 
 class TickerServiceTest: ApiServiceTest {
-    
+
     private let service = TickerService()
-    
+
     // MARK: - XCTestCase
-    
+
     override func setUp() {
         super.setUp()
         service.delegate = self
     }
-    
+
     // MARK: - Test
-    
+
     func testGetTickerService() {
         service.get()
         waitForExpectations(timeout: ApiService.Params.timeout, handler: nil)
     }
-    
+
 }
 
 extension TickerServiceTest: TickerServiceDelegate {
-    
+
     func tickerGetDidComplete(ticker: Ticker, date: Date, fromCache: Bool) {
         self.success()
     }
@@ -38,5 +38,5 @@ extension TickerServiceTest: TickerServiceDelegate {
     func tickerGetDidComplete(failure: ServiceFailureType) {
         self.failure(failure)
     }
-    
+
 }

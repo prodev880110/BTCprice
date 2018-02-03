@@ -10,10 +10,10 @@ import Charts
 import UIKit
 
 class BodyView: CardView {
-    
+
     // MARK: - Outlet
-    
+
     @IBOutlet weak var priceView: BodyPriceView!
     @IBOutlet weak var historyView: BodyHistoryView!
-    
+
 }

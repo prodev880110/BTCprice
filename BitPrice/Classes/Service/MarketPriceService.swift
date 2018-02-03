@@ -9,15 +9,15 @@
 import Foundation
 
 class MarketPriceService: Service<MarketPrice> {
-    
+
     // MARK: - Variable
-    
+
     private let apiService = MarketPriceApiService()
-    
+
     weak var delegate: MarketPriceServiceDelegate?
-    
+
     // MARK: - Public
-    
+
     func get(reference: ReferenceType, cachedDays days: Int = 0) {
         if let marketPrice = dbFetch(reference: reference, cachedDays: days) {
             DispatchQueue.main.async {
@@ -25,16 +25,16 @@ class MarketPriceService: Service<MarketPrice> {
             }
             return
         }
-        
+
         apiService.get(reference: reference, success: { (data) in
             self.success(reference: reference, data: data)
-        }) { failure in
+        }, failure: { failure in
             self.failure(failure, reference: reference)
-        }
+        })
     }
-    
+
     // MARK: - Private
-    
+
     private func success(reference: ReferenceType, data: Data) {
         DispatchQueue.main.async {
             if let marketPrice = self.jsonDecode(data: data) {
@@ -45,7 +45,7 @@ class MarketPriceService: Service<MarketPrice> {
             }
         }
     }
-    
+
     private func failure(_ failure: ServiceFailureType, reference: ReferenceType) {
         DispatchQueue.main.async {
             if let marketPrice = self.dbFetch(reference: reference) {
@@ -55,7 +55,7 @@ class MarketPriceService: Service<MarketPrice> {
             }
         }
     }
-    
+
 }
 
 protocol MarketPriceServiceDelegate: class {

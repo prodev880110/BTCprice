@@ -10,35 +10,35 @@ import XCTest
 @testable import BitPrice
 
 class MarketPriceApiServiceTest: ApiServiceTest {
-    
+
     private let service = MarketPriceApiService()
-    
+
     // MARK: - XCTestCase
-    
+
     override func setUp() {
         super.setUp()
     }
-    
+
     // MARK: - Test
-    
+
     func testGetWeekMarkePriceApiService() {
         get(reference: .week)
     }
-    
+
     func testGetMonthMarkePriceApiService() {
         get(reference: .month)
     }
-    
+
     func testGetYearMarkePriceApiService() {
         get(reference: .year)
     }
-    
+
     func testGetAllMarkePriceApiService() {
         get(reference: .all)
     }
-    
+
     // MARK: - Private
-    
+
     private func get(reference: ReferenceType) {
         service.get(reference: reference, success: { data in
             do {
@@ -47,11 +47,11 @@ class MarketPriceApiServiceTest: ApiServiceTest {
             } catch {
                 self.failure(.server)
             }
-        }) { failure in
+        }, failure: { failure in
             self.failure(failure)
-        }
+        })
 
         waitForExpectations(timeout: ApiService.Params.timeout, handler: nil)
     }
-    
+
 }

@@ -9,14 +9,14 @@
 import NotificationBannerSwift
 
 class BannerColors: BannerColorsProtocol {
-    
+
     func color(for style: BannerStyle) -> UIColor {
         switch style {
         case .danger:
-            return UIColor.app.red
+            return UIColor.App.red
         default:
-            return UIColor.app.purple
+            return UIColor.App.purple
         }
     }
-    
+
 }
