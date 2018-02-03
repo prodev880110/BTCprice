@@ -30,3 +30,4 @@
 // MARK: - BaseNotificationBanner
 
 "banner.no_connection" = "Dispositivo sem acesso à Internet";
+"banner.server_failure" = "Falha ao conectar-se com servidor";

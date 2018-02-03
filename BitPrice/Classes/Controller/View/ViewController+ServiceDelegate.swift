@@ -24,6 +24,13 @@ extension ViewController: TickerServiceDelegate {
     func tickerGetDidComplete(failure: ServiceFailureType) {
         bodyView.priceView.setPrice(0)
         bodyView.priceView.spinnerView.hide()
+        
+        switch failure {
+        case .server:
+            StatusBarNotificationBanner.serverFailure.show()
+        case .connection:
+            StatusBarNotificationBanner.noConnection.show()
+        }
     }
     
 }
