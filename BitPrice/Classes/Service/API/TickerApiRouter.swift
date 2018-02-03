@@ -38,7 +38,7 @@ enum TickerApiRouter: URLRequestConvertible {
     
     private var path: String {
         switch self {
-        case .get: return "/ticker1"
+        case .get: return "/ticker"
         }
     }
     
