@@ -1,6 +1,9 @@
 language: objective-c
 osx_image: xcode9.2
+before_install:
+  - brew install swiftlint
 install:
   - bundle install
 script:
   - fastlane test
+  - swiftlint
