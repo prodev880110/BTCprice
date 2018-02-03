@@ -520,7 +520,7 @@
 				788B8434B80F97993872248B /* [CP] Embed Pods Frameworks */,
 				284B06907BEF15D8EB92EB93 /* [CP] Copy Pods Resources */,
 				F8635772201AAE1000FB886B /* Run Crashlytics Script */,
-				F881EA12202630B300F5E096 /* Run Script */,
+				F881EA12202630B300F5E096 /* Run SwiftLint Script */,
 			);
 			buildRules = (
 			);
@@ -843,14 +843,14 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\"";
 		};
-		F881EA12202630B300F5E096 /* Run Script */ = {
+		F881EA12202630B300F5E096 /* Run SwiftLint Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Run Script";
+			name = "Run SwiftLint Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

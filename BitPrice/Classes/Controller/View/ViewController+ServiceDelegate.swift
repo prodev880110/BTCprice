@@ -40,13 +40,13 @@ extension ViewController: MarketPriceServiceDelegate {
     func marketPriceGetDidComplete(marketPrice: MarketPrice) {
         let ref = UserDefaults.standard.reference()
 
-        let firsPrice = marketPrice.values.first?.y ?? 0
-        let lastPrice = marketPrice.values.last?.y ?? 0
+        let firsPrice = marketPrice.values.first?.yAxis ?? 0
+        let lastPrice = marketPrice.values.last?.yAxis ?? 0
         var values = [ChartDataEntry]()
 
         for value in marketPrice.values {
-            let x = Double(value.x)
-            let y = Double(value.y)
+            let x = Double(value.xAxis)
+            let y = Double(value.yAxis)
             values.append(ChartDataEntry(x: x, y: y))
         }
 

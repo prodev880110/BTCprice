@@ -12,9 +12,15 @@ struct MarketPrice: Decodable {
 
     let values: [Value]
 
-    struct Value: Decodable {
-        let x: Int
-        let y: Float
+}
+
+struct Value: Decodable {
+    let xAxis: Int
+    let yAxis: Float
+
+    enum CodingKeys: String, CodingKey {
+        case xAxis = "x"
+        case yAxis = "y"
     }
 
 }
