@@ -9,7 +9,7 @@
 import NotificationBannerSwift
 
 class BannerColors: BannerColorsProtocol {
-    
+
     func color(for style: BannerStyle) -> UIColor {
         switch style {
         case .danger:
@@ -18,5 +18,5 @@ class BannerColors: BannerColorsProtocol {
             return UIColor.app.purple
         }
     }
-    
+
 }

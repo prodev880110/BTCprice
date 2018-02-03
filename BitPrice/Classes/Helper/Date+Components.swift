@@ -9,7 +9,7 @@
 import Foundation
 
 extension Date {
-    
+
     var startOfBitcoin: Date {
         return Date.fromString("2009-01-03", dateFormat: "yyyy-MM-dd")
     }

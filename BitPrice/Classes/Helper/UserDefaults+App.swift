@@ -10,24 +10,24 @@ import Foundation
 import UIKit
 
 extension UserDefaults {
-    
+
     private struct Key {
         static let referenceType = "reference"
     }
-    
+
     // MARK: - Reference
-    
+
     func reference() -> ReferenceType {
         let storedValue = value(forKey: Key.referenceType)
         var type: ReferenceType?
-        
+
         if let storedValue = storedValue {
             type = ReferenceType(rawValue: (storedValue as! String))
         }
-        
+
         return type ?? ReferenceType.week
     }
-    
+
     func setReference(_ type: ReferenceType) {
         set(type.rawValue, forKey: Key.referenceType)
     }

@@ -9,12 +9,12 @@
 import Foundation
 
 struct MarketPrice: Decodable {
-    
+
     let values: [Value]
-    
+
     struct Value: Decodable {
         let x: Int
         let y: Float
     }
-    
+
 }

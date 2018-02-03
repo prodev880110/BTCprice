@@ -19,10 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupRemoteConfig()
         return true
     }
-    
+
     func applicationDidBecomeActive(_ application: UIApplication) {
         RemoteConfig.remoteConfig().fetch()
     }
 
 }
-

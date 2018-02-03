@@ -9,15 +9,15 @@
 import Foundation
 
 class TickerService: Service<Ticker> {
-    
+
     // MARK: - Variable
-    
+
     weak var delegate: TickerServiceDelegate?
-    
+
     private let apiService = TickerApiService()
-    
+
     // MARK: - Public
-    
+
     func get() {
         apiService.get(success: { (data) in
             self.success(data: data)
@@ -25,9 +25,9 @@ class TickerService: Service<Ticker> {
             self.failure(failure)
         }
     }
-    
+
     // MARK: - Private
-    
+
     private func success(data: Data) {
         DispatchQueue.main.async {
             if let ticker = self.jsonDecode(data: data) {
@@ -39,19 +39,19 @@ class TickerService: Service<Ticker> {
             }
         }
     }
-    
+
     private func failure(_ failure: ServiceFailureType) {
         DispatchQueue.main.async {
             guard let request = RequestDbService().fetch(reference: nil) else {
                 self.delegate?.tickerGetDidComplete(failure: failure)
                 return
             }
-            
+
             if let ticker = self.jsonDecode(data: request.data) {
                 self.delegate?.tickerGetDidComplete(ticker: ticker, date: request.date, fromCache: true)
                 return
             }
-            
+
             self.delegate?.tickerGetDidComplete(failure: failure)
         }
     }

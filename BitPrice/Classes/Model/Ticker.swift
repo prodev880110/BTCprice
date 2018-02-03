@@ -9,11 +9,11 @@
 import Foundation
 
 struct Ticker: Decodable {
-    
+
     let USD: TickerItem
-    
+
     struct TickerItem: Decodable {
         let last: Float
     }
-    
+
 }

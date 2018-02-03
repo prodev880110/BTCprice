@@ -11,7 +11,7 @@ import Firebase
 import Foundation
 
 extension AppDelegate {
-    
+
     func setupFirebase() {
         FirebaseApp.configure()
         /*
@@ -21,7 +21,7 @@ extension AppDelegate {
         #endif
         */
     }
-    
+
     func setupRemoteConfig() {
         let remoteConfig = RemoteConfig.remoteConfig()
         #if DEBUG
@@ -31,5 +31,5 @@ extension AppDelegate {
         #endif
         remoteConfig.setDefaults(fromPlist: "RemoteConfigDefaults")
     }
-    
+
 }
