@@ -43,7 +43,7 @@ class RequestDbServiceTest: XCTestCase {
             return
         }
 
-        XCTFail()
+        XCTFail("Fail when try to delete and fetch a request")
     }
 
     func testDeleteAndFetchRequestDbService() {
@@ -69,7 +69,7 @@ class RequestDbServiceTest: XCTestCase {
             }
         }
 
-        XCTFail()
+        XCTFail("Fail when try to delete and fetch many requests")
     }
 
 }

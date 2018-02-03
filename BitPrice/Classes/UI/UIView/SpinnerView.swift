@@ -28,11 +28,11 @@ class SpinnerView: UIView {
 
         UIView.animate(withDuration: 0.25, animations: {
             self.alpha = 1
-        }) { (finished) in
+        }, completion: { _ in
             self.indicatorView.isHidden = false
 
             self.addSubview(self.indicatorView)
-        }
+        })
     }
 
     func hide() {
@@ -45,10 +45,10 @@ class SpinnerView: UIView {
 
         UIView.animate(withDuration: 0.25, animations: {
             self.alpha = 0
-        }) { (finished) in
+        }, completion: { _ in
             self.indicatorView.stopAnimating()
             self.removeFromSuperview()
-        }
+        })
     }
 
 }

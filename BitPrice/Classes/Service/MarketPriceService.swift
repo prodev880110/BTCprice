@@ -28,9 +28,9 @@ class MarketPriceService: Service<MarketPrice> {
 
         apiService.get(reference: reference, success: { (data) in
             self.success(reference: reference, data: data)
-        }) { failure in
+        }, failure: { failure in
             self.failure(failure, reference: reference)
-        }
+        })
     }
 
     // MARK: - Private

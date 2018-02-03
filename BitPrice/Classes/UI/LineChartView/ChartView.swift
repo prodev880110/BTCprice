@@ -62,7 +62,7 @@ class ChartView: LineChartView {
         setupAxis(leftAxis)
         leftAxis.labelFont = UIFont.appFont(ofSize: 10)
 
-        leftAxis.valueFormatter = DefaultAxisValueFormatter.with(block: { (value, axis) -> String in
+        leftAxis.valueFormatter = DefaultAxisValueFormatter.with(block: { value, _ -> String in
             return Float(value).toCurrencyString(fractionDigits: 0)
         })
     }
@@ -72,7 +72,7 @@ class ChartView: LineChartView {
         xAxis.labelPosition = .bottom
         xAxis.labelFont = UIFont.appFont(ofSize: 9)
 
-        xAxis.valueFormatter = DefaultAxisValueFormatter.with(block: { (value, axis) -> String in
+        xAxis.valueFormatter = DefaultAxisValueFormatter.with(block: { value, _ -> String in
             let dateFormat = "chart_view.date_format".localized
             return Date(timeIntervalSince1970: value).toString(dateFormat: dateFormat)
         })

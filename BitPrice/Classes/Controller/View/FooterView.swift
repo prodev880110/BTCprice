@@ -55,10 +55,15 @@ class FooterView: UIView {
         sender.isSelected = true
         let type: ReferenceType
 
-        if sender == weekButton { type = .week }
-        else if sender == monthButton { type = .month }
-        else if sender == yearButton { type = .year }
-        else { type = .all }
+        if sender == weekButton {
+            type = .week
+        } else if sender == monthButton {
+            type = .month
+        } else if sender == yearButton {
+            type = .year
+        } else {
+            type = .all
+        }
 
         delegate?.footerViewButtonDidSelect(type: type)
     }

@@ -47,9 +47,9 @@ class MarketPriceApiServiceTest: ApiServiceTest {
             } catch {
                 self.failure(.server)
             }
-        }) { failure in
+        }, failure: { failure in
             self.failure(failure)
-        }
+        })
 
         waitForExpectations(timeout: ApiService.Params.timeout, handler: nil)
     }

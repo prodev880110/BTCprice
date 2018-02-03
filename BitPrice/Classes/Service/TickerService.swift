@@ -21,9 +21,9 @@ class TickerService: Service<Ticker> {
     func get() {
         apiService.get(success: { (data) in
             self.success(data: data)
-        }) { (failure) in
+        }, failure: { failure in
             self.failure(failure)
-        }
+        })
     }
 
     // MARK: - Private
