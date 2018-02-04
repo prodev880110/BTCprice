@@ -12,6 +12,7 @@
 		B5CF2D788D7C5B77E19FD99A /* Pods_BitPriceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07813F8BD707C695FDBBC646 /* Pods_BitPriceTests.framework */; };
 		F8282342201D3B1C0008D8AF /* Date+Diff.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8282341201D3B1C0008D8AF /* Date+Diff.swift */; };
 		F835876B2027A7EC00D3D375 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F835876A2027A7EC00D3D375 /* SnapshotHelper.swift */; };
+		F835876D2027A93C00D3D375 /* SnapshotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F835876C2027A93C00D3D375 /* SnapshotUITests.swift */; };
 		F8566EF9201B2EAC005E9950 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8566EF8201B2EAC005E9950 /* UIColor+App.swift */; };
 		F8566EFB201B2F3A005E9950 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8566EFA201B2F3A005E9950 /* CardView.swift */; };
 		F8566F09201B85F4005E9950 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8566F08201B85F4005E9950 /* String+Localized.swift */; };
@@ -102,6 +103,7 @@
 		E040B7A9DD2ED0787D6FD566 /* Pods-BitPrice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitPrice.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitPrice/Pods-BitPrice.release.xcconfig"; sourceTree = "<group>"; };
 		F8282341201D3B1C0008D8AF /* Date+Diff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Diff.swift"; sourceTree = "<group>"; };
 		F835876A2027A7EC00D3D375 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		F835876C2027A93C00D3D375 /* SnapshotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotUITests.swift; sourceTree = "<group>"; };
 		F8566EF8201B2EAC005E9950 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		F8566EFA201B2F3A005E9950 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		F8566F08201B85F4005E9950 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
@@ -494,6 +496,7 @@
 			isa = PBXGroup;
 			children = (
 				F835876A2027A7EC00D3D375 /* SnapshotHelper.swift */,
+				F835876C2027A93C00D3D375 /* SnapshotUITests.swift */,
 				F8D9D9CF201A925A002F2DCC /* ViewControllerUITests.swift */,
 				F8D9D9D1201A925A002F2DCC /* Info.plist */,
 			);
@@ -934,6 +937,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8D9D9D0201A925A002F2DCC /* ViewControllerUITests.swift in Sources */,
+				F835876D2027A93C00D3D375 /* SnapshotUITests.swift in Sources */,
 				F835876B2027A7EC00D3D375 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
