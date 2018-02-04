@@ -9,54 +9,53 @@
 [![Codebeat][codebeat-badge]][codebeat-url]
 [![Gitter][gitter-badge]][gitter-url]
 
-O BitPrice é um aplicativo que apresenta o histórico de preços do Bitcoin.
+BitPrice is an iOS app that display and monitor the current Bitcoint (BTC) rate.
 
-# Requisitos
+# Requirements
 
-- Xcode 9 ou superior
-- Ruby (padrão no MacOS)
+- Xcode 9 or later
+- Ruby
 
-# Compatibilidade
+# Information
 
-- **Versão de sistemas**: Requer iOS 9.0 ou superior
-- **Dispositivos**: iPhone
-- **Idiomas**: Inglês e Português
+- **Compatibility**: Requires iOS 9.0 or later. Compatible with iPhone and iPod touch.
+- **Languages**: English and Portuguese.
 
-# Configuração inicial
+# Usage
 
-### Obrigatório
+### Required Steps
 
-Executar os seguintes comandos na raiz do projeto:
+Run the following commands on the root folder of project:
 
 ```
-# instalar as dependências do sistema
+# install system dependencies
 gem install bundler
 bundle install
 
-# instalar as dependências do projeto
+# install project dependencies
 pod install
 
-# abrir o projeto utilizando a workspace
+# open project
 open BitPrice.xcworkspace
 ```
 
-### Opcional
+### Optional Steps
 
-- Instalar o [SwiftLint](https://github.com/realm/SwiftLint#using-homebrew) utilizando o [Homebrew](https://brew.sh/)
-- Instalar as [fontes](https://firebasestorage.googleapis.com/v0/b/bitprice-55d7d.appspot.com/o/Fonts%2FDINPro.zip?alt=media&token=69fab1f3-2af7-46b1-a29d-81afb5df5297) *(clicar duas vezes sobre cada uma)*
-- Copiar a [paleta de cores](https://firebasestorage.googleapis.com/v0/b/bitprice-55d7d.appspot.com/o/Colors%2FBitPrice.clr?alt=media&token=ea2970e1-ef97-433f-a67a-b202cea28a54) para o diretório `~\Library\Colors`
+- Install [SwiftLint](https://github.com/realm/SwiftLint#using-homebrew) using [Homebrew](https://brew.sh/)
+- Install [fonts](https://firebasestorage.googleapis.com/v0/b/bitprice-55d7d.appspot.com/o/Fonts%2FDINPro.zip?alt=media&token=69fab1f3-2af7-46b1-a29d-81afb5df5297)
+- Copy [colors palette](https://firebasestorage.googleapis.com/v0/b/bitprice-55d7d.appspot.com/o/Colors%2FBitPrice.clr?alt=media&token=ea2970e1-ef97-433f-a67a-b202cea28a54) to folder `~\Library\Colors`
 
-# Outras informaçes
+# Details
 
-Para mais informações (arquitetura, ambientes, testes, ferramentas e outros) acesse a [wiki](https://github.com/Bruno-Furtado/bitprice-ios/wiki).
+More details (architecture, environments, tests, tools...) can be found on the [wiki](https://github.com/Bruno-Furtado/bitprice-ios/wiki).
 
-# Licença
+# License
 
-Este código-fonte é distribuído sob os termos e condições da [MIT](LICENSE).
+This code is distributed under the terms and conditions of the [MIT](LICENSE).
 
 # Change-log
 
-Um resumo sobre cada versão do BitPrice pode ser encontrado nas [releases](https://github.com/Bruno-Furtado/bitprice-ios/releases).
+A brief summary of each Lovely release can be found on the [releases](https://github.com/Bruno-Furtado/bitprice-ios/releases).
 
 [swift-badge]: https://img.shields.io/badge/swift-4.0-orange.svg?style=flat
 [swift-url]: https://swift.org
