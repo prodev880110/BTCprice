@@ -5,7 +5,7 @@ devices([
 
 languages([
 	"en-US",
-	["pt", "pt_BR"]
+	"pt-BR"
 ])
 
 scheme "Snapshot"
