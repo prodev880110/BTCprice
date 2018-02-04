@@ -23,7 +23,7 @@ class SnapshotUITests: XCTestCase {
     // MARK: - Test
 
     func testSnapshot0() {
-        XCUIApplication().buttons["monthButton"].tap()
+        XCUIApplication().buttons["weekButton"].tap()
         snapshot("0Launch")
     }
 
