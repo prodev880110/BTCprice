@@ -19,7 +19,7 @@ BitPrice is an iOS app that display and monitor the current Bitcoint (BTC) rate.
 # Information
 
 - **Compatibility**: Requires iOS 9.0 or later. Compatible with iPhone and iPod touch.
-- **Languages**: English and Portuguese
+- **Languages**: English and Portuguese.
 
 # Usage
 
@@ -47,7 +47,7 @@ open BitPrice.xcworkspace
 
 # Details
 
-For more details (architecture, environments, tests, tools...) view the [wiki](https://github.com/Bruno-Furtado/bitprice-ios/wiki).
+More details (architecture, environments, tests, tools...) can be found on the [wiki](https://github.com/Bruno-Furtado/bitprice-ios/wiki).
 
 # License
 
