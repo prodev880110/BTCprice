@@ -1,6 +1,6 @@
 devices([
-	"iPhone X",
-	"iPhone 8 Plus"
+	"iPhone X (11.2)",
+	"iPhone 8 Plus (11.2)"
 ])
 
 languages([
