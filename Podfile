@@ -33,7 +33,11 @@ target 'BitPrice' do
     target 'BitPriceUITests' do
         inherit! :search_paths
     end
-    
+
+    target 'SnapshotUITests' do
+        inherit! :search_paths
+    end
+
 end
 
 post_install do | installer |
