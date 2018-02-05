@@ -1,1 +1,1 @@
-
+cryptocurrency,ticker,price,usd,dollar,real time,wallet,blockchain,coin,exchange,coinmarketcap

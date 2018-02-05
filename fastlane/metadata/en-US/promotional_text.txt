@@ -1,1 +1,1 @@
-
+Monitoring the current Bitcoint (BTC) rate.

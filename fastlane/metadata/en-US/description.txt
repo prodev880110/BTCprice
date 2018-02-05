@@ -1,1 +1,6 @@
+Track real-time rate from Bitcoin (BTC).
 
+Moreover, you can analysis price history by week, month, year, and from the beginning.
+
+Source:
+• Blockchain.info
