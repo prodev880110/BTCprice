@@ -17,14 +17,14 @@ default_platform(:ios)
 
 platform :ios do
   before_all do
-  	setup_travis
-    cocoapods(repo_update: true)
+  	#setup_travis
+    #cocoapods(repo_update: true)
   end
 
   desc "Capture screenshots and send to iTunes Connect"
   lane :screenshots do
-    capture_screenshots
-    frame_screenshots
+    #capture_screenshots
+    #frame_screenshots
     upload_to_app_store(ignore_language_directory_validation: true)
   end
 
