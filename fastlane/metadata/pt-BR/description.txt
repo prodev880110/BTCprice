@@ -1,0 +1,6 @@
+Acompanhe em tempo real a cotação do Bitcoin (BTC).
+
+Além disso, é possível analisar o histórico de preços por semana, mês, ano e desde o início.
+
+Fonte:
+• Blockchain.info

@@ -16,6 +16,11 @@ or alternatively using `brew cask install fastlane`
 
 # Available Actions
 ## iOS
+### ios screenshots
+```
+fastlane ios screenshots
+```
+Capture screenshots and send to iTunes Connect
 ### ios test
 ```
 fastlane ios test

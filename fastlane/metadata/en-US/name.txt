@@ -1,1 +1,1 @@
-BitPrice - Bitcoin Price
+BitPrice - Bitcoin Rate

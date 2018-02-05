@@ -1,0 +1,1 @@
+criptomoeda,cotacao,preco,usd,dolar,tempo real,carteira,blockchain,moeda virtual,coinmarketcap

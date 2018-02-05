@@ -7,16 +7,44 @@
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForTesting = "NO"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F8D9D9A8201A925A002F2DCC"
                BuildableName = "BitPrice.app"
                BlueprintName = "BitPrice"
+               ReferencedContainer = "container:BitPrice.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F8D9D9CA201A925A002F2DCC"
+               BuildableName = "BitPriceUITests.xctest"
+               BlueprintName = "BitPriceUITests"
+               ReferencedContainer = "container:BitPrice.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F83587712027AD4D00D3D375"
+               BuildableName = "SnapshotUITests.xctest"
+               BlueprintName = "SnapshotUITests"
                ReferencedContainer = "container:BitPrice.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,26 +62,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F8D9D9BF201A925A002F2DCC"
-               BuildableName = "BitPriceTests.xctest"
-               BlueprintName = "BitPriceTests"
-               ReferencedContainer = "container:BitPrice.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F8D9D9CA201A925A002F2DCC"
-               BuildableName = "BitPriceUITests.xctest"
-               BlueprintName = "BitPriceUITests"
-               ReferencedContainer = "container:BitPrice.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "F83587712027AD4D00D3D375"
                BuildableName = "SnapshotUITests.xctest"
                BlueprintName = "SnapshotUITests"
@@ -61,15 +69,6 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F8D9D9A8201A925A002F2DCC"
-            BuildableName = "BitPrice.app"
-            BlueprintName = "BitPrice"
-            ReferencedContainer = "container:BitPrice.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -84,16 +83,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F8D9D9A8201A925A002F2DCC"
-            BuildableName = "BitPrice.app"
-            BlueprintName = "BitPrice"
+            BlueprintIdentifier = "F83587712027AD4D00D3D375"
+            BuildableName = "SnapshotUITests.xctest"
+            BlueprintName = "SnapshotUITests"
             ReferencedContainer = "container:BitPrice.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -103,16 +101,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F8D9D9A8201A925A002F2DCC"
-            BuildableName = "BitPrice.app"
-            BlueprintName = "BitPrice"
-            ReferencedContainer = "container:BitPrice.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

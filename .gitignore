@@ -57,5 +57,5 @@ Pods/
 #
 fastlane/report.xml
 fastlane/Preview.html
-fastlane/screenshots
+fastlane/screenshots/screenshots.html
 fastlane/test_output
