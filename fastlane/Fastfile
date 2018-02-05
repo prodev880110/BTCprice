@@ -24,6 +24,7 @@ platform :ios do
   desc "Capture screenshots and send to iTunes Connect"
   lane :screenshots do
     capture_screenshots
+    frame_screenshots
     upload_to_app_store
   end
 
