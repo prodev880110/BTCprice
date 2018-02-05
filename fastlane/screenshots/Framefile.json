@@ -1,0 +1,27 @@
+{
+  "default": {
+    "keyword": {
+      "font": "./fonts/DINPro-Bold.otf",
+      "color": "#4C428A",
+      "supported": ["en-US", "pt-BR"]
+    },
+    "title": {
+      "font": "./fonts/DINPro-Light.otf",
+      "color": "#424242",
+      "supported": ["en-US", "pt-BR"]
+    },
+    "background": "./background.jpg",
+    "padding": 50,
+    "show_complete_frame": false,
+    "stack_title" : true,
+    "title_below_image": false
+  },
+  "data": [
+    {
+      "filter": "0Launch"
+    },
+    {
+      "filter": "1Launch"
+    }
+  ]
+}
